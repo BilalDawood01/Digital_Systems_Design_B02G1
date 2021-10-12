@@ -29,7 +29,7 @@ begin
   -- Assign the outputs. We only have one signal for now 
   outputs(0) <= W;
   outputs(1) <= W_int;
-  outputs(2) <= '0'; -- We will connect this later
+  outputs(2) <= V; -- We will connect this later
   
   -- Get the inputs from the slide switches on the FPGA board 
   A <= switches_inputs(0);
