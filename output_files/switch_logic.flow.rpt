@@ -1,5 +1,5 @@
 Flow report for switch_logic
-Tue Oct 12 13:27:32 2021
+Tue Oct 12 15:23:27 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,24 +40,24 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Oct 12 13:27:31 2021       ;
+; Flow Status                        ; Successful - Tue Oct 12 15:23:27 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; switch_logic                                ;
 ; Top-level Entity Name              ; switch_logic                                ;
 ; Family                             ; MAX 10                                      ;
-; Device                             ; 10M08DAF484C8G                              ;
+; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1                                           ;
-;     Total combinational functions  ; 1                                           ;
-;     Dedicated logic registers      ; 0                                           ;
+; Total logic elements               ; 3 / 49,760 ( < 1 % )                        ;
+;     Total combinational functions  ; 3 / 49,760 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 0 / 49,760 ( 0 % )                          ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 6                                           ;
+; Total pins                         ; 6 / 360 ( 2 % )                             ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/12/2021 13:27:17 ;
+; Start date & time ; 10/12/2021 15:19:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; switch_logic        ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 196163610224323.163406683743072        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 196163610224323.163407357215828        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -94,8 +94,10 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4781 MB             ; 00:00:34                           ;
-; Total                ; 00:00:15     ; --                      ; --                  ; 00:00:34                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4784 MB             ; 00:00:36                           ;
+; Fitter               ; 00:00:14     ; 1.0                     ; 5631 MB             ; 00:00:17                           ;
+; Fitter               ; 00:00:12     ; 1.0                     ; 5632 MB             ; 00:00:15                           ;
+; Total                ; 00:00:43     ; --                      ; --                  ; 00:01:08                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -105,6 +107,8 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; Zaid-Laptop      ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Zaid-Laptop      ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Zaid-Laptop      ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -112,6 +116,8 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off LAB1_ABRINI_DAWOOD_MUJTABA -c switch_logic
+quartus_fit --read_settings_files=off --write_settings_files=off LAB1_ABRINI_DAWOOD_MUJTABA -c switch_logic
+quartus_fit --read_settings_files=on --write_settings_files=off LAB1_ABRINI_DAWOOD_MUJTABA -c switch_logic
 
 
 
