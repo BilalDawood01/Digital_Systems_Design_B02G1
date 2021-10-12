@@ -12,11 +12,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "outputs[2]",
+					"strict" : false
+				},
+				{
 					"name" : "switches_inputs[0]",
 					"strict" : false
 				},
 				{
 					"name" : "switches_inputs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "switches_inputs[2]",
 					"strict" : false
 				}
 			]
