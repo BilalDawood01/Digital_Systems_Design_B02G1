@@ -24,6 +24,7 @@ begin
   
   -- ADD logic for signals (W and V)
   W<= W_int;
+  V <= C and (W_int);
   
   -- Assign the outputs. We only have one signal for now 
   outputs(0) <= W;

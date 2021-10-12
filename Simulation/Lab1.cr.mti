@@ -1,0 +1,17 @@
+C:/Github/Digital_Systems_Design_B02G1/switch_logic.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Github/Digital_Systems_Design_B02G1/switch_logic.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity switch_logic
+-- Compiling architecture Behavioral of switch_logic
+
+} {} {}} C:/Github/Digital_Systems_Design_B02G1/tb_switch_logic.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Github/Digital_Systems_Design_B02G1/tb_switch_logic.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_switch_logic
+-- Compiling architecture behavior of tb_switch_logic
+
+} {} {}}

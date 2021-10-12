@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+Eswitch_logic
+Z0 w1634064771
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Github/Digital_Systems_Design_B02G1/Simulation
+Z4 8C:/Github/Digital_Systems_Design_B02G1/switch_logic.vhd
+Z5 FC:/Github/Digital_Systems_Design_B02G1/switch_logic.vhd
+l0
+L6
+V[KES6eOVe_meLY?K>_^o`0
+!s100 MjL2aWcT1JiDF5[`cG<7Y0
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1634065468
+!i10b 1
+Z8 !s108 1634065468.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Github/Digital_Systems_Design_B02G1/switch_logic.vhd|
+Z10 !s107 C:/Github/Digital_Systems_Design_B02G1/switch_logic.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+DEx4 work 12 switch_logic 0 22 [KES6eOVe_meLY?K>_^o`0
+l21
+L15
+VC0MVN^3J]I^zoD1TgIYLz2
+!s100 Wf<UM2I7<Nnk5;^6D2l3:0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etb_switch_logic
+Z13 w1634066510
+R1
+R2
+R3
+Z14 8C:/Github/Digital_Systems_Design_B02G1/tb_switch_logic.vhd
+Z15 FC:/Github/Digital_Systems_Design_B02G1/tb_switch_logic.vhd
+l0
+L5
+V9Dc`FcQ2GJI`41kCiIb340
+!s100 E6;Bd7Qaame0@GG29@?GD2
+R6
+32
+Z16 !s110 1634066567
+!i10b 1
+Z17 !s108 1634066567.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Github/Digital_Systems_Design_B02G1/tb_switch_logic.vhd|
+Z19 !s107 C:/Github/Digital_Systems_Design_B02G1/tb_switch_logic.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+Z20 DEx4 work 15 tb_switch_logic 0 22 9Dc`FcQ2GJI`41kCiIb340
+l27
+L8
+V@9JGORc1XM27]lI^=2=]W2
+!s100 WlQWjZY?A;>73VaMehV`S3
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
