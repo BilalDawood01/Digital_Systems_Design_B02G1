@@ -1,6 +1,6 @@
 Fitter report for switch_logic
-Tue Oct 12 15:43:59 2021
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Tue Oct 12 16:03:43 2021
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -44,9 +44,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -56,16 +56,15 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Oct 12 15:43:59 2021       ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Fitter Status                      ; Successful - Tue Oct 12 16:03:43 2021       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; switch_logic                                ;
 ; Top-level Entity Name              ; switch_logic                                ;
 ; Family                             ; MAX 10                                      ;
@@ -155,7 +154,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.2%      ;
+;     Processors 2-4         ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -354,7 +353,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/bilal/Desktop/Bilal/ENEL_Semesters/7_Fall_2021/ENEL_453-Digital_System_Designs/Digital_Systems_Design_B02G1/output_files/switch_logic.pin.
+The pin-out file can be found in C:/Github/Digital_Systems_Design_B02G1/output_files/switch_logic.pin.
 
 
 +---------------------------------------------------------------------+
@@ -1283,11 +1282,9 @@ Warning (292013): Feature LogicLock is only available with a valid subscription 
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
     Info (176445): Device 10M08DAF484I7G is compatible
     Info (176445): Device 10M08DAF484I7P is compatible
-    Info (176445): Device 10M16DAF484A7G is compatible
     Info (176445): Device 10M16DAF484C7G is compatible
     Info (176445): Device 10M16DAF484I7G is compatible
     Info (176445): Device 10M16DAF484I7P is compatible
-    Info (176445): Device 10M25DAF484A7G is compatible
     Info (176445): Device 10M25DAF484C7G is compatible
     Info (176445): Device 10M25DAF484I7G is compatible
     Info (176445): Device 10M50DAF484I7G is compatible
@@ -1310,15 +1307,15 @@ Info (12825): DCLK dual-purpose pin not reserved
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Critical Warning (169085): No exact pin location assignment(s) for 3 pins of 6 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Info (332104): Reading SDC File: 'DE10_LITE.sdc'
-Warning (332174): Ignored filter at DE10_LITE.sdc(9): ADC_CLK_10 could not be matched with a port File: C:/Users/bilal/Desktop/Bilal/ENEL_Semesters/7_Fall_2021/ENEL_453-Digital_System_Designs/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 9
-Warning (332049): Ignored create_clock at DE10_LITE.sdc(9): Argument <targets> is an empty collection File: C:/Users/bilal/Desktop/Bilal/ENEL_Semesters/7_Fall_2021/ENEL_453-Digital_System_Designs/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 9
-    Info (332050): create_clock -period "10.0 MHz" [get_ports ADC_CLK_10] File: C:/Users/bilal/Desktop/Bilal/ENEL_Semesters/7_Fall_2021/ENEL_453-Digital_System_Designs/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 9
-Warning (332174): Ignored filter at DE10_LITE.sdc(10): MAX10_CLK1_50 could not be matched with a port File: C:/Users/bilal/Desktop/Bilal/ENEL_Semesters/7_Fall_2021/ENEL_453-Digital_System_Designs/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 10
-Warning (332049): Ignored create_clock at DE10_LITE.sdc(10): Argument <targets> is an empty collection File: C:/Users/bilal/Desktop/Bilal/ENEL_Semesters/7_Fall_2021/ENEL_453-Digital_System_Designs/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 10
-    Info (332050): create_clock -period "50.0 MHz" [get_ports MAX10_CLK1_50] File: C:/Users/bilal/Desktop/Bilal/ENEL_Semesters/7_Fall_2021/ENEL_453-Digital_System_Designs/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 10
-Warning (332174): Ignored filter at DE10_LITE.sdc(11): MAX10_CLK2_50 could not be matched with a port File: C:/Users/bilal/Desktop/Bilal/ENEL_Semesters/7_Fall_2021/ENEL_453-Digital_System_Designs/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 11
-Warning (332049): Ignored create_clock at DE10_LITE.sdc(11): Argument <targets> is an empty collection File: C:/Users/bilal/Desktop/Bilal/ENEL_Semesters/7_Fall_2021/ENEL_453-Digital_System_Designs/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 11
-    Info (332050): create_clock -period "50.0 MHz" [get_ports MAX10_CLK2_50] File: C:/Users/bilal/Desktop/Bilal/ENEL_Semesters/7_Fall_2021/ENEL_453-Digital_System_Designs/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 11
+Warning (332174): Ignored filter at DE10_LITE.sdc(9): ADC_CLK_10 could not be matched with a port File: C:/Github/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 9
+Warning (332049): Ignored create_clock at DE10_LITE.sdc(9): Argument <targets> is an empty collection File: C:/Github/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 9
+    Info (332050): create_clock -period "10.0 MHz" [get_ports ADC_CLK_10] File: C:/Github/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 9
+Warning (332174): Ignored filter at DE10_LITE.sdc(10): MAX10_CLK1_50 could not be matched with a port File: C:/Github/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 10
+Warning (332049): Ignored create_clock at DE10_LITE.sdc(10): Argument <targets> is an empty collection File: C:/Github/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 10
+    Info (332050): create_clock -period "50.0 MHz" [get_ports MAX10_CLK1_50] File: C:/Github/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 10
+Warning (332174): Ignored filter at DE10_LITE.sdc(11): MAX10_CLK2_50 could not be matched with a port File: C:/Github/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 11
+Warning (332049): Ignored create_clock at DE10_LITE.sdc(11): Argument <targets> is an empty collection File: C:/Github/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 11
+    Info (332050): create_clock -period "50.0 MHz" [get_ports MAX10_CLK2_50] File: C:/Github/Digital_Systems_Design_B02G1/DE10_LITE.sdc Line: 11
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -1492,7 +1489,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_R[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1506,24 +1503,24 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file C:/Users/bilal/Desktop/Bilal/ENEL_Semesters/7_Fall_2021/ENEL_453-Digital_System_Designs/Digital_Systems_Design_B02G1/output_files/switch_logic.fit.smsg
+Info (144001): Generated suppressed messages file C:/Github/Digital_Systems_Design_B02G1/output_files/switch_logic.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 162 warnings
-    Info: Peak virtual memory: 5634 megabytes
-    Info: Processing ended: Tue Oct 12 15:43:59 2021
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 5627 megabytes
+    Info: Processing ended: Tue Oct 12 16:03:44 2021
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/bilal/Desktop/Bilal/ENEL_Semesters/7_Fall_2021/ENEL_453-Digital_System_Designs/Digital_Systems_Design_B02G1/output_files/switch_logic.fit.smsg.
+The suppressed messages can be found in C:/Github/Digital_Systems_Design_B02G1/output_files/switch_logic.fit.smsg.
 
 

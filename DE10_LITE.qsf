@@ -14,7 +14,8 @@ set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
 set_global_assignment -name SDC_FILE DE10_LITE.SDC
 
 #============================================================
-# CLOCK
+# 
+
 #============================================================
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK1_50
