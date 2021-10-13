@@ -8,7 +8,7 @@ entity switch_logic is
            switches_inputs : in STD_LOGIC_VECTOR (2 downto 0);
            outputs : out STD_LOGIC_VECTOR (2 downto 0);
            clk : in STD_LOGIC;
-          reset : in STD_LOGIC
+           reset : in STD_LOGIC
            );
 end switch_logic;
 

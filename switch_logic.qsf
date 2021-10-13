@@ -214,4 +214,9 @@ set_global_assignment -name SOURCE_FILE db/switch_logic.cmp.rdb
 set_global_assignment -name SOURCE_FILE switch_logic.qsf
 set_global_assignment -name SOURCE_FILE DE10_LITE.qsf
 set_global_assignment -name VHDL_FILE tb_sequential_logic.vhd
+set_location_assignment PIN_P11 -to clk
+set_location_assignment PIN_A8 -to outputs[0]
+set_location_assignment PIN_A9 -to outputs[1]
+set_location_assignment PIN_A10 -to outputs[2]
+set_location_assignment PIN_F15 -to reset
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
