@@ -2,10 +2,10 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-ENTITY tb_switch_logic IS
-END tb_switch_logic;
+ENTITY tb_sequential_logic IS
+END tb_sequential_logic;
 
-ARCHITECTURE behavior OF tb_switch_logic IS
+ARCHITECTURE behavior OF tb_sequential_logic IS
 
 -- Component Declaration for the UUT
 	 
@@ -24,8 +24,13 @@ ARCHITECTURE behavior OF tb_switch_logic IS
     --Outputs
     signal outputs : std_logic_vector(2 downto 0);
 	
+    --Clock
+    signal clk : std_logic;
+    --Reset
+    signal reset : std_logic;
+	
 	-- Clock period definitions
-	constant clk_period:time:=10ns;
+	constant clk_period:time:=25ns;
     
     BEGIN
     -- Instantiate the Unit Under Test (UUT)
@@ -49,7 +54,7 @@ ARCHITECTURE behavior OF tb_switch_logic IS
     -- Modified Stimulus Process 
     modi_stim_proc: process 
     begin
-
+		reset <= '0';
       -- test all the combinations
       switches_inputs <= "000";  --ABC
       wait for 100 ns;
@@ -64,7 +69,12 @@ ARCHITECTURE behavior OF tb_switch_logic IS
       wait for 100 ns;
 		
 		switches_inputs <= "100";  --ABC
+		reset <= '1';
       wait for 100 ns;
+		
+		switches_inputs <= "011";  --ABC Second 011
+      wait for 100 ns;
+		reset <= '0';
 		
 		switches_inputs <= "101";  --ABC
       wait for 100 ns;

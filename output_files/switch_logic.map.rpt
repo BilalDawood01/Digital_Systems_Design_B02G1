@@ -1,5 +1,5 @@
 Analysis & Synthesis report for switch_logic
-Tue Oct 12 16:03:28 2021
+Wed Oct 13 15:12:25 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,16 +42,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 12 16:03:28 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 13 15:12:25 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; switch_logic                                ;
 ; Top-level Entity Name              ; switch_logic                                ;
 ; Family                             ; MAX 10                                      ;
 ; Total logic elements               ; 2                                           ;
 ;     Total combinational functions  ; 2                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 6                                           ;
+;     Dedicated logic registers      ; 1                                           ;
+; Total registers                    ; 1                                           ;
+; Total pins                         ; 8                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -189,17 +189,17 @@ refer to the applicable agreement for further details.
 ;     -- normal mode                          ; 2       ;
 ;     -- arithmetic mode                      ; 0       ;
 ;                                             ;         ;
-; Total registers                             ; 0       ;
-;     -- Dedicated logic registers            ; 0       ;
+; Total registers                             ; 1       ;
+;     -- Dedicated logic registers            ; 1       ;
 ;     -- I/O registers                        ; 0       ;
 ;                                             ;         ;
-; I/O pins                                    ; 6       ;
+; I/O pins                                    ; 8       ;
 ;                                             ;         ;
 ; Embedded Multiplier 9-bit elements          ; 0       ;
 ;                                             ;         ;
 ; Maximum fan-out node                        ; W_int~0 ;
 ; Maximum fan-out                             ; 2       ;
-; Total fan-out                               ; 14      ;
+; Total fan-out                               ; 19      ;
 ; Average fan-out                             ; 1.00    ;
 +---------------------------------------------+---------+
 
@@ -209,7 +209,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+--------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name  ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+--------------+--------------+
-; |switch_logic              ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 6    ; 0            ; 0          ; |switch_logic       ; switch_logic ; work         ;
+; |switch_logic              ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 8    ; 0            ; 0          ; |switch_logic       ; switch_logic ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -219,10 +219,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 1     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 1     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -234,14 +234,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 6                           ;
+; boundary_port         ; 8                           ;
+; cycloneiii_ff         ; 1                           ;
+;     CLR               ; 1                           ;
 ; cycloneiii_lcell_comb ; 2                           ;
 ;     normal            ; 2                           ;
 ;         2 data inputs ; 1                           ;
 ;         3 data inputs ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Average LUT depth     ; 0.63                        ;
 +-----------------------+-----------------------------+
 
 
@@ -260,7 +262,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Oct 12 16:03:11 2021
+    Info: Processing started: Wed Oct 13 15:12:15 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LAB1_ABRINI_DAWOOD_MUJTABA -c switch_logic
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -270,18 +272,22 @@ Info (12021): Found 2 design units, including 1 entities, in source file tb_swit
 Info (12021): Found 2 design units, including 1 entities, in source file switch_logic.vhd
     Info (12022): Found design unit 1: switch_logic-Behavioral File: C:/Github/Digital_Systems_Design_B02G1/switch_logic.vhd Line: 15
     Info (12023): Found entity 1: switch_logic File: C:/Github/Digital_Systems_Design_B02G1/switch_logic.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file tb_sequential_logic.vhd
+    Info (12022): Found design unit 1: tb_sequential_logic-behavior File: C:/Github/Digital_Systems_Design_B02G1/tb_sequential_logic.vhd Line: 8
+    Info (12023): Found entity 1: tb_sequential_logic File: C:/Github/Digital_Systems_Design_B02G1/tb_sequential_logic.vhd Line: 5
 Info (12127): Elaborating entity "switch_logic" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at switch_logic.vhd(18): object "V_del" assigned a value but never read File: C:/Github/Digital_Systems_Design_B02G1/switch_logic.vhd Line: 18
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 8 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
+Info (21057): Implemented 10 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
     Info (21059): Implemented 3 output pins
     Info (21061): Implemented 2 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4783 megabytes
-    Info: Processing ended: Tue Oct 12 16:03:28 2021
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:36
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4786 megabytes
+    Info: Processing ended: Wed Oct 13 15:12:25 2021
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
 
 

@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/18.1
 Eswitch_logic
-Z0 w1634077137
+Z0 w1634159532
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z3 dC:/Github/Digital_Systems_Design_B02G1/Simulation_Bilal
@@ -17,13 +17,13 @@ Z4 8C:/Github/Digital_Systems_Design_B02G1/switch_logic.vhd
 Z5 FC:/Github/Digital_Systems_Design_B02G1/switch_logic.vhd
 l0
 L6
-V?0OgHa_LG9^dWSTUQRLD12
-!s100 0QS_KBd89V96oleZ<RH>51
+V^[;en@j[[GBOZ9KK^b:Y^2
+!s100 [Dm9a`^AXS>R`<eY9LAI42
 Z6 OV;C;10.5b;63
 32
-Z7 !s110 1634078530
+Z7 !s110 1634159657
 !i10b 1
-Z8 !s108 1634078530.000000
+Z8 !s108 1634159657.000000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Github/Digital_Systems_Design_B02G1/switch_logic.vhd|
 Z10 !s107 C:/Github/Digital_Systems_Design_B02G1/switch_logic.vhd|
 !i113 1
@@ -32,11 +32,11 @@ Z12 tExplicit 1 CvgOpt 0
 Abehavioral
 R1
 R2
-DEx4 work 12 switch_logic 0 22 ?0OgHa_LG9^dWSTUQRLD12
+Z13 DEx4 work 12 switch_logic 0 22 ^[;en@j[[GBOZ9KK^b:Y^2
 l21
 L15
-VK73Z<:PXmck[TVbN;0Z3A2
-!s100 QYaIoZE6519@=EcUF<T[n0
+V5CEmkROWaAQ5`m=f>1g1@2
+!s100 7<@gWGzBb6;6z>SPSB<A50
 R6
 32
 R7
@@ -47,13 +47,52 @@ R10
 !i113 1
 R11
 R12
+Etb_sequential_logic
+Z14 w1634159520
+R1
+R2
+R3
+Z15 8C:/Github/Digital_Systems_Design_B02G1/tb_sequential_logic.vhd
+Z16 FC:/Github/Digital_Systems_Design_B02G1/tb_sequential_logic.vhd
+l0
+L5
+V1^oPn3Y]Q4zLUG@OhC7Sg3
+!s100 iZ`dCUYP^oXmD`Z@o`P1C3
+R6
+32
+R7
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Github/Digital_Systems_Design_B02G1/tb_sequential_logic.vhd|
+Z18 !s107 C:/Github/Digital_Systems_Design_B02G1/tb_sequential_logic.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+DEx4 work 19 tb_sequential_logic 0 22 1^oPn3Y]Q4zLUG@OhC7Sg3
+l35
+L8
+V1MnY2j;BD7JaYQP?Ya]KC2
+!s100 m6NokRiggfd?GC<LJMY:Y3
+R6
+32
+R7
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
 Etb_switch_logic
 w1634079150
 R1
 R2
 R3
-8C:/Github/Digital_Systems_Design_B02G1/tb_sequential_logic.vhd
-FC:/Github/Digital_Systems_Design_B02G1/tb_sequential_logic.vhd
+R15
+R16
 l0
 L5
 V9Dc`FcQ2GJI`41kCiIb340
@@ -63,8 +102,8 @@ R6
 !s110 1634079153
 !i10b 1
 !s108 1634079153.000000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Github/Digital_Systems_Design_B02G1/tb_sequential_logic.vhd|
-!s107 C:/Github/Digital_Systems_Design_B02G1/tb_sequential_logic.vhd|
+R17
+R18
 !i113 1
 R11
 R12

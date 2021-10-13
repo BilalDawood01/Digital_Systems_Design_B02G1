@@ -31,9 +31,9 @@ begin
   outputs(2) <= V; -- We will connect this later
   
   -- Get the inputs from the slide switches on the FPGA board 
-  A <= switches_inputs(0); -- modified
+  A <= switches_inputs(2); -- modified
   B <= switches_inputs(1); -- modified
-  C <= switches_inputs(2); -- modified
+  C <= switches_inputs(0); -- modified
 --  
   logic_of_switches: process(clk, reset)
   begin 

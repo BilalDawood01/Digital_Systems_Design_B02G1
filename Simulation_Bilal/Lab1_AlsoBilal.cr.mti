@@ -1,0 +1,18 @@
+C:/Github/Digital_Systems_Design_B02G1/switch_logic.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Github/Digital_Systems_Design_B02G1/switch_logic.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity switch_logic
+-- Compiling architecture Behavioral of switch_logic
+
+} {} {}} C:/Github/Digital_Systems_Design_B02G1/tb_sequential_logic.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Github/Digital_Systems_Design_B02G1/tb_sequential_logic.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_sequential_logic
+-- Compiling architecture behavior of tb_sequential_logic
+** Warning: C:/Github/Digital_Systems_Design_B02G1/tb_sequential_logic.vhd(33): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+
+} {} {}}
