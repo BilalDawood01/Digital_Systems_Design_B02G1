@@ -19,7 +19,7 @@ ARCHITECTURE behavior OF tb_sequential_logic IS
     END COMPONENT;
     
     --Inputs
-    signal switches_inputs : std_logic_vector(2 downto 0) := (others => '0');
+    signal switches_inputs_signal : std_logic_vector(2 downto 0) := (others => '0');
     
     --Outputs
     signal outputs : std_logic_vector(2 downto 0);
@@ -35,7 +35,7 @@ ARCHITECTURE behavior OF tb_sequential_logic IS
     BEGIN
     -- Instantiate the Unit Under Test (UUT)
     uut: switch_logic PORT MAP (
-        switches_inputs => switches_inputs,
+        switches_inputs => switches_inputs_signal,
         outputs => outputs,
         clk => clk,
         reset => reset

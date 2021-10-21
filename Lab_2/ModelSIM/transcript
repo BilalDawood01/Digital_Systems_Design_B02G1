@@ -1,0 +1,86 @@
+# Compile of averager.vhd was successful.
+# Compile of binary_bcd.vhd was successful.
+# Compile of registers.vhd was successful.
+# Compile of SevenSegment.vhd was successful.
+# Compile of SevenSegment_decoder.vhd was successful.
+# Compile of voltmeter.vhd was successful.
+# Compile of test_ADC.vhd was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.test_de10_lite
+# vsim -gui work.test_de10_lite 
+# Start time: 15:35:57 on Oct 21,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.test_de10_lite(behavior)
+add wave -position insertpoint  \
+sim:/test_de10_lite/MAX10_CLK1_50 \
+sim:/test_de10_lite/response_valid_out \
+sim:/test_de10_lite/ADC_out \
+sim:/test_de10_lite/counter \
+sim:/test_de10_lite/response_valid_out_i
+run -all
+# Compile of averager.vhd was successful.
+# Compile of binary_bcd.vhd was successful.
+# Compile of registers.vhd was successful.
+# Compile of SevenSegment.vhd was successful.
+# Compile of SevenSegment_decoder.vhd was successful.
+# Compile of voltmeter.vhd was successful.
+# Compile of test_ADC.vhd was successful.
+# 7 compiles, 0 failed with no errors.
+# Compile of averager.vhd was successful.
+# Compile of binary_bcd.vhd was successful.
+# Compile of registers.vhd was successful.
+# Compile of SevenSegment.vhd was successful.
+# Compile of SevenSegment_decoder.vhd was successful.
+# Compile of voltmeter.vhd was successful.
+# Compile of test_ADC.vhd was successful.
+# Compile of tb_ADC.vhd was successful with warnings.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.tb_de10_lite
+# End time: 15:40:08 on Oct 21,2021, Elapsed time: 0:04:11
+# Errors: 0, Warnings: 9
+# vsim -gui work.tb_de10_lite 
+# Start time: 15:40:08 on Oct 21,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_de10_lite(behavioral)
+# Loading work.test_de10_lite(behavior)
+add wave -position insertpoint  \
+sim:/tb_de10_lite/clk \
+sim:/tb_de10_lite/response_valid_out_i1 \
+sim:/tb_de10_lite/ADC_read \
+sim:/tb_de10_lite/clk_period
+run -all
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+vsim -gui work.tb_de10_lite work.test_de10_lite
+# End time: 15:58:11 on Oct 21,2021, Elapsed time: 0:18:03
+# Errors: 0, Warnings: 1
+# vsim -gui work.tb_de10_lite work.test_de10_lite 
+# Start time: 15:58:11 on Oct 21,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_de10_lite(behavioral)
+# Loading work.test_de10_lite(behavior)
+add wave -position insertpoint  \
+sim:/tb_de10_lite/clk \
+sim:/tb_de10_lite/response_valid_out_i1 \
+sim:/tb_de10_lite/ADC_read \
+sim:/tb_de10_lite/clk_period
+run -all
+add wave -position insertpoint  \
+sim:/tb_de10_lite/clk \
+sim:/tb_de10_lite/response_valid_out_i1 \
+sim:/tb_de10_lite/ADC_read \
+sim:/tb_de10_lite/clk_period
+add wave -position insertpoint  \
+sim:/tb_de10_lite/clk \
+sim:/tb_de10_lite/response_valid_out_i1 \
+sim:/tb_de10_lite/ADC_read \
+sim:/tb_de10_lite/clk_period
+run -all
