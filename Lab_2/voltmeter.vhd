@@ -128,7 +128,7 @@ sync4 : registers
                  q_outputs => response_valid_out_i3
                 );                
                 
-SevenSegment_ins: SevenSegment  
+SevenSegment_ins: SevenSegment
                   PORT MAP( Num_Hex0 => Num_Hex0,
                             Num_Hex1 => Num_Hex1,
                             Num_Hex2 => Num_Hex2,
@@ -144,7 +144,8 @@ SevenSegment_ins: SevenSegment
                             DP_in    => DP_in
                           );
                                      
-ADC_Conversion_ins:  test_DE10_Lite  PORT MAP(      
+ADC_Conversion_ins:  test_DE10_Lite  
+	PORT MAP(      
                                      MAX10_CLK1_50       => clk,
                                      response_valid_out  => response_valid_out_i1(0),
                                      ADC_out             => ADC_read);
