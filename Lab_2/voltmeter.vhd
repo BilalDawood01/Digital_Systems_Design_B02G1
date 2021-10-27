@@ -5,6 +5,7 @@ use ieee.numeric_std.all;
 entity Voltmeter is
     Port ( clk                           : in  STD_LOGIC;
            reset                         : in  STD_LOGIC;
+			  Switch								  : in  STD_LOGIC;
            LEDR                          : out STD_LOGIC_VECTOR (9 downto 0);
            HEX0,HEX1,HEX2,HEX3,HEX4,HEX5 : out STD_LOGIC_VECTOR (7 downto 0)
           );
@@ -21,6 +22,7 @@ Signal busy: STD_LOGIC;
 signal response_valid_out_i1,response_valid_out_i2,response_valid_out_i3 : STD_LOGIC_VECTOR(0 downto 0);
 Signal bcd: STD_LOGIC_VECTOR(15 DOWNTO 0);
 Signal Q_temp1 : std_logic_vector(11 downto 0);
+Signal Mux_Output : std_logic_vector(11 downto 0);
 
 Component SevenSegment is
     Port( Num_Hex0,Num_Hex1,Num_Hex2,Num_Hex3,Num_Hex4,Num_Hex5 : in  STD_LOGIC_VECTOR (3 downto 0);
@@ -29,7 +31,7 @@ Component SevenSegment is
 			);
 End Component ;
 
-Component test_DE10_Lite is
+Component ADC_Conversion is
     Port( MAX10_CLK1_50      : in STD_LOGIC;
           response_valid_out : out STD_LOGIC;
           ADC_out            : out STD_LOGIC_VECTOR (11 downto 0)
@@ -67,6 +69,15 @@ Component averager is
     Q   : out std_logic_vector(11 downto 0)
     );
   end Component;
+
+Component Mux_for_Averager is
+port(
+	Mux_Switch  : in  std_logic;
+	Pre_Ave     : in  std_logic_vector(11 downto 0); 
+	Post_Ave    : in std_logic_vector(11 downto 0);
+	Final_Out   : out std_logic_vector(11 downto 0)
+	);
+end Component;
 
 begin
    Num_Hex0 <= bcd(3  downto  0); 
@@ -144,16 +155,26 @@ SevenSegment_ins: SevenSegment
                             DP_in    => DP_in
                           );
                                      
-ADC_Conversion_ins:  test_DE10_Lite  
+ADC_Conversion_ins:  ADC_Conversion
 	PORT MAP(      
                                      MAX10_CLK1_50       => clk,
                                      response_valid_out  => response_valid_out_i1(0),
                                      ADC_out             => ADC_read);
- 
-LEDR(9 downto 0) <=Q_temp1(11 downto 2); -- gives visual display of upper binary bits to the LEDs on board
+
+												 
+mux_ins: Mux_for_Averager                             
+   PORT MAP(
+      Mux_Switch => Switch,
+		Pre_Ave    => q_outputs_2,
+		Post_Ave   => Q_temp1,  
+		Final_Out  => Mux_Output
+      );
+		
+												 
+LEDR(9 downto 0) <=Mux_Output(11 downto 2); -- gives visual display of upper binary bits to the LEDs on board
 
 -- in line below, can change the scaling factor (i.e. 2500), to calibrate the voltage reading to a reference voltmeter
-voltage <= std_logic_vector(resize(unsigned(Q_temp1)*2500*2/4096,voltage'length));  -- Converting ADC_read a 12 bit binary to voltage readable numbers
+voltage <= std_logic_vector(resize(unsigned(Mux_Output)*2500*2/4096,voltage'length));  -- Converting ADC_read a 12 bit binary to voltage readable numbers
 
 binary_bcd_ins: binary_bcd                               
    PORT MAP(
@@ -164,4 +185,5 @@ binary_bcd_ins: binary_bcd
       busy     => busy,                         
       bcd      => bcd         
       );
+
 end Behavioral;
