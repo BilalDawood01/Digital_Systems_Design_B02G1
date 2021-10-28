@@ -18,6 +18,7 @@ architecture Mux_Behaviour of Mux_for_Averager is
 			case Mux_Switch is
 				when '0' => Final_Out <= Pre_Ave;
 				when '1' => Final_Out <= Post_Ave;
+				when others => Final_Out <= Post_Ave;
 			end case;
 	end process;
 end Mux_Behaviour;

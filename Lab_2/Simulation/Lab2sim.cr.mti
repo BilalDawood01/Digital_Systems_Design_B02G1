@@ -1,19 +1,90 @@
-{C:/Users/donen/Dropbox/U of C/ENEL 453/ENEL 453 F2019/Labs/Lab 2/Final release/Simulation/tb_ADC.vhd} {2 {vcom -work work -2002 -explicit -stats=none {C:/Users/donen/Dropbox/U of C/ENEL 453/ENEL 453 F2019/Labs/Lab 2/Final release/Simulation/tb_ADC.vhd}
+C:/Github/Digital_Systems_Design_B02G1/Lab_2/Simulation/tb_prelab.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Github/Digital_Systems_Design_B02G1/Lab_2/Simulation/tb_prelab.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity tb_DE10_Lite
--- Compiling architecture Behavioral of tb_DE10_Lite
-** Warning: C:/Users/donen/Dropbox/U of C/ENEL 453/ENEL 453 F2019/Labs/Lab 2/Final release/Simulation/tb_ADC.vhd(10): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+-- Compiling entity tb_prelab
+-- Compiling architecture behavior of tb_prelab
+** Warning: C:/Github/Digital_Systems_Design_B02G1/Lab_2/Simulation/tb_prelab.vhd(36): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Github/Digital_Systems_Design_B02G1/Lab_2/Simulation/tb_prelab.vhd(69): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Github/Digital_Systems_Design_B02G1/Lab_2/Simulation/tb_prelab.vhd(72): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Github/Digital_Systems_Design_B02G1/Lab_2/Simulation/tb_prelab.vhd(75): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Github/Digital_Systems_Design_B02G1/Lab_2/Simulation/tb_prelab.vhd(78): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 
-} {} {}} {C:/Users/donen/Dropbox/U of C/ENEL 453/ENEL 453 F2019/Labs/Lab 2/Final release/Simulation/test_ADC.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donen/Dropbox/U of C/ENEL 453/ENEL 453 F2019/Labs/Lab 2/Final release/Simulation/test_ADC.vhd}
+} {} {}} C:/Github/Digital_Systems_Design_B02G1/Lab_2/tb_mux.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Github/Digital_Systems_Design_B02G1/Lab_2/tb_mux.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_mux
+-- Compiling architecture behavior of tb_mux
+
+} {} {}} C:/Github/Digital_Systems_Design_B02G1/Lab_2/Simulation/test_ADC.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Github/Digital_Systems_Design_B02G1/Lab_2/Simulation/test_ADC.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity test_DE10_Lite
 -- Compiling architecture behavior of test_DE10_Lite
+
+} {} {}} C:/Github/Digital_Systems_Design_B02G1/Lab_2/registers.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Github/Digital_Systems_Design_B02G1/Lab_2/registers.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity registers
+-- Compiling architecture rtl of registers
+
+} {} {}} C:/Github/Digital_Systems_Design_B02G1/Lab_2/SevenSegment.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Github/Digital_Systems_Design_B02G1/Lab_2/SevenSegment.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity SevenSegment
+-- Compiling architecture Behavioral of SevenSegment
+
+} {} {}} C:/Github/Digital_Systems_Design_B02G1/Lab_2/averager.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Github/Digital_Systems_Design_B02G1/Lab_2/averager.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity averager
+-- Compiling architecture rtl of averager
+
+} {} {}} C:/Github/Digital_Systems_Design_B02G1/Lab_2/binary_bcd.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Github/Digital_Systems_Design_B02G1/Lab_2/binary_bcd.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity binary_bcd
+-- Compiling architecture behavior of binary_bcd
+
+} {} {}} C:/Github/Digital_Systems_Design_B02G1/Lab_2/SevenSegment_decoder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Github/Digital_Systems_Design_B02G1/Lab_2/SevenSegment_decoder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity SevenSegment_decoder
+-- Compiling architecture Behavioral of SevenSegment_decoder
+
+} {} {}} C:/Github/Digital_Systems_Design_B02G1/Lab_2/mux.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Github/Digital_Systems_Design_B02G1/Lab_2/mux.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Mux_for_Averager
+-- Compiling architecture Mux_Behaviour of Mux_for_Averager
+
+} {} {}} C:/Github/Digital_Systems_Design_B02G1/Lab_2/voltmeter.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Github/Digital_Systems_Design_B02G1/Lab_2/voltmeter.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Voltmeter
+-- Compiling architecture Behavioral of Voltmeter
 
 } {} {}}

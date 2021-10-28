@@ -12,13 +12,16 @@ ARCHITECTURE behavior OF tb_prelab IS
     PORT(
            clk                           : in  STD_LOGIC;
            reset                         : in  STD_LOGIC;
-           LEDR                          : out STD_LOGIC_VECTOR (9 downto 0);
+           Switch								: in  STD_LOGIC;
+			  LEDR                          : out STD_LOGIC_VECTOR (9 downto 0);
            HEX0,HEX1,HEX2,HEX3,HEX4,HEX5 : out STD_LOGIC_VECTOR (7 downto 0)
     );
     END COMPONENT;
     
     --Inputs
     signal clk : STD_LOGIC;
+	 
+	 signal switch: STD_LOGIC;
     
 	
     --Clock
@@ -37,6 +40,7 @@ ARCHITECTURE behavior OF tb_prelab IS
     uut: Voltmeter PORT MAP (
         clk => clk,
         reset => reset,
+		  Switch => switch,
 		  LEDR => LEDR,
 		  HEX0 => HEX0,
 		  HEX1 => HEX1,
@@ -61,8 +65,16 @@ ARCHITECTURE behavior OF tb_prelab IS
     begin
 	 
 		reset<= '1';
+		switch<='1';
 		wait for 91ns;
 		reset<= '0';
+		switch<='1';
+		wait for 900000ns;
+		reset<= '1';
+		switch<='0';
+		wait for 91ns;
+		reset<= '0';
+		switch<='0';
 		wait for 900000ns;
     end process;
 
