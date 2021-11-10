@@ -8,26 +8,27 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/Ya/Documents/Lab1/Simulation
+dC:/intelFPGA_lite/20.1
 Eaverager
-Z0 w1634841769
-Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z0 w1636332290
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z4 dC:/Github/Digital_Systems_Design_B02G1/Lab_2/ModelSIM
-Z5 8C:/Github/Digital_Systems_Design_B02G1/Lab_2/averager.vhd
-Z6 FC:/Github/Digital_Systems_Design_B02G1/Lab_2/averager.vhd
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 33
+Z4 dD:/Digital_Systems_Design_B02G1/Lab_3/ModelSIM
+Z5 8D:/Digital_Systems_Design_B02G1/Lab_3/averager.vhd
+Z6 FD:/Digital_Systems_Design_B02G1/Lab_3/averager.vhd
 l0
-L6
+L6 1
 VB8:2CDW`BR7l1OCmU>8;70
 !s100 SD0FhjE;VVh:AY`^Mm8L61
-Z7 OV;C;10.5b;63
+Z7 OV;C;2020.1;71
 32
-Z8 !s110 1634857065
+Z8 !s110 1636558766
 !i10b 1
-Z9 !s108 1634857065.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Github/Digital_Systems_Design_B02G1/Lab_2/averager.vhd|
-Z11 !s107 C:/Github/Digital_Systems_Design_B02G1/Lab_2/averager.vhd|
+Z9 !s108 1636558766.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/averager.vhd|
+Z11 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/averager.vhd|
 !i113 1
 Z12 o-work work -2002 -explicit
 Z13 tExplicit 1 CvgOpt 0
@@ -36,8 +37,9 @@ R1
 R2
 R3
 DEx4 work 8 averager 0 22 B8:2CDW`BR7l1OCmU>8;70
+!i122 33
 l21
-L15
+L15 73
 VG;7@I7_amaWiWHS^mKDW43
 !s100 YnXhfMY^K8AFmglKzVX2T2
 R7
@@ -51,24 +53,25 @@ R11
 R12
 R13
 Ebinary_bcd
-R0
+Z14 w1636508856
 R1
 R2
 R3
+!i122 34
 R4
-Z14 8C:/Github/Digital_Systems_Design_B02G1/Lab_2/binary_bcd.vhd
-Z15 FC:/Github/Digital_Systems_Design_B02G1/Lab_2/binary_bcd.vhd
+Z15 8D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd
+Z16 FD:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd
 l0
-L8
+L8 1
 Vo<z`d6o]a?hb2:1^mkKIJ0
 !s100 Ai7<aVU>PmVj]f3eOfUVA0
 R7
 32
-Z16 !s110 1634857066
+R8
 !i10b 1
 R9
-Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Github/Digital_Systems_Design_B02G1/Lab_2/binary_bcd.vhd|
-Z18 !s107 C:/Github/Digital_Systems_Design_B02G1/Lab_2/binary_bcd.vhd|
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd|
+Z18 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd|
 !i113 1
 R12
 R13
@@ -77,13 +80,14 @@ R1
 R2
 R3
 DEx4 work 10 binary_bcd 0 22 o<z`d6o]a?hb2:1^mkKIJ0
-l30
-L19
-VD;;?JKhcFn293?b44B]hE0
-!s100 VS>UdhPb1_VAG?=`hPclj3
+!i122 34
+l31
+L19 85
+VCm=L^I0[hH<[M[BVnMn0;2
+!s100 `?=:K<UDbY9z]iIFDCWBR2
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -91,81 +95,130 @@ R18
 !i113 1
 R12
 R13
-Eregisters
+Emux_for_averager
 R0
+R1
 R2
 R3
+!i122 35
 R4
-Z19 8C:/Github/Digital_Systems_Design_B02G1/Lab_2/registers.vhd
-Z20 FC:/Github/Digital_Systems_Design_B02G1/Lab_2/registers.vhd
+Z19 8D:/Digital_Systems_Design_B02G1/Lab_3/mux.vhd
+Z20 FD:/Digital_Systems_Design_B02G1/Lab_3/mux.vhd
 l0
-L4
-Voi=cDXg^hG:lDnFXRmWGZ3
-!s100 QTc_J_@loN^G6JbG4TBe_1
+L5 1
+VAPQ>^ZhXfPm=PS6_Cn]kO1
+!s100 4`zU@ih]XzU55IC[AJa3>0
 R7
 32
-R16
+R8
 !i10b 1
-Z21 !s108 1634857066.000000
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Github/Digital_Systems_Design_B02G1/Lab_2/registers.vhd|
-Z23 !s107 C:/Github/Digital_Systems_Design_B02G1/Lab_2/registers.vhd|
+R9
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/mux.vhd|
+Z22 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/mux.vhd|
+!i113 1
+R12
+R13
+Amux_behaviour
+R1
+R2
+R3
+DEx4 work 16 mux_for_averager 0 22 APQ>^ZhXfPm=PS6_Cn]kO1
+!i122 35
+l15
+L14 11
+VEBI5]KBo`1[>ZWZS`zPAU0
+!s100 k5NeoM0KX^NNRMRj0K1=c2
+R7
+32
+R8
+!i10b 1
+R9
+R21
+R22
+!i113 1
+R12
+R13
+Eregisters
+Z23 w1636506042
+R2
+R3
+!i122 36
+R4
+Z24 8D:/Digital_Systems_Design_B02G1/Lab_3/registers.vhd
+Z25 FD:/Digital_Systems_Design_B02G1/Lab_3/registers.vhd
+l0
+L8 1
+V37Niic37K>kneni2Cbf3K1
+!s100 bm`kcHBjM6i8>lziT4>?;0
+R7
+32
+Z26 !s110 1636558767
+!i10b 1
+R9
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/registers.vhd|
+Z28 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/registers.vhd|
 !i113 1
 R12
 R13
 Artl
 R2
 R3
-DEx4 work 9 registers 0 22 oi=cDXg^hG:lDnFXRmWGZ3
-l18
-L17
-VPekQcjKOj2ehDXIQNC9^91
-!s100 3^K2_j=ic2=an>bR28X3Y2
+DEx4 work 9 registers 0 22 37Niic37K>kneni2Cbf3K1
+!i122 36
+l22
+L21 15
+VWSUB]SQTTiZ0H?i0WQ8:D0
+!s100 Hi6049GQ3`ogRBj=EW<=>3
 R7
 32
-R16
+R26
 !i10b 1
-R21
-R22
-R23
+R9
+R27
+R28
 !i113 1
 R12
 R13
 Esevensegment
-R0
+Z29 w1636558472
+Z30 DPx4 work 20 typesforsevensegment 0 22 =`HJ;K_A`l9CLFT2P=J`J0
 R2
 R3
+!i122 37
 R4
-Z24 8C:/Github/Digital_Systems_Design_B02G1/Lab_2/SevenSegment.vhd
-Z25 FC:/Github/Digital_Systems_Design_B02G1/Lab_2/SevenSegment.vhd
+Z31 8D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment.vhd
+Z32 FD:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment.vhd
 l0
-L5
-VFQL0l=JL^=MaiIUn`WdFb1
-!s100 FAQQnV:QmAocX2NB>i[z<3
+L6 1
+VZc_=_azM1iC_33]4=:7R@1
+!s100 7P?6Bk@3=V?LPc?hYD;KR1
 R7
 32
-R16
+R26
 !i10b 1
-R21
-Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Github/Digital_Systems_Design_B02G1/Lab_2/SevenSegment.vhd|
-Z27 !s107 C:/Github/Digital_Systems_Design_B02G1/Lab_2/SevenSegment.vhd|
+Z33 !s108 1636558767.000000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment.vhd|
+Z35 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment.vhd|
 !i113 1
 R12
 R13
 Abehavioral
+R30
 R2
 R3
-DEx4 work 12 sevensegment 0 22 FQL0l=JL^=MaiIUn`WdFb1
-l20
-L11
-V2F^Fcf9gjzodgkg_]691i2
-!s100 RiGS?:ZGQAlZ5UmR<S:Kz0
+DEx4 work 12 sevensegment 0 22 Zc_=_azM1iC_33]4=:7R@1
+!i122 37
+l27
+L14 65
+V43_VHmlVb9b<=94jb1DZl0
+!s100 m=i<ooi]Fka3EaL9KeQGe2
 R7
 32
-R16
-!i10b 1
-R21
 R26
-R27
+!i10b 1
+R33
+R34
+R35
 !i113 1
 R12
 R13
@@ -173,20 +226,21 @@ Esevensegment_decoder
 R0
 R2
 R3
+!i122 38
 R4
-Z28 8C:/Github/Digital_Systems_Design_B02G1/Lab_2/SevenSegment_decoder.vhd
-Z29 FC:/Github/Digital_Systems_Design_B02G1/Lab_2/SevenSegment_decoder.vhd
+Z36 8D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment_decoder.vhd
+Z37 FD:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment_decoder.vhd
 l0
-L5
+L5 1
 VVlW=l2M0eeEbg:dCz4:;@0
 !s100 nVLN]dm0afJ4i1K[@D_Do2
 R7
 32
-R16
+R26
 !i10b 1
-R21
-Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Github/Digital_Systems_Design_B02G1/Lab_2/SevenSegment_decoder.vhd|
-Z31 !s107 C:/Github/Digital_Systems_Design_B02G1/Lab_2/SevenSegment_decoder.vhd|
+R33
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment_decoder.vhd|
+Z39 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment_decoder.vhd|
 !i113 1
 R12
 R13
@@ -194,160 +248,188 @@ Abehavioral
 R2
 R3
 DEx4 work 20 sevensegment_decoder 0 22 VlW=l2M0eeEbg:dCz4:;@0
+!i122 38
 l14
-L13
+L13 29
 VC?9QIg:<Nc@7LA^50J:Ca0
 !s100 G[]U9WTmdjCPQ770:^Jn=3
 R7
 32
-R16
+R26
 !i10b 1
-R21
-R30
-R31
-!i113 1
-R12
-R13
-Etb_de10_lite
-Z32 w1634847088
-Z33 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-R2
-Z34 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 21
-Z35 dC:/Users/Ya/Desktop/Digital_Systems_Design_B02G1/Lab_2/ModelSIM
-Z36 8C:/Users/Ya/Desktop/Digital_Systems_Design_B02G1/Lab_2/Simulation/tb_ADC.vhd
-Z37 FC:/Users/Ya/Desktop/Digital_Systems_Design_B02G1/Lab_2/Simulation/tb_ADC.vhd
-l0
-L6 1
-VY5]65D9X8mPJOGE=9abzX2
-!s100 KkUeQ_Fa5[ZANn=i;=dOX1
-Z38 OV;C;2020.1;71
-32
-Z39 !s110 1634852386
-!i10b 1
-Z40 !s108 1634852386.000000
-Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ya/Desktop/Digital_Systems_Design_B02G1/Lab_2/Simulation/tb_ADC.vhd|
-Z42 !s107 C:/Users/Ya/Desktop/Digital_Systems_Design_B02G1/Lab_2/Simulation/tb_ADC.vhd|
-!i113 1
-R12
-R13
-Abehavioral
 R33
-R2
-R34
-DEx4 work 12 tb_de10_lite 0 22 Y5]65D9X8mPJOGE=9abzX2
-!i122 21
-l23
-L9 32
-V=h4ER@b@CEj4L2DPQ8e`m3
-!s100 flNeMVWed_Qj52F]ENMcd0
 R38
-32
 R39
+!i113 1
+R12
+R13
+Etb_mux
+Z40 w1636332292
+R2
+R3
+!i122 39
+R4
+Z41 8D:/Digital_Systems_Design_B02G1/Lab_3/tb_mux.vhd
+Z42 FD:/Digital_Systems_Design_B02G1/Lab_3/tb_mux.vhd
+l0
+L5 1
+VFeSmOM[XiEU11@f7?i;dd1
+!s100 @hDSL4UPXzH[L_RGCVOcE1
+R7
+32
+R26
 !i10b 1
-R40
-R41
-R42
+R33
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/tb_mux.vhd|
+Z44 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/tb_mux.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R2
+R3
+DEx4 work 6 tb_mux 0 22 FeSmOM[XiEU11@f7?i;dd1
+!i122 39
+l26
+L8 60
+V=ai:3@OO633FFQ?4?d42Z2
+!s100 lJPOn>z16E8Q@c7_?@A1N2
+R7
+32
+R26
+!i10b 1
+R33
+R43
+R44
 !i113 1
 R12
 R13
 Etb_prelab
-Z43 w1634858377
+R0
 R2
 R3
+!i122 32
 R4
-Z44 8C:\Github\Digital_Systems_Design_B02G1\Lab_2\Simulation\tb_prelab.vhd
-Z45 FC:\Github\Digital_Systems_Design_B02G1\Lab_2\Simulation\tb_prelab.vhd
+Z45 8D:/Digital_Systems_Design_B02G1/Lab_3/Simulation/tb_prelab.vhd
+Z46 FD:/Digital_Systems_Design_B02G1/Lab_3/Simulation/tb_prelab.vhd
 l0
-L4
+L4 1
 V0=ECP@hAd5X8Y>i>3jIa>0
 !s100 9TMG8<nD`<bVi9dCTDI`P0
 R7
 32
-Z46 !s110 1634858383
+Z47 !s110 1636558765
 !i10b 1
-Z47 !s108 1634858383.000000
-Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Github\Digital_Systems_Design_B02G1\Lab_2\Simulation\tb_prelab.vhd|
-Z49 !s107 C:\Github\Digital_Systems_Design_B02G1\Lab_2\Simulation\tb_prelab.vhd|
+Z48 !s108 1636558765.000000
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/Simulation/tb_prelab.vhd|
+Z50 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/Simulation/tb_prelab.vhd|
 !i113 1
 R12
 R13
 Abehavior
 R2
 R3
-Z50 DEx4 work 9 tb_prelab 0 22 0=ECP@hAd5X8Y>i>3jIa>0
-l35
-L7
-VQB`lFoVa3e6QWZ3Legb<Q1
-!s100 b1[Nk:1GFd=L=OW3Q`HMP0
+DEx4 work 9 tb_prelab 0 22 0=ECP@hAd5X8Y>i>3jIa>0
+!i122 32
+l38
+L7 76
+Vohg6TfbF@XYjLc`<ZLbN;1
+!s100 jZRc_V7BGfMVPU:]TnTKc2
 R7
 32
-R46
-!i10b 1
 R47
+!i10b 1
 R48
 R49
+R50
 !i113 1
 R12
 R13
-Etest_de10_lite
-Z51 w1634856686
+Ptypesforsevensegment
 R2
 R3
+!i122 40
+w1636334478
 R4
-Z52 8C:/Github/Digital_Systems_Design_B02G1/Lab_2/Simulation/test_ADC.vhd
-Z53 FC:/Github/Digital_Systems_Design_B02G1/Lab_2/Simulation/test_ADC.vhd
+8D:/Digital_Systems_Design_B02G1/Lab_3/typesforsevensegment.vhd
+FD:/Digital_Systems_Design_B02G1/Lab_3/typesforsevensegment.vhd
 l0
-L6
-VV@Q5GZFH]EZ[NWnbbL5E<1
-!s100 72N:e;ZbWmel4[3]E_PHT0
+L4 1
+V=`HJ;K_A`l9CLFT2P=J`J0
+!s100 K4TzEJKOV7;dBe_0W<EBM1
 R7
 32
-R16
+Z51 !s110 1636558768
 !i10b 1
-R21
-Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Github/Digital_Systems_Design_B02G1/Lab_2/Simulation/test_ADC.vhd|
-Z55 !s107 C:/Github/Digital_Systems_Design_B02G1/Lab_2/Simulation/test_ADC.vhd|
+R33
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/typesforsevensegment.vhd|
+!s107 D:/Digital_Systems_Design_B02G1/Lab_3/typesforsevensegment.vhd|
+!i113 1
+R12
+R13
+Evoltage2distance
+R40
+R1
+R2
+R3
+!i122 41
+R4
+Z52 8D:/Digital_Systems_Design_B02G1/Lab_3/voltage2distance.vhd
+Z53 FD:/Digital_Systems_Design_B02G1/Lab_3/voltage2distance.vhd
+l0
+L24 1
+VfL]0H:>Wh9PbQDnGnld?c2
+!s100 >O^l<??9^SUPcE>=h0gaY3
+R7
+32
+R51
+!i10b 1
+Z54 !s108 1636558768.000000
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/voltage2distance.vhd|
+Z56 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/voltage2distance.vhd|
 !i113 1
 R12
 R13
 Abehavior
+R1
 R2
 R3
-DEx4 work 14 test_de10_lite 0 22 V@Q5GZFH]EZ[NWnbbL5E<1
-l15
-L12
-VA8<BNdU5n;R9o1]o8No]E3
-!s100 FeHTfnb>k6a0V3LN0cg8b1
+DEx4 work 16 voltage2distance 0 22 fL]0H:>Wh9PbQDnGnld?c2
+!i122 41
+l4143
+L32 4119
+V8[1n9[m1cD2ged5^O5z6z3
+!s100 GjKPL5;e>lB5zkog_@IKn1
 R7
 32
-R16
+R51
 !i10b 1
-R21
 R54
 R55
+R56
 !i113 1
 R12
 R13
 Evoltmeter
-Z56 w1634856957
+R40
 R1
 R2
 R3
+!i122 42
 R4
-Z57 8C:/Github/Digital_Systems_Design_B02G1/Lab_2/voltmeter.vhd
-Z58 FC:/Github/Digital_Systems_Design_B02G1/Lab_2/voltmeter.vhd
+Z57 8D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd
+Z58 FD:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd
 l0
-L5
-VNZkE0hY4AP^OFJSP;WEYD0
-!s100 GJ3:Hl@R15mIU9dYP58e>0
+L5 1
+VmSDRZN0mo:>dP>MNFk^5C3
+!s100 6??^e2<NkN?f[b?o<mF1D0
 R7
 32
-R16
+R51
 !i10b 1
-R21
-Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Github/Digital_Systems_Design_B02G1/Lab_2/voltmeter.vhd|
-Z60 !s107 C:/Github/Digital_Systems_Design_B02G1/Lab_2/voltmeter.vhd|
+R54
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd|
+Z60 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd|
 !i113 1
 R12
 R13
@@ -355,16 +437,17 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 9 voltmeter 0 22 NZkE0hY4AP^OFJSP;WEYD0
-l71
-L14
-VgTaO<GH[fB6^?90LeP]o<0
-!s100 O9CA@;`^I5BA^CTPADn3W2
+Z61 DEx4 work 9 voltmeter 0 22 mSDRZN0mo:>dP>MNFk^5C3
+!i122 42
+l82
+Z62 L15 175
+Z63 Vgh;ieUjb==L6S;h;S<<4M0
+Z64 !s100 [HHb7EMGiEKLV@6`hz?jK3
 R7
 32
-R16
+R51
 !i10b 1
-R21
+R54
 R59
 R60
 !i113 1

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Voltmeter
-Tue Nov 09 18:41:29 2021
+Wed Nov 10 08:49:13 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -100,7 +100,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 09 18:41:29 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 10 08:49:13 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Voltmeter                                   ;
 ; Top-level Entity Name              ; Voltmeter                                   ;
@@ -380,20 +380,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |Voltmeter|binary_bcd:binary_bcd_ins|CurentState                                                                                       ;
-+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
-; Name           ; CurentState.S0 ; CurentState.s6 ; CurentState.S5 ; CurentState.S4 ; CurentState.S3 ; CurentState.S2 ; CurentState.S1 ; CurentState.s7 ;
-+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
-; CurentState.s7 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ;
-; CurentState.S1 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 1              ;
-; CurentState.S2 ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 1              ;
-; CurentState.S3 ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 1              ;
-; CurentState.S4 ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 1              ;
-; CurentState.S5 ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; CurentState.s6 ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; CurentState.S0 ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Voltmeter|binary_bcd:binary_bcd_ins|CurentState                                                                                      ;
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+
+; Name           ; CurentState.S0 ; CurentState.s6 ; CurentState.S5 ; CurentState.S4 ; CurentState.S3 ; CurentState.S2 ; CurentState.S1 ; CurentState.r ;
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+
+; CurentState.r  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ;
+; CurentState.S1 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 1             ;
+; CurentState.S2 ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 1             ;
+; CurentState.S3 ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 1             ;
+; CurentState.S4 ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 1             ;
+; CurentState.S5 ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 1             ;
+; CurentState.s6 ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1             ;
+; CurentState.S0 ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1             ;
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+
 
 
 Encoding Type:  One-Hot
@@ -1498,7 +1498,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -1508,7 +1508,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 09 18:40:58 2021
+    Info: Processing started: Wed Nov 10 08:48:09 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LAB3_ABRINI_DAWOOD_MUJTABA -c Voltmeter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1767,103 +1767,103 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[12] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[13] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[14] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[15] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[8] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[9] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[10] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[11] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[4] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[5] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[6] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[7] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[0] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[1] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[2] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[3] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[25] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
     Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|bcd_signal[24] File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[1] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[0] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[3] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[4] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[5] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[6] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[7] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[8] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[9] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[10] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[11] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[12] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[13] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[14] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[15] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[16] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[17] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[18] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[19] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[20] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[21] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[22] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[23] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[24] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[25] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[26] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[27] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[28] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[29] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[30] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[31] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[2] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s7 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[26] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
     Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|bcd_signal[25] File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[27] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
@@ -2104,10 +2104,10 @@ Info (21057): Implemented 978 device resources after synthesis - the final resou
     Info (21061): Implemented 915 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 367 warnings
-    Info: Peak virtual memory: 4812 megabytes
-    Info: Processing ended: Tue Nov 09 18:41:29 2021
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:43
+    Info: Peak virtual memory: 4827 megabytes
+    Info: Processing ended: Wed Nov 10 08:49:14 2021
+    Info: Elapsed time: 00:01:05
+    Info: Total CPU time (on all processors): 00:00:50
 
 
 +------------------------------------------+

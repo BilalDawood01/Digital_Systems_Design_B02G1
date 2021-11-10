@@ -1,7 +1,7 @@
 
 State Machine - |Voltmeter|binary_bcd:binary_bcd_ins|CurentState
-Name CurentState.S0 CurentState.s6 CurentState.S5 CurentState.S4 CurentState.S3 CurentState.S2 CurentState.S1 CurentState.s7 
-CurentState.s7 0 0 0 0 0 0 0 0 
+Name CurentState.S0 CurentState.s6 CurentState.S5 CurentState.S4 CurentState.S3 CurentState.S2 CurentState.S1 CurentState.r 
+CurentState.r 0 0 0 0 0 0 0 0 
 CurentState.S1 0 0 0 0 0 0 1 1 
 CurentState.S2 0 0 0 0 0 1 0 1 
 CurentState.S3 0 0 0 0 1 0 0 1 
