@@ -1,7 +1,3 @@
--- The Problem with the Reset: As the if structure indicates an asynchronous reset (i.e.
--- "if reset = '1'" without needing a rising edge), there needs to be a reset
--- in the sensitivity list for the process.
-
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -21,7 +17,7 @@ end entity;
 architecture rtl of registers is
 begin
 
-   process (clk, reset)
+   process (clk)
    begin
       if reset = '1' then
 		   q_outputs <= (others=>'0');
