@@ -10,11 +10,11 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/20.1
 Eaverager
-Z0 w1636332290
+Z0 w1636650284
 Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 33
+!i122 165
 Z4 dD:/Digital_Systems_Design_B02G1/Lab_3/ModelSIM
 Z5 8D:/Digital_Systems_Design_B02G1/Lab_3/averager.vhd
 Z6 FD:/Digital_Systems_Design_B02G1/Lab_3/averager.vhd
@@ -24,9 +24,9 @@ VB8:2CDW`BR7l1OCmU>8;70
 !s100 SD0FhjE;VVh:AY`^Mm8L61
 Z7 OV;C;2020.1;71
 32
-Z8 !s110 1636558766
+Z8 !s110 1636671930
 !i10b 1
-Z9 !s108 1636558766.000000
+Z9 !s108 1636671930.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/averager.vhd|
 Z11 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/averager.vhd|
 !i113 1
@@ -37,7 +37,7 @@ R1
 R2
 R3
 DEx4 work 8 averager 0 22 B8:2CDW`BR7l1OCmU>8;70
-!i122 33
+!i122 165
 l21
 L15 73
 VG;7@I7_amaWiWHS^mKDW43
@@ -53,11 +53,11 @@ R11
 R12
 R13
 Ebinary_bcd
-Z14 w1636508856
+Z14 w1636671684
 R1
 R2
 R3
-!i122 34
+!i122 166
 R4
 Z15 8D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd
 Z16 FD:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd
@@ -80,11 +80,11 @@ R1
 R2
 R3
 DEx4 work 10 binary_bcd 0 22 o<z`d6o]a?hb2:1^mkKIJ0
-!i122 34
+!i122 166
 l31
-L19 85
-VCm=L^I0[hH<[M[BVnMn0;2
-!s100 `?=:K<UDbY9z]iIFDCWBR2
+L19 153
+VaZ1g7KGe;>`?F;BQ5jk[A1
+!s100 9I;AClD>Z^@Nbn?=C=KUm1
 R7
 32
 R8
@@ -96,14 +96,14 @@ R18
 R12
 R13
 Emux_for_averager
-R0
+Z19 w1636332290
 R1
 R2
 R3
-!i122 35
+!i122 167
 R4
-Z19 8D:/Digital_Systems_Design_B02G1/Lab_3/mux.vhd
-Z20 FD:/Digital_Systems_Design_B02G1/Lab_3/mux.vhd
+Z20 8D:/Digital_Systems_Design_B02G1/Lab_3/mux.vhd
+Z21 FD:/Digital_Systems_Design_B02G1/Lab_3/mux.vhd
 l0
 L5 1
 VAPQ>^ZhXfPm=PS6_Cn]kO1
@@ -113,8 +113,8 @@ R7
 R8
 !i10b 1
 R9
-Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/mux.vhd|
-Z22 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/mux.vhd|
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/mux.vhd|
+Z23 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/mux.vhd|
 !i113 1
 R12
 R13
@@ -123,7 +123,7 @@ R1
 R2
 R3
 DEx4 work 16 mux_for_averager 0 22 APQ>^ZhXfPm=PS6_Cn]kO1
-!i122 35
+!i122 167
 l15
 L14 11
 VEBI5]KBo`1[>ZWZS`zPAU0
@@ -133,30 +133,30 @@ R7
 R8
 !i10b 1
 R9
-R21
 R22
+R23
 !i113 1
 R12
 R13
 Eregisters
-Z23 w1636506042
+Z24 w1636506042
 R2
 R3
-!i122 36
+!i122 168
 R4
-Z24 8D:/Digital_Systems_Design_B02G1/Lab_3/registers.vhd
-Z25 FD:/Digital_Systems_Design_B02G1/Lab_3/registers.vhd
+Z25 8D:/Digital_Systems_Design_B02G1/Lab_3/registers.vhd
+Z26 FD:/Digital_Systems_Design_B02G1/Lab_3/registers.vhd
 l0
 L8 1
 V37Niic37K>kneni2Cbf3K1
 !s100 bm`kcHBjM6i8>lziT4>?;0
 R7
 32
-Z26 !s110 1636558767
+Z27 !s110 1636671931
 !i10b 1
 R9
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/registers.vhd|
-Z28 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/registers.vhd|
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/registers.vhd|
+Z29 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/registers.vhd|
 !i113 1
 R12
 R13
@@ -164,83 +164,83 @@ Artl
 R2
 R3
 DEx4 work 9 registers 0 22 37Niic37K>kneni2Cbf3K1
-!i122 36
+!i122 168
 l22
 L21 15
 VWSUB]SQTTiZ0H?i0WQ8:D0
 !s100 Hi6049GQ3`ogRBj=EW<=>3
 R7
 32
-R26
+R27
 !i10b 1
 R9
-R27
 R28
+R29
 !i113 1
 R12
 R13
 Esevensegment
-Z29 w1636558472
-Z30 DPx4 work 20 typesforsevensegment 0 22 =`HJ;K_A`l9CLFT2P=J`J0
+Z30 w1636671858
+Z31 DPx4 work 20 typesforsevensegment 0 22 =`HJ;K_A`l9CLFT2P=J`J0
 R2
 R3
-!i122 37
+!i122 169
 R4
-Z31 8D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment.vhd
-Z32 FD:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment.vhd
+Z32 8D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment.vhd
+Z33 FD:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment.vhd
 l0
 L6 1
 VZc_=_azM1iC_33]4=:7R@1
 !s100 7P?6Bk@3=V?LPc?hYD;KR1
 R7
 32
-R26
+R27
 !i10b 1
-Z33 !s108 1636558767.000000
-Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment.vhd|
-Z35 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment.vhd|
+Z34 !s108 1636671931.000000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment.vhd|
+Z36 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment.vhd|
 !i113 1
 R12
 R13
 Abehavioral
-R30
+R31
 R2
 R3
 DEx4 work 12 sevensegment 0 22 Zc_=_azM1iC_33]4=:7R@1
-!i122 37
+!i122 169
 l27
 L14 65
-V43_VHmlVb9b<=94jb1DZl0
-!s100 m=i<ooi]Fka3EaL9KeQGe2
+VLQ@hN8if_D6k^YVKVUnYe1
+!s100 XZ6jWA@XQbOR^@;HNi1G13
 R7
 32
-R26
+R27
 !i10b 1
-R33
 R34
 R35
+R36
 !i113 1
 R12
 R13
 Esevensegment_decoder
-R0
+R19
 R2
 R3
-!i122 38
+!i122 170
 R4
-Z36 8D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment_decoder.vhd
-Z37 FD:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment_decoder.vhd
+Z37 8D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment_decoder.vhd
+Z38 FD:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment_decoder.vhd
 l0
 L5 1
 VVlW=l2M0eeEbg:dCz4:;@0
 !s100 nVLN]dm0afJ4i1K[@D_Do2
 R7
 32
-R26
+R27
 !i10b 1
-R33
-Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment_decoder.vhd|
-Z39 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment_decoder.vhd|
+R34
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment_decoder.vhd|
+Z40 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/SevenSegment_decoder.vhd|
 !i113 1
 R12
 R13
@@ -248,40 +248,40 @@ Abehavioral
 R2
 R3
 DEx4 work 20 sevensegment_decoder 0 22 VlW=l2M0eeEbg:dCz4:;@0
-!i122 38
+!i122 170
 l14
 L13 29
 VC?9QIg:<Nc@7LA^50J:Ca0
 !s100 G[]U9WTmdjCPQ770:^Jn=3
 R7
 32
-R26
+R27
 !i10b 1
-R33
-R38
+R34
 R39
+R40
 !i113 1
 R12
 R13
 Etb_mux
-Z40 w1636332292
+Z41 w1636332292
 R2
 R3
-!i122 39
+!i122 171
 R4
-Z41 8D:/Digital_Systems_Design_B02G1/Lab_3/tb_mux.vhd
-Z42 FD:/Digital_Systems_Design_B02G1/Lab_3/tb_mux.vhd
+Z42 8D:/Digital_Systems_Design_B02G1/Lab_3/tb_mux.vhd
+Z43 FD:/Digital_Systems_Design_B02G1/Lab_3/tb_mux.vhd
 l0
 L5 1
 VFeSmOM[XiEU11@f7?i;dd1
 !s100 @hDSL4UPXzH[L_RGCVOcE1
 R7
 32
-R26
+R27
 !i10b 1
-R33
-Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/tb_mux.vhd|
-Z44 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/tb_mux.vhd|
+R34
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/tb_mux.vhd|
+Z45 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/tb_mux.vhd|
 !i113 1
 R12
 R13
@@ -289,40 +289,40 @@ Abehavior
 R2
 R3
 DEx4 work 6 tb_mux 0 22 FeSmOM[XiEU11@f7?i;dd1
-!i122 39
+!i122 171
 l26
 L8 60
 V=ai:3@OO633FFQ?4?d42Z2
 !s100 lJPOn>z16E8Q@c7_?@A1N2
 R7
 32
-R26
+R27
 !i10b 1
-R33
-R43
+R34
 R44
+R45
 !i113 1
 R12
 R13
 Etb_prelab
-R0
+Z46 w1636670900
 R2
 R3
-!i122 32
+!i122 164
 R4
-Z45 8D:/Digital_Systems_Design_B02G1/Lab_3/Simulation/tb_prelab.vhd
-Z46 FD:/Digital_Systems_Design_B02G1/Lab_3/Simulation/tb_prelab.vhd
+Z47 8D:/Digital_Systems_Design_B02G1/Lab_3/Simulation/tb_prelab.vhd
+Z48 FD:/Digital_Systems_Design_B02G1/Lab_3/Simulation/tb_prelab.vhd
 l0
 L4 1
 V0=ECP@hAd5X8Y>i>3jIa>0
 !s100 9TMG8<nD`<bVi9dCTDI`P0
 R7
 32
-Z47 !s110 1636558765
+R8
 !i10b 1
-Z48 !s108 1636558765.000000
-Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/Simulation/tb_prelab.vhd|
-Z50 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/Simulation/tb_prelab.vhd|
+Z49 !s108 1636671929.000000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/Simulation/tb_prelab.vhd|
+Z51 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/Simulation/tb_prelab.vhd|
 !i113 1
 R12
 R13
@@ -330,25 +330,25 @@ Abehavior
 R2
 R3
 DEx4 work 9 tb_prelab 0 22 0=ECP@hAd5X8Y>i>3jIa>0
-!i122 32
+!i122 164
 l38
 L7 76
 Vohg6TfbF@XYjLc`<ZLbN;1
 !s100 jZRc_V7BGfMVPU:]TnTKc2
 R7
 32
-R47
+R8
 !i10b 1
-R48
 R49
 R50
+R51
 !i113 1
 R12
 R13
 Ptypesforsevensegment
 R2
 R3
-!i122 40
+!i122 172
 w1636334478
 R4
 8D:/Digital_Systems_Design_B02G1/Lab_3/typesforsevensegment.vhd
@@ -359,20 +359,20 @@ V=`HJ;K_A`l9CLFT2P=J`J0
 !s100 K4TzEJKOV7;dBe_0W<EBM1
 R7
 32
-Z51 !s110 1636558768
+R27
 !i10b 1
-R33
+R34
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/typesforsevensegment.vhd|
 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/typesforsevensegment.vhd|
 !i113 1
 R12
 R13
 Evoltage2distance
-R40
+R41
 R1
 R2
 R3
-!i122 41
+!i122 173
 R4
 Z52 8D:/Digital_Systems_Design_B02G1/Lab_3/voltage2distance.vhd
 Z53 FD:/Digital_Systems_Design_B02G1/Lab_3/voltage2distance.vhd
@@ -382,9 +382,9 @@ VfL]0H:>Wh9PbQDnGnld?c2
 !s100 >O^l<??9^SUPcE>=h0gaY3
 R7
 32
-R51
+Z54 !s110 1636671932
 !i10b 1
-Z54 !s108 1636558768.000000
+R34
 Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/voltage2distance.vhd|
 Z56 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/voltage2distance.vhd|
 !i113 1
@@ -395,41 +395,41 @@ R1
 R2
 R3
 DEx4 work 16 voltage2distance 0 22 fL]0H:>Wh9PbQDnGnld?c2
-!i122 41
+!i122 173
 l4143
 L32 4119
 V8[1n9[m1cD2ged5^O5z6z3
 !s100 GjKPL5;e>lB5zkog_@IKn1
 R7
 32
-R51
-!i10b 1
 R54
+!i10b 1
+R34
 R55
 R56
 !i113 1
 R12
 R13
 Evoltmeter
-R40
+Z57 w1636648230
 R1
 R2
 R3
-!i122 42
+!i122 174
 R4
-Z57 8D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd
-Z58 FD:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd
+Z58 8D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd
+Z59 FD:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd
 l0
 L5 1
 VmSDRZN0mo:>dP>MNFk^5C3
 !s100 6??^e2<NkN?f[b?o<mF1D0
 R7
 32
-R51
-!i10b 1
 R54
-Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd|
-Z60 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd|
+!i10b 1
+Z60 !s108 1636671932.000000
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd|
+Z62 !s107 D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd|
 !i113 1
 R12
 R13
@@ -437,19 +437,19 @@ Abehavioral
 R1
 R2
 R3
-Z61 DEx4 work 9 voltmeter 0 22 mSDRZN0mo:>dP>MNFk^5C3
-!i122 42
+Z63 DEx4 work 9 voltmeter 0 22 mSDRZN0mo:>dP>MNFk^5C3
+!i122 174
 l82
-Z62 L15 175
-Z63 Vgh;ieUjb==L6S;h;S<<4M0
-Z64 !s100 [HHb7EMGiEKLV@6`hz?jK3
+Z64 L15 174
+Z65 VjZj2A1HSj44QG5Q[<S?Z=3
+Z66 !s100 oN@822FHe_lAY7XC0RSOP3
 R7
 32
-R51
-!i10b 1
 R54
-R59
+!i10b 1
 R60
+R61
+R62
 !i113 1
 R12
 R13

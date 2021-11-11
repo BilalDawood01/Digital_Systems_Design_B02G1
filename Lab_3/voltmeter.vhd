@@ -169,8 +169,7 @@ mux_ins: Mux_for_Averager
 		Post_Ave   => Q_temp1,  
 		Final_Out  => Mux_Output
       );
-		
-												 
+														 
 LEDR(9 downto 0) <=Mux_Output(11 downto 2); -- gives visual display of upper binary bits to the LEDs on board
 
 -- in line below, can change the scaling factor (i.e. 2500), to calibrate the voltage reading to a reference voltmeter

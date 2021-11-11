@@ -89,15 +89,83 @@ bcd_sequential_process: process (reset, clk)
 begin
       if (reset='1') then
 			CurentState<=r;
-         -- bcd<= (others=>'0');
-         -- bcd_signal<=(others=>'0');
-         -- counter_2<=0;
-         -- counter<=(others=>'0');
-         -- busy<='1';
+		-- bcd<= (others=>'0');
+		-- bcd_signal<=(others=>'0');
+		-- counter_2<=0;
+		-- counter<=(others=>'0');
+		-- busy<='1';
       elsif (rising_edge(clk)) then
          CurentState<=NextState;
       end if;
 end process;
 
+--begin
+--
+--bcd_process: process (reset, clk)
+--variable nextstate: statetype;
+--
+--begin
+--      if (reset='1') then
+--         bcd<= (others=>'0');
+--         bcd_signal<=(others=>'0');
+--         counter_2<=0;
+--         counter<=(others=>'0');
+--         busy<='1';
+--			
+--      elsif (rising_edge(clk)) then
+--			Case CurentState is
+--				when S0 =>
+--								bcd_signal(12 DOWNTO 0)<=UNSIGNED(binary);
+--								
+--								NextState:=S1;                            
+--				when S1 => 
+--								if (bcd_signal(28 downto 25) >4) then
+--									bcd_signal <= bcd_signal+ add3_3digit;
+--								end if;
+--								
+--								NextState:=S2;
+--				when S2 => 
+--								if (bcd_signal(24 downto 21) >4) then
+--									bcd_signal <=bcd_signal+ add3_2digit;
+--								end if;
+--
+--								NextState:=S3;                   
+--				when S3 => 
+--								if (bcd_signal(20 downto 17) >4) then
+--									bcd_signal <= bcd_signal+ add3_1digit;
+--								end if;
+--
+--								NextState:=S4;
+--				when S4 => 
+--								if (bcd_signal(16 downto 13) >4) then
+--									bcd_signal <= bcd_signal+ add3_0digit;
+--								end if;
+--
+--								NextState:=S5;
+--				when S5 => 
+--								bcd_signal<=shift_left(unsigned(bcd_signal), 1);
+--								NextState:=S6;
+--				when S6 =>
+--								If (counter_2=12) then
+--									bcd<=std_logic_vector(bcd_signal(28 downto 13));
+--									bcd_signal<=(others=>'0');
+--									counter_2<=0;
+--									NextState:=S0;
+--								else
+--									counter_2<=counter_2+1;
+--									NextState:=S1;
+--								end if;
+--
+--				When others => 
+--								NextState:=S0;
+--								counter_2<=0;
+--								bcd_signal<=(others=>'0');
+--			End Case;
+--			
+--			CurentState<=NextState;
+--			
+--       end if;
+--		 
+--end process;
 
 end behavior;
