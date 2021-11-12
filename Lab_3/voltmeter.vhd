@@ -184,7 +184,7 @@ mux_ins: Mux_for_Averager
 LEDR(9 downto 0) <= Mux_Output(11 downto 2); -- gives visual display of upper binary bits to the LEDs on board
 
 -- in line below, can change the scaling factor (i.e. 2500), to calibrate the voltage reading to a reference voltmeter
-voltage <= std_logic_vector(resize(unsigned(Mux_Output)*2500*2/4096,voltage'length));  -- Converting ADC_read a 12 bit binary to voltage readable numbers
+voltage <= std_logic_vector(resize(unsigned(Q_temp1)*2500*2/4096,voltage'length));  -- Converting ADC_read a 12 bit binary to voltage readable numbers
 
 v2d: voltage2distance
 	PORT MAP(
