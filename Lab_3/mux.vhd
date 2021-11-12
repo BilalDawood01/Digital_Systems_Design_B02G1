@@ -5,20 +5,20 @@ use ieee.numeric_std.all;
 entity Mux_for_Averager is
 port (
 	Mux_Switch   : in  std_logic;
-	Pre_Ave   : in  std_logic_vector(11 downto 0); 
-	Post_Ave     : in std_logic_vector(11 downto 0);
+	Voltage_v2d   : in  std_logic_vector(11 downto 0); 
+	Distance_v2d     : in std_logic_vector(11 downto 0);
 	Final_Out   : out std_logic_vector(11 downto 0)
 );
 end Mux_for_Averager;
 
 architecture Mux_Behaviour of Mux_for_Averager is
 	begin
-		process (Mux_Switch,Pre_Ave,Post_Ave)
+		process (Mux_Switch,Voltage_v2d,Distance_v2d)
 		begin
 			case Mux_Switch is
-				when '0' => Final_Out <= Pre_Ave;
-				when '1' => Final_Out <= Post_Ave;
-				when others => Final_Out <= Post_Ave;
+				when '0' => Final_Out <= Voltage_v2d;
+				when '1' => Final_Out <= Distance_v2d;
+				when others => Final_Out <= Distance_v2d;
 			end case;
 	end process;
 end Mux_Behaviour;

@@ -23,6 +23,7 @@ signal response_valid_out_i1,response_valid_out_i2,response_valid_out_i3 : STD_L
 Signal bcd: STD_LOGIC_VECTOR(15 DOWNTO 0);
 Signal Q_temp1 : std_logic_vector(11 downto 0);
 Signal Mux_Output : std_logic_vector(11 downto 0);
+Signal v2d_output : STD_LOGIC_VECTOR(12 DOWNTO 0);         
 
 Component SevenSegment is
     Port( Num_Hex0,Num_Hex1,Num_Hex2,Num_Hex3,Num_Hex4,Num_Hex5 : in  STD_LOGIC_VECTOR (3 downto 0);
@@ -72,10 +73,19 @@ Component averager is
 
 Component Mux_for_Averager is
 port(
-	Mux_Switch  : in  std_logic;
-	Pre_Ave     : in  std_logic_vector(11 downto 0); 
-	Post_Ave    : in std_logic_vector(11 downto 0);
-	Final_Out   : out std_logic_vector(11 downto 0)
+	Mux_Switch  	 : in  std_logic;
+	Voltage_v2d     : in  std_logic_vector(11 downto 0); 
+	Distance_v2d    : in std_logic_vector(11 downto 0);
+	Final_Out   	 : out std_logic_vector(11 downto 0)
+	);
+end Component;
+
+Component voltage2distance is
+port(
+	  clk            :  IN    STD_LOGIC;                                
+     reset          :  IN    STD_LOGIC;                                
+     voltage        :  IN    STD_LOGIC_VECTOR(12 DOWNTO 0);                           
+     distance       :  OUT   STD_LOGIC_VECTOR(12 DOWNTO 0)
 	);
 end Component;
 
@@ -164,16 +174,25 @@ ADC_Conversion_ins:  ADC_Conversion
 												 
 mux_ins: Mux_for_Averager                             
    PORT MAP(
-      Mux_Switch => Switch,
-		Pre_Ave    => q_outputs_2,
-		Post_Ave   => Q_temp1,  
-		Final_Out  => Mux_Output
+      Mux_Switch 		=> Switch,
+		Voltage_v2d    => Q_temp1,
+		Distance_v2d   => Q_outputs_2,  
+		Final_Out  		=> Mux_Output
       );
+		
 														 
-LEDR(9 downto 0) <=Mux_Output(11 downto 2); -- gives visual display of upper binary bits to the LEDs on board
+LEDR(9 downto 0) <= Mux_Output(11 downto 2); -- gives visual display of upper binary bits to the LEDs on board
 
 -- in line below, can change the scaling factor (i.e. 2500), to calibrate the voltage reading to a reference voltmeter
 voltage <= std_logic_vector(resize(unsigned(Mux_Output)*2500*2/4096,voltage'length));  -- Converting ADC_read a 12 bit binary to voltage readable numbers
+
+v2d: voltage2distance
+	PORT MAP(
+      clk            => clk,                                
+		reset          => reset,                                
+		voltage        => voltage,        -- originally put q_temp1; changed to voltage (but we want decimal not 12 bit binary?)                   
+		distance       => v2d_output		 -- created new signal
+      );
 
 binary_bcd_ins: binary_bcd                               
    PORT MAP(
