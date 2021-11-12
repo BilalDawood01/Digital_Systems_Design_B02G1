@@ -22,7 +22,7 @@ Signal busy: STD_LOGIC;
 signal response_valid_out_i1,response_valid_out_i2,response_valid_out_i3 : STD_LOGIC_VECTOR(0 downto 0);
 Signal bcd: STD_LOGIC_VECTOR(15 DOWNTO 0);
 Signal Q_temp1 : std_logic_vector(11 downto 0);
-Signal Mux_Output : std_logic_vector(11 downto 0);
+Signal Mux_Output : std_logic_vector(12 downto 0);
 Signal v2d_output : STD_LOGIC_VECTOR(12 DOWNTO 0);         
 
 Component SevenSegment is
@@ -74,9 +74,9 @@ Component averager is
 Component Mux_for_Averager is
 port(
 	Mux_Switch  	 : in  std_logic;
-	Voltage_v2d     : in  std_logic_vector(11 downto 0); 
-	Distance_v2d    : in std_logic_vector(11 downto 0);
-	Final_Out   	 : out std_logic_vector(11 downto 0)
+	Voltage_v2d     : in  std_logic_vector(12 downto 0); 
+	Distance_v2d    : in std_logic_vector(12 downto 0);
+	Final_Out   	 : out std_logic_vector(12 downto 0)
 	);
 end Component;
 
@@ -175,8 +175,8 @@ ADC_Conversion_ins:  ADC_Conversion
 mux_ins: Mux_for_Averager                             
    PORT MAP(
       Mux_Switch 		=> Switch,
-		Voltage_v2d    => Q_temp1,
-		Distance_v2d   => Q_outputs_2,  
+		Voltage_v2d    => voltage,
+		Distance_v2d   => v2d_output,  
 		Final_Out  		=> Mux_Output
       );
 		
@@ -199,7 +199,7 @@ binary_bcd_ins: binary_bcd
       clk      => clk,                          
       reset    => reset,                                 
       ena      => '1',                           
-      binary   => voltage,    
+      binary   => Mux_output,    
       busy     => busy,                         
       bcd      => bcd         
       );

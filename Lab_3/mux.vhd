@@ -5,9 +5,9 @@ use ieee.numeric_std.all;
 entity Mux_for_Averager is
 port (
 	Mux_Switch   : in  std_logic;
-	Voltage_v2d   : in  std_logic_vector(11 downto 0); 
-	Distance_v2d     : in std_logic_vector(11 downto 0);
-	Final_Out   : out std_logic_vector(11 downto 0)
+	Voltage_v2d   : in  std_logic_vector(12 downto 0); 
+	Distance_v2d     : in std_logic_vector(12 downto 0);
+	Final_Out   : out std_logic_vector(12 downto 0)
 );
 end Mux_for_Averager;
 
