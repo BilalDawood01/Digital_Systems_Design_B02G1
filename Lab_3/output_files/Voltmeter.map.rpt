@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Voltmeter
-Thu Nov 11 18:44:20 2021
+Thu Nov 11 22:13:39 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -100,13 +100,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 11 18:44:20 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 11 22:13:38 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Voltmeter                                   ;
 ; Top-level Entity Name              ; Voltmeter                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 1,772                                       ;
-;     Total combinational functions  ; 1,497                                       ;
+; Total logic elements               ; 1,774                                       ;
+;     Total combinational functions  ; 1,499                                       ;
 ;     Dedicated logic registers      ; 328                                         ;
 ; Total registers                    ; 328                                         ;
 ; Total pins                         ; 61                                          ;
@@ -292,16 +292,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                                                          ;
 +---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,772                                                                                                                          ;
+; Estimated Total logic elements              ; 1,774                                                                                                                          ;
 ;                                             ;                                                                                                                                ;
-; Total combinational functions               ; 1497                                                                                                                           ;
+; Total combinational functions               ; 1499                                                                                                                           ;
 ; Logic element usage by number of LUT inputs ;                                                                                                                                ;
-;     -- 4 input functions                    ; 877                                                                                                                            ;
-;     -- 3 input functions                    ; 415                                                                                                                            ;
-;     -- <=2 input functions                  ; 205                                                                                                                            ;
+;     -- 4 input functions                    ; 878                                                                                                                            ;
+;     -- 3 input functions                    ; 417                                                                                                                            ;
+;     -- <=2 input functions                  ; 204                                                                                                                            ;
 ;                                             ;                                                                                                                                ;
 ; Logic elements by mode                      ;                                                                                                                                ;
-;     -- normal mode                          ; 1209                                                                                                                           ;
+;     -- normal mode                          ; 1211                                                                                                                           ;
 ;     -- arithmetic mode                      ; 288                                                                                                                            ;
 ;                                             ;                                                                                                                                ;
 ; Total registers                             ; 328                                                                                                                            ;
@@ -316,8 +316,8 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                                                                              ;
 ;                                             ;                                                                                                                                ;
 ; Maximum fan-out node                        ; lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_arg:auto_generated|op_1~10 ;
-; Maximum fan-out                             ; 276                                                                                                                            ;
-; Total fan-out                               ; 6434                                                                                                                           ;
+; Maximum fan-out                             ; 277                                                                                                                            ;
+; Total fan-out                               ; 6442                                                                                                                           ;
 ; Average fan-out                             ; 3.30                                                                                                                           ;
 +---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
 
@@ -327,7 +327,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                          ; Entity Name                            ; Library Name ;
 +------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+--------------+
-; |Voltmeter                                                                   ; 1497 (1)            ; 328 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 61   ; 0            ; 0          ; |Voltmeter                                                                                                                                                                                                                                   ; Voltmeter                              ; work         ;
+; |Voltmeter                                                                   ; 1499 (1)            ; 328 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 61   ; 0            ; 0          ; |Voltmeter                                                                                                                                                                                                                                   ; Voltmeter                              ; work         ;
 ;    |ADC_Conversion:ADC_Conversion_ins|                                       ; 54 (5)              ; 90 (29)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|ADC_Conversion:ADC_Conversion_ins                                                                                                                                                                                                 ; ADC_Conversion                         ; work         ;
 ;       |adc_qsys:u0|                                                          ; 49 (0)              ; 61 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0                                                                                                                                                                                     ; adc_qsys                               ; adc_qsys     ;
 ;          |adc_qsys_altpll_sys:altpll_sys|                                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_altpll_sys:altpll_sys                                                                                                                                                      ; adc_qsys_altpll_sys                    ; adc_qsys     ;
@@ -342,14 +342,14 @@ https://fpgasoftware.intel.com/eula.
 ;                   |fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst|fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance ; fiftyfivenm_adcblock_primitive_wrapper ; adc_qsys     ;
 ;          |altera_reset_controller:rst_controller_001|                        ; 0 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller_001                                                                                                                                          ; altera_reset_controller                ; adc_qsys     ;
 ;             |altera_reset_synchronizer:alt_rst_sync_uq1|                     ; 0 (0)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_sync_uq1                                                                                               ; altera_reset_synchronizer              ; adc_qsys     ;
-;    |Mux_for_Averager:mux_ins|                                                ; 46 (46)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|Mux_for_Averager:mux_ins                                                                                                                                                                                                          ; Mux_for_Averager                       ; work         ;
+;    |Mux_for_Averager:mux_ins|                                                ; 39 (39)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|Mux_for_Averager:mux_ins                                                                                                                                                                                                          ; Mux_for_Averager                       ; work         ;
 ;    |SevenSegment:SevenSegment_ins|                                           ; 28 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|SevenSegment:SevenSegment_ins                                                                                                                                                                                                     ; SevenSegment                           ; work         ;
 ;       |SevenSegment_decoder:\decoder_Instantiator:2:decoder|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|SevenSegment:SevenSegment_ins|SevenSegment_decoder:\decoder_Instantiator:2:decoder                                                                                                                                                ; SevenSegment_decoder                   ; work         ;
 ;       |SevenSegment_decoder:\decoder_Instantiator:3:decoder|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|SevenSegment:SevenSegment_ins|SevenSegment_decoder:\decoder_Instantiator:3:decoder                                                                                                                                                ; SevenSegment_decoder                   ; work         ;
 ;       |SevenSegment_decoder:\decoder_Instantiator:4:decoder|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|SevenSegment:SevenSegment_ins|SevenSegment_decoder:\decoder_Instantiator:4:decoder                                                                                                                                                ; SevenSegment_decoder                   ; work         ;
 ;       |SevenSegment_decoder:\decoder_Instantiator:5:decoder|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|SevenSegment:SevenSegment_ins|SevenSegment_decoder:\decoder_Instantiator:5:decoder                                                                                                                                                ; SevenSegment_decoder                   ; work         ;
 ;    |averager:ave|                                                            ; 206 (206)           ; 204 (204)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|averager:ave                                                                                                                                                                                                                      ; averager                               ; work         ;
-;    |binary_bcd:binary_bcd_ins|                                               ; 276 (276)           ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|binary_bcd:binary_bcd_ins                                                                                                                                                                                                         ; binary_bcd                             ; work         ;
+;    |binary_bcd:binary_bcd_ins|                                               ; 292 (292)           ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|binary_bcd:binary_bcd_ins                                                                                                                                                                                                         ; binary_bcd                             ; work         ;
 ;    |lpm_mult:Mult0|                                                          ; 57 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|lpm_mult:Mult0                                                                                                                                                                                                                    ; lpm_mult                               ; work         ;
 ;       |multcore:mult_core|                                                   ; 57 (29)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|lpm_mult:Mult0|multcore:mult_core                                                                                                                                                                                                 ; multcore                               ; work         ;
 ;          |mpar_add:padder|                                                   ; 28 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                                                                                                                                 ; mpar_add                               ; work         ;
@@ -362,7 +362,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |registers:sync2|                                                         ; 0 (0)               ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|registers:sync2                                                                                                                                                                                                                   ; registers                              ; work         ;
 ;    |registers:sync3|                                                         ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|registers:sync3                                                                                                                                                                                                                   ; registers                              ; work         ;
 ;    |registers:sync4|                                                         ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|registers:sync4                                                                                                                                                                                                                   ; registers                              ; work         ;
-;    |voltage2distance:v2d|                                                    ; 829 (829)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|voltage2distance:v2d                                                                                                                                                                                                              ; voltage2distance                       ; work         ;
+;    |voltage2distance:v2d|                                                    ; 822 (822)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|voltage2distance:v2d                                                                                                                                                                                                              ; voltage2distance                       ; work         ;
 +------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -650,6 +650,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Voltmeter|binary_bcd:binary_bcd_ins|Selector77                                                                                                                                                     ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Voltmeter|binary_bcd:binary_bcd_ins|Selector69                                                                                                                                                     ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |Voltmeter|binary_bcd:binary_bcd_ins|Selector82                                                                                                                                                     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |Voltmeter|binary_bcd:binary_bcd_ins|Selector66                                                                                                                                                     ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |Voltmeter|binary_bcd:binary_bcd_ins|Selector13                                                                                                                                                     ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 20 LEs               ; -4 LEs                 ; No         ; |Voltmeter|binary_bcd:binary_bcd_ins|Selector1                                                                                                                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1423,9 +1424,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+--------------------------+
 ; num_hex4    ; Input ; Info     ; Stuck at VCC             ;
 ; num_hex5    ; Input ; Info     ; Stuck at VCC             ;
-; dp_in[5..4] ; Input ; Info     ; Stuck at GND             ;
-; dp_in[2..0] ; Input ; Info     ; Stuck at GND             ;
-; dp_in[3]    ; Input ; Info     ; Stuck at VCC             ;
+; dp_in[3..0] ; Input ; Info     ; Stuck at GND             ;
+; dp_in[5]    ; Input ; Info     ; Stuck at GND             ;
+; dp_in[4]    ; Input ; Info     ; Stuck at VCC             ;
 +-------------+-------+----------+--------------------------+
 
 
@@ -1477,21 +1478,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR           ; 217                         ;
 ;     ENA CLR SCLR      ; 8                           ;
 ;     plain             ; 3                           ;
-; cycloneiii_lcell_comb ; 1502                        ;
+; cycloneiii_lcell_comb ; 1504                        ;
 ;     arith             ; 288                         ;
 ;         2 data inputs ; 77                          ;
 ;         3 data inputs ; 211                         ;
-;     normal            ; 1214                        ;
+;     normal            ; 1216                        ;
 ;         0 data inputs ; 21                          ;
 ;         1 data inputs ; 12                          ;
-;         2 data inputs ; 100                         ;
-;         3 data inputs ; 204                         ;
-;         4 data inputs ; 877                         ;
+;         2 data inputs ; 99                          ;
+;         3 data inputs ; 206                         ;
+;         4 data inputs ; 878                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; fiftyfivenm_adcblock  ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 16.90                       ;
-; Average LUT depth     ; 8.58                        ;
+; Average LUT depth     ; 8.51                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1510,7 +1511,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 11 18:43:46 2021
+    Info: Processing started: Thu Nov 11 22:13:00 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LAB3_ABRINI_DAWOOD_MUJTABA -c Voltmeter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1556,6 +1557,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file tb_mux.
     Info (12023): Found entity 1: tb_mux File: D:/Digital_Systems_Design_B02G1/Lab_3/tb_mux.vhd Line: 5
 Info (12021): Found 1 design units, including 0 entities, in source file typesforsevensegment.vhd
     Info (12022): Found design unit 1: typesforsevensegment File: D:/Digital_Systems_Design_B02G1/Lab_3/typesforsevensegment.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tb_troubleshooting.vhd
+    Info (12022): Found design unit 1: tb_troubleshooting-behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/tb_troubleshooting.vhd Line: 8
+    Info (12023): Found entity 1: tb_troubleshooting File: D:/Digital_Systems_Design_B02G1/Lab_3/tb_troubleshooting.vhd Line: 5
 Info (12127): Elaborating entity "Voltmeter" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at voltmeter.vhd(21): object "busy" assigned a value but never read File: D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 21
 Info (12128): Elaborating entity "averager" for hierarchy "averager:ave" File: D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 103
@@ -1900,6 +1904,8 @@ Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[15] has unsafe behav
     Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[16] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
     Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[12] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[11] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
     Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[10] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
@@ -1919,6 +1925,8 @@ Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[4] has unsafe behavi
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[3] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
     Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[2] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
+Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[1] has unsafe behavior File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
     Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: D:/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Info (13000): Registers with preset signals will power-up high File: D:/Digital_Systems_Design_B02G1/Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 42
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
@@ -1940,8 +1948,8 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX1[6]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
     Warning (13410): Pin "HEX1[7]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
     Warning (13410): Pin "HEX2[7]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
-    Warning (13410): Pin "HEX3[7]" is stuck at GND File: D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
-    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
+    Warning (13410): Pin "HEX3[7]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
+    Warning (13410): Pin "HEX4[7]" is stuck at GND File: D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
     Warning (13410): Pin "HEX5[7]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 52 registers lost all their fanouts during netlist optimizations.
@@ -2100,16 +2108,16 @@ Warning (20013): Ignored 149 assignments for entity "DE10_LITE" -- entity does n
 Info (144001): Generated suppressed messages file D:/Digital_Systems_Design_B02G1/Lab_3/output_files/Voltmeter.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1843 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1845 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 58 output pins
-    Info (21061): Implemented 1780 logic cells
+    Info (21061): Implemented 1782 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 363 warnings
-    Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Thu Nov 11 18:44:20 2021
-    Info: Elapsed time: 00:00:34
-    Info: Total CPU time (on all processors): 00:00:49
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 367 warnings
+    Info: Peak virtual memory: 4808 megabytes
+    Info: Processing ended: Thu Nov 11 22:13:39 2021
+    Info: Elapsed time: 00:00:39
+    Info: Total CPU time (on all processors): 00:00:50
 
 
 +------------------------------------------+

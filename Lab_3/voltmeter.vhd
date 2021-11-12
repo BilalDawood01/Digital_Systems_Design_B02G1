@@ -96,7 +96,7 @@ begin
    Num_Hex3 <= bcd(15 downto 12);
    Num_Hex4 <= "1111";  -- blank this display
    Num_Hex5 <= "1111";  -- blank this display   
-   DP_in    <= "001000";-- position of the decimal point in the display
+   DP_in    <= "010000";-- position of the decimal point in the display
 
                   
    
@@ -181,7 +181,7 @@ mux_ins: Mux_for_Averager
       );
 		
 														 
-LEDR(9 downto 0) <= Mux_Output(11 downto 2); -- gives visual display of upper binary bits to the LEDs on board
+LEDR(9 downto 0) <= Mux_Output(12 downto 3); -- gives visual display of upper binary bits to the LEDs on board
 
 -- in line below, can change the scaling factor (i.e. 2500), to calibrate the voltage reading to a reference voltmeter
 voltage <= std_logic_vector(resize(unsigned(Q_temp1)*2500*2/4096,voltage'length));  -- Converting ADC_read a 12 bit binary to voltage readable numbers

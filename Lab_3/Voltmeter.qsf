@@ -361,4 +361,5 @@ set_global_assignment -name VHDL_FILE Simulation/tb_prelab.vhd
 set_global_assignment -name VHDL_FILE mux.vhd
 set_global_assignment -name VHDL_FILE tb_mux.vhd
 set_global_assignment -name VHDL_FILE typesforsevensegment.vhd
+set_global_assignment -name VHDL_FILE tb_troubleshooting.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
