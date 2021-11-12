@@ -156,12 +156,12 @@ SevenSegment_ins: SevenSegment
                             Num_Hex3 => Num_Hex3,
                             Num_Hex4 => Num_Hex4,
                             Num_Hex5 => Num_Hex5,
-                            Hex0     => Hex0,
-                            Hex1     => Hex1,
-                            Hex2     => Hex2,
-                            Hex3     => Hex3,
-                            Hex4     => Hex4,
-                            Hex5     => Hex5,
+                            Hex0     => HEX0,
+                            Hex1     => HEX1,
+                            Hex2     => HEX2,
+                            Hex3     => HEX3,
+                            Hex4     => HEX4,
+                            Hex5     => HEX5,
                             DP_in    => DP_in
                           );
                                      

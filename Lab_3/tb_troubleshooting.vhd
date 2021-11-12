@@ -8,61 +8,58 @@ END tb_troubleshooting;
 ARCHITECTURE behavior OF tb_troubleshooting IS
 
 -- Component Declaration for the UUT
-	 Component binary_bcd IS
-	PORT(
-      clk     : IN  STD_LOGIC;                      --system clock
-      reset   : IN  STD_LOGIC;                      --active low asynchronus reset
-      ena     : IN  STD_LOGIC;                      --latches in new binary number and starts conversion
-      binary  : IN  STD_LOGIC_VECTOR(12 DOWNTO 0);  --binary number to convert
-      busy    : OUT STD_LOGIC;                      --indicates conversion in progress
-      bcd     : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)   --resulting BCD number
-		);           
-	END Component;
+	 Component SevenSegment is
+    Port( Num_Hex0,Num_Hex1,Num_Hex2,Num_Hex3,Num_Hex4,Num_Hex5 : in  STD_LOGIC_VECTOR (3 downto 0);
+          Hex0,Hex1,Hex2,Hex3,Hex4,Hex5                         : out STD_LOGIC_VECTOR (7 downto 0);
+          DP_in                                                 : in  STD_LOGIC_VECTOR (5 downto 0)
+			);
+	End Component ;
+    
 	 
+	 signal Num_Hex0,Num_Hex1,Num_Hex2,Num_Hex3,Num_Hex4,Num_Hex5 : STD_LOGIC_VECTOR (3 downto 0);
+	 signal Hex0,Hex1,Hex2,Hex3,Hex4,Hex5                         : STD_LOGIC_VECTOR (7 downto 0);
+	 signal DP_in                                                 : STD_LOGIC_VECTOR (5 downto 0);
     
-	 signal clk : std_logic;
-	 signal reset : std_logic;
-	 signal Mux_output : std_logic_vector(12 downto 0); 
-	 signal busy : std_logic;
-	 signal bcd : STD_LOGIC_VECTOR(15 DOWNTO 0); 
-    
-	 -- Clock period definitions
-		constant clk_period:time:=2ns;
+	
 	 
     BEGIN
     -- Instantiate the Unit Under Test (UUT)
-	 binary_bcd_ins: binary_bcd                               
-    PORT MAP(
-      clk      => clk,                          
-      reset    => reset,                                 
-      ena      => '1',                           
-      binary   => Mux_output,    
-      busy     => busy,                         
-      bcd      => bcd         
-      );
+	 SevenSegment_ins: SevenSegment
+			PORT MAP( Num_Hex0 => Num_Hex0,
+						 Num_Hex1 => Num_Hex1,
+						 Num_Hex2 => Num_Hex2,
+						 Num_Hex3 => Num_Hex3,
+						 Num_Hex4 => Num_Hex4,
+						 Num_Hex5 => Num_Hex5,
+						 Hex0     => Hex0,
+						 Hex1     => Hex1,
+						 Hex2     => Hex2,
+						 Hex3     => Hex3,
+						 Hex4     => Hex4,
+						 Hex5     => Hex5,
+						 DP_in    => DP_in
+					  );
 
-		
-	
-		clk_process : process
-	 begin
-		clk<= '0';
-		wait for clk_period/2;
-		clk<='1';
-		wait for clk_period/2;
-	 end process;
 	 
     -- Stimulus Process 
     stim_proc: process 
     begin
-		reset <= '0';
 
-		Mux_output <= "0101010101011";  --2731
+
+	 Num_Hex4 <= "1111";  -- blank this display
+   Num_Hex5 <= "1111";  -- blank this display   
+   DP_in    <= "010000";-- position of the decimal point in the display
+
+		Num_Hex0 <= "0100"; 
+		Num_Hex1 <= "0011"; -- "0000000"
+		Num_Hex2 <= "0010";
+		Num_Hex3 <= "0001";
       wait for 10000 ns;
 		
-      Mux_output <= "0101111111011";  --3067
-      wait for 10000 ns;
-		
-      Mux_output <= "1000100011111";  --4383
+      Num_Hex0 <= "0100"; 
+		Num_Hex1 <= "0111";
+		Num_Hex2 <= "0010";
+		Num_Hex3 <= "0011";
       wait for 10000 ns;
 
 		

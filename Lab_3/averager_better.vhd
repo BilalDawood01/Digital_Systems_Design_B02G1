@@ -10,7 +10,7 @@ entity averager is
 		  reset : in  std_logic;
 		  Din   : in  std_logic_vector(11 downto 0);
 		  Q     : out std_logic_vector(11 downto 0));
-		  Times_to_Average : in  std_logic(7 downto 0);
+		  Times_to_Average : in  std_logic(7 downto 0)
 	end averager;
 
 architecture rtl of averager is
