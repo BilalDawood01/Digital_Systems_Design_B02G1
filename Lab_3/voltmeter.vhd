@@ -23,13 +23,15 @@ signal response_valid_out_i1,response_valid_out_i2,response_valid_out_i3 : STD_L
 Signal bcd: STD_LOGIC_VECTOR(15 DOWNTO 0);
 Signal Q_temp1 : std_logic_vector(11 downto 0);
 Signal Mux_Output : std_logic_vector(12 downto 0);
-Signal v2d_output : STD_LOGIC_VECTOR(12 DOWNTO 0);         
+Signal v2d_output : STD_LOGIC_VECTOR(12 DOWNTO 0); 
 
 Component SevenSegment is
-    Port( Num_Hex0,Num_Hex1,Num_Hex2,Num_Hex3,Num_Hex4,Num_Hex5 : in  STD_LOGIC_VECTOR (3 downto 0);
+    Port( bcd : in  STD_LOGIC_VECTOR (15 downto 0);
+				Num_Hex0,Num_Hex1,Num_Hex2,Num_Hex3,Num_Hex4,Num_Hex5 : in  STD_LOGIC_VECTOR (3 downto 0);
           Hex0,Hex1,Hex2,Hex3,Hex4,Hex5                         : out STD_LOGIC_VECTOR (7 downto 0);
-          DP_in                                                 : in  STD_LOGIC_VECTOR (5 downto 0)
-			);
+          DP_in                                                 : in  STD_LOGIC_VECTOR (5 downto 0);
+			Mux_Switch   : in  std_logic		 
+			 );
 End Component ;
 
 Component ADC_Conversion is
@@ -76,8 +78,8 @@ port(
 	Mux_Switch  	 : in  std_logic;
 	Voltage_v2d     : in  std_logic_vector(12 downto 0); 
 	Distance_v2d    : in std_logic_vector(12 downto 0);
-	Final_Out   	 : out std_logic_vector(12 downto 0)
-	);
+	Final_Out   	 : out std_logic_vector(12 downto 0);
+	DP_in           : out  STD_LOGIC_VECTOR (5 downto 0)	);
 end Component;
 
 Component voltage2distance is
@@ -95,8 +97,12 @@ begin
    Num_Hex2 <= bcd(11 downto  8);
    Num_Hex3 <= bcd(15 downto 12);
    Num_Hex4 <= "1111";  -- blank this display
-   Num_Hex5 <= "1111";  -- blank this display   
-   DP_in    <= "010000";-- position of the decimal point in the display
+   Num_Hex5 <= "1111";  -- blank this display 
+--	if (Switch = '1') then
+--		DP_in    <= "001000"; -- "ABCDEFGH"
+--	else
+--		DP_in    <= "000100";-- position of the decimal point in the display
+--	end if;
 
                   
    
@@ -150,7 +156,8 @@ sync4 : registers
                 );                
                 
 SevenSegment_ins: SevenSegment
-                  PORT MAP( Num_Hex0 => Num_Hex0,
+                  PORT MAP( bcd => bcd,
+									Num_Hex0 => Num_Hex0,
                             Num_Hex1 => Num_Hex1,
                             Num_Hex2 => Num_Hex2,
                             Num_Hex3 => Num_Hex3,
@@ -162,8 +169,9 @@ SevenSegment_ins: SevenSegment
                             Hex3     => HEX3,
                             Hex4     => HEX4,
                             Hex5     => HEX5,
-                            DP_in    => DP_in
-                          );
+                            DP_in    => DP_in,
+									 Mux_Switch 		=> Switch
+									 );
                                      
 ADC_Conversion_ins:  ADC_Conversion
 	PORT MAP(      
@@ -177,11 +185,12 @@ mux_ins: Mux_for_Averager
       Mux_Switch 		=> Switch,
 		Voltage_v2d    => voltage,
 		Distance_v2d   => v2d_output,  
-		Final_Out  		=> Mux_Output
-      );
+		Final_Out  		=> Mux_Output,
+		DP_in => DP_in      );
 		
 														 
 LEDR(9 downto 0) <= Mux_Output(12 downto 3); -- gives visual display of upper binary bits to the LEDs on board
+-- LEDR(9 downto 0) <= bcd(9 downto 0); -- gives visual display of upper binary bits to the LEDs on board
 
 -- in line below, can change the scaling factor (i.e. 2500), to calibrate the voltage reading to a reference voltmeter
 voltage <= std_logic_vector(resize(unsigned(Q_temp1)*2500*2/4096,voltage'length));  -- Converting ADC_read a 12 bit binary to voltage readable numbers
@@ -201,7 +210,7 @@ binary_bcd_ins: binary_bcd
       ena      => '1',                           
       binary   => Mux_output,    
       busy     => busy,                         
-      bcd      => bcd         
+      bcd      => bcd
       );
 
 end Behavioral;

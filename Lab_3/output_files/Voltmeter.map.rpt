@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Voltmeter
-Thu Nov 11 23:06:20 2021
+Sat Nov 13 10:41:38 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -15,9 +15,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
   9. State Machine - |Voltmeter|binary_bcd:binary_bcd_ins|CurentState
- 10. State Machine - |Voltmeter|ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state
- 11. Registers Protected by Synthesis
- 12. User-Specified and Inferred Latches
+ 10. State Machine - |Voltmeter|binary_bcd:binary_bcd_ins|\bcd_process:nextstate
+ 11. State Machine - |Voltmeter|ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state
+ 12. Registers Protected by Synthesis
  13. Registers Removed During Synthesis
  14. Removed Registers Triggering Further Register Optimizations
  15. General Register Statistics
@@ -99,15 +99,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 11 23:06:20 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 13 10:41:38 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Voltmeter                                   ;
 ; Top-level Entity Name              ; Voltmeter                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 1,774                                       ;
-;     Total combinational functions  ; 1,499                                       ;
-;     Dedicated logic registers      ; 328                                         ;
-; Total registers                    ; 328                                         ;
+; Total logic elements               ; 1,701                                       ;
+;     Total combinational functions  ; 1,411                                       ;
+;     Dedicated logic registers      ; 404                                         ;
+; Total registers                    ; 404                                         ;
 ; Total pins                         ; 61                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -288,39 +288,39 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                                                  ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                                                          ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,774                                                                                                                          ;
-;                                             ;                                                                                                                                ;
-; Total combinational functions               ; 1499                                                                                                                           ;
-; Logic element usage by number of LUT inputs ;                                                                                                                                ;
-;     -- 4 input functions                    ; 877                                                                                                                            ;
-;     -- 3 input functions                    ; 418                                                                                                                            ;
-;     -- <=2 input functions                  ; 204                                                                                                                            ;
-;                                             ;                                                                                                                                ;
-; Logic elements by mode                      ;                                                                                                                                ;
-;     -- normal mode                          ; 1211                                                                                                                           ;
-;     -- arithmetic mode                      ; 288                                                                                                                            ;
-;                                             ;                                                                                                                                ;
-; Total registers                             ; 328                                                                                                                            ;
-;     -- Dedicated logic registers            ; 328                                                                                                                            ;
-;     -- I/O registers                        ; 0                                                                                                                              ;
-;                                             ;                                                                                                                                ;
-; I/O pins                                    ; 61                                                                                                                             ;
-;                                             ;                                                                                                                                ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                                                                              ;
-;                                             ;                                                                                                                                ;
-; Total PLLs                                  ; 1                                                                                                                              ;
-;     -- PLLs                                 ; 1                                                                                                                              ;
-;                                             ;                                                                                                                                ;
-; Maximum fan-out node                        ; lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_arg:auto_generated|op_1~10 ;
-; Maximum fan-out                             ; 277                                                                                                                            ;
-; Total fan-out                               ; 6441                                                                                                                           ;
-; Average fan-out                             ; 3.30                                                                                                                           ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 1,701     ;
+;                                             ;           ;
+; Total combinational functions               ; 1411      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 884       ;
+;     -- 3 input functions                    ; 357       ;
+;     -- <=2 input functions                  ; 170       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 1123      ;
+;     -- arithmetic mode                      ; 288       ;
+;                                             ;           ;
+; Total registers                             ; 404       ;
+;     -- Dedicated logic registers            ; 404       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 61        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Total PLLs                                  ; 1         ;
+;     -- PLLs                                 ; 1         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 315       ;
+; Total fan-out                               ; 6556      ;
+; Average fan-out                             ; 3.38      ;
++---------------------------------------------+-----------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -328,7 +328,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                          ; Entity Name                            ; Library Name ;
 +------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+--------------+
-; |Voltmeter                                                                   ; 1499 (1)            ; 328 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 61   ; 0            ; 0          ; |Voltmeter                                                                                                                                                                                                                                   ; Voltmeter                              ; work         ;
+; |Voltmeter                                                                   ; 1411 (1)            ; 404 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 61   ; 0            ; 0          ; |Voltmeter                                                                                                                                                                                                                                   ; Voltmeter                              ; work         ;
 ;    |ADC_Conversion:ADC_Conversion_ins|                                       ; 54 (5)              ; 90 (29)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|ADC_Conversion:ADC_Conversion_ins                                                                                                                                                                                                 ; ADC_Conversion                         ; work         ;
 ;       |adc_qsys:u0|                                                          ; 49 (0)              ; 61 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0                                                                                                                                                                                     ; adc_qsys                               ; adc_qsys     ;
 ;          |adc_qsys_altpll_sys:altpll_sys|                                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_altpll_sys:altpll_sys                                                                                                                                                      ; adc_qsys_altpll_sys                    ; adc_qsys     ;
@@ -343,14 +343,14 @@ refer to the applicable agreement for further details.
 ;                   |fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst|fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance ; fiftyfivenm_adcblock_primitive_wrapper ; adc_qsys     ;
 ;          |altera_reset_controller:rst_controller_001|                        ; 0 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller_001                                                                                                                                          ; altera_reset_controller                ; adc_qsys     ;
 ;             |altera_reset_synchronizer:alt_rst_sync_uq1|                     ; 0 (0)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_sync_uq1                                                                                               ; altera_reset_synchronizer              ; adc_qsys     ;
-;    |Mux_for_Averager:mux_ins|                                                ; 39 (39)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|Mux_for_Averager:mux_ins                                                                                                                                                                                                          ; Mux_for_Averager                       ; work         ;
-;    |SevenSegment:SevenSegment_ins|                                           ; 28 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|SevenSegment:SevenSegment_ins                                                                                                                                                                                                     ; SevenSegment                           ; work         ;
-;       |SevenSegment_decoder:\decoder_Instantiator:0:decoder|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|SevenSegment:SevenSegment_ins|SevenSegment_decoder:\decoder_Instantiator:0:decoder                                                                                                                                                ; SevenSegment_decoder                   ; work         ;
-;       |SevenSegment_decoder:\decoder_Instantiator:1:decoder|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|SevenSegment:SevenSegment_ins|SevenSegment_decoder:\decoder_Instantiator:1:decoder                                                                                                                                                ; SevenSegment_decoder                   ; work         ;
-;       |SevenSegment_decoder:\decoder_Instantiator:2:decoder|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|SevenSegment:SevenSegment_ins|SevenSegment_decoder:\decoder_Instantiator:2:decoder                                                                                                                                                ; SevenSegment_decoder                   ; work         ;
+;    |Mux_for_Averager:mux_ins|                                                ; 40 (40)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|Mux_for_Averager:mux_ins                                                                                                                                                                                                          ; Mux_for_Averager                       ; work         ;
+;    |SevenSegment:SevenSegment_ins|                                           ; 74 (25)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|SevenSegment:SevenSegment_ins                                                                                                                                                                                                     ; SevenSegment                           ; work         ;
+;       |SevenSegment_decoder:\decoder_Instantiator:0:decoder|                 ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|SevenSegment:SevenSegment_ins|SevenSegment_decoder:\decoder_Instantiator:0:decoder                                                                                                                                                ; SevenSegment_decoder                   ; work         ;
+;       |SevenSegment_decoder:\decoder_Instantiator:1:decoder|                 ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|SevenSegment:SevenSegment_ins|SevenSegment_decoder:\decoder_Instantiator:1:decoder                                                                                                                                                ; SevenSegment_decoder                   ; work         ;
+;       |SevenSegment_decoder:\decoder_Instantiator:2:decoder|                 ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|SevenSegment:SevenSegment_ins|SevenSegment_decoder:\decoder_Instantiator:2:decoder                                                                                                                                                ; SevenSegment_decoder                   ; work         ;
 ;       |SevenSegment_decoder:\decoder_Instantiator:3:decoder|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|SevenSegment:SevenSegment_ins|SevenSegment_decoder:\decoder_Instantiator:3:decoder                                                                                                                                                ; SevenSegment_decoder                   ; work         ;
 ;    |averager:ave|                                                            ; 206 (206)           ; 204 (204)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|averager:ave                                                                                                                                                                                                                      ; averager                               ; work         ;
-;    |binary_bcd:binary_bcd_ins|                                               ; 292 (292)           ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|binary_bcd:binary_bcd_ins                                                                                                                                                                                                         ; binary_bcd                             ; work         ;
+;    |binary_bcd:binary_bcd_ins|                                               ; 154 (154)           ; 84 (84)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|binary_bcd:binary_bcd_ins                                                                                                                                                                                                         ; binary_bcd                             ; work         ;
 ;    |lpm_mult:Mult0|                                                          ; 57 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|lpm_mult:Mult0                                                                                                                                                                                                                    ; lpm_mult                               ; work         ;
 ;       |multcore:mult_core|                                                   ; 57 (29)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|lpm_mult:Mult0|multcore:mult_core                                                                                                                                                                                                 ; multcore                               ; work         ;
 ;          |mpar_add:padder|                                                   ; 28 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                                                                                                                                 ; mpar_add                               ; work         ;
@@ -363,7 +363,7 @@ refer to the applicable agreement for further details.
 ;    |registers:sync2|                                                         ; 0 (0)               ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|registers:sync2                                                                                                                                                                                                                   ; registers                              ; work         ;
 ;    |registers:sync3|                                                         ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|registers:sync3                                                                                                                                                                                                                   ; registers                              ; work         ;
 ;    |registers:sync4|                                                         ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|registers:sync4                                                                                                                                                                                                                   ; registers                              ; work         ;
-;    |voltage2distance:v2d|                                                    ; 822 (822)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|voltage2distance:v2d                                                                                                                                                                                                              ; voltage2distance                       ; work         ;
+;    |voltage2distance:v2d|                                                    ; 825 (825)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Voltmeter|voltage2distance:v2d                                                                                                                                                                                                              ; voltage2distance                       ; work         ;
 +------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -383,20 +383,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |Voltmeter|binary_bcd:binary_bcd_ins|CurentState                                                                                      ;
-+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+
-; Name           ; CurentState.S0 ; CurentState.s6 ; CurentState.S5 ; CurentState.S4 ; CurentState.S3 ; CurentState.S2 ; CurentState.S1 ; CurentState.r ;
-+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+
-; CurentState.r  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ;
-; CurentState.S1 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 1             ;
-; CurentState.S2 ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 1             ;
-; CurentState.S3 ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 1             ;
-; CurentState.S4 ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 1             ;
-; CurentState.S5 ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 1             ;
-; CurentState.s6 ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1             ;
-; CurentState.S0 ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1             ;
-+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Voltmeter|binary_bcd:binary_bcd_ins|CurentState                                                                      ;
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+; Name           ; CurentState.s6 ; CurentState.S5 ; CurentState.S4 ; CurentState.S3 ; CurentState.S2 ; CurentState.S1 ; CurentState.S0 ;
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+; CurentState.S0 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ;
+; CurentState.S1 ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 1              ;
+; CurentState.S2 ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 1              ;
+; CurentState.S3 ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 1              ;
+; CurentState.S4 ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 1              ;
+; CurentState.S5 ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; CurentState.s6 ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Voltmeter|binary_bcd:binary_bcd_ins|\bcd_process:nextstate                                                                                                                                                   ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+; Name                      ; \bcd_process:nextstate.s6 ; \bcd_process:nextstate.S5 ; \bcd_process:nextstate.S4 ; \bcd_process:nextstate.S3 ; \bcd_process:nextstate.S2 ; \bcd_process:nextstate.S1 ; \bcd_process:nextstate.S0 ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+; \bcd_process:nextstate.S0 ; 0                         ; 0                         ; 0                         ; 0                         ; 0                         ; 0                         ; 0                         ;
+; \bcd_process:nextstate.S1 ; 0                         ; 0                         ; 0                         ; 0                         ; 0                         ; 1                         ; 1                         ;
+; \bcd_process:nextstate.S2 ; 0                         ; 0                         ; 0                         ; 0                         ; 1                         ; 0                         ; 1                         ;
+; \bcd_process:nextstate.S3 ; 0                         ; 0                         ; 0                         ; 1                         ; 0                         ; 0                         ; 1                         ;
+; \bcd_process:nextstate.S4 ; 0                         ; 0                         ; 1                         ; 0                         ; 0                         ; 0                         ; 1                         ;
+; \bcd_process:nextstate.S5 ; 0                         ; 1                         ; 0                         ; 0                         ; 0                         ; 0                         ; 1                         ;
+; \bcd_process:nextstate.s6 ; 1                         ; 0                         ; 0                         ; 0                         ; 0                         ; 0                         ; 1                         ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
 
 
 Encoding Type:  One-Hot
@@ -456,93 +471,6 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                 ;
-+-----------------------------------------------------+--------------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal                  ; Free of Timing Hazards ;
-+-----------------------------------------------------+--------------------------------------+------------------------+
-; binary_bcd:binary_bcd_ins|bcd[0]                    ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd[1]                    ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd[2]                    ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd[3]                    ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd[4]                    ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd[5]                    ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd[6]                    ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd[7]                    ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd[8]                    ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd[9]                    ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd[10]                   ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd[11]                   ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd[12]                   ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd[13]                   ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd[14]                   ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd[15]                   ; binary_bcd:binary_bcd_ins|Selector61 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[13]            ; binary_bcd:binary_bcd_ins|Selector78 ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[1]              ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[0]              ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[3]              ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[4]              ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[5]              ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[6]              ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[7]              ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[8]              ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[9]              ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[10]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[11]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[12]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[13]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[14]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[15]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[16]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[17]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[18]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[19]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[20]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[21]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[22]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[23]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[24]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[25]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[26]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[27]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[28]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[29]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[30]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[31]             ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|counter_2[2]              ; binary_bcd:binary_bcd_ins|WideOr4    ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[14]            ; binary_bcd:binary_bcd_ins|Selector78 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[15]            ; binary_bcd:binary_bcd_ins|Selector78 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[16]            ; binary_bcd:binary_bcd_ins|Selector78 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[17]            ; binary_bcd:binary_bcd_ins|Selector83 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[18]            ; binary_bcd:binary_bcd_ins|Selector83 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[19]            ; binary_bcd:binary_bcd_ins|Selector83 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[20]            ; binary_bcd:binary_bcd_ins|Selector83 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[21]            ; binary_bcd:binary_bcd_ins|Selector84 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[22]            ; binary_bcd:binary_bcd_ins|Selector84 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[23]            ; binary_bcd:binary_bcd_ins|Selector84 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[24]            ; binary_bcd:binary_bcd_ins|Selector84 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[25]            ; binary_bcd:binary_bcd_ins|Selector85 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[26]            ; binary_bcd:binary_bcd_ins|Selector85 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[27]            ; binary_bcd:binary_bcd_ins|Selector85 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[28]            ; binary_bcd:binary_bcd_ins|Selector85 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[12]            ; binary_bcd:binary_bcd_ins|Selector65 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[11]            ; binary_bcd:binary_bcd_ins|Selector65 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[10]            ; binary_bcd:binary_bcd_ins|Selector65 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[9]             ; binary_bcd:binary_bcd_ins|Selector65 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[8]             ; binary_bcd:binary_bcd_ins|Selector65 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[7]             ; binary_bcd:binary_bcd_ins|Selector65 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[6]             ; binary_bcd:binary_bcd_ins|Selector65 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[5]             ; binary_bcd:binary_bcd_ins|Selector65 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[4]             ; binary_bcd:binary_bcd_ins|Selector65 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[3]             ; binary_bcd:binary_bcd_ins|Selector65 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[2]             ; binary_bcd:binary_bcd_ins|Selector65 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[1]             ; binary_bcd:binary_bcd_ins|Selector65 ; yes                    ;
-; binary_bcd:binary_bcd_ins|bcd_signal[0]             ; binary_bcd:binary_bcd_ins|Selector65 ; yes                    ;
-; Number of user-specified and inferred latches = 77  ;                                      ;                        ;
-+-----------------------------------------------------+--------------------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -575,6 +503,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state~6                                                                                                                                                                                 ; Lost fanout                                                                                                                                                                                                 ;
 ; ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state~7                                                                                                                                                                                 ; Lost fanout                                                                                                                                                                                                 ;
 ; ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state~8                                                                                                                                                                                 ; Lost fanout                                                                                                                                                                                                 ;
+; binary_bcd:binary_bcd_ins|\bcd_process:nextstate.S0                                                                                                                                                                                                                                                                                                                      ; Lost fanout                                                                                                                                                                                                 ;
+; binary_bcd:binary_bcd_ins|\bcd_process:nextstate.S1                                                                                                                                                                                                                                                                                                                      ; Lost fanout                                                                                                                                                                                                 ;
+; binary_bcd:binary_bcd_ins|\bcd_process:nextstate.S2                                                                                                                                                                                                                                                                                                                      ; Lost fanout                                                                                                                                                                                                 ;
+; binary_bcd:binary_bcd_ins|\bcd_process:nextstate.S3                                                                                                                                                                                                                                                                                                                      ; Lost fanout                                                                                                                                                                                                 ;
+; binary_bcd:binary_bcd_ins|\bcd_process:nextstate.S4                                                                                                                                                                                                                                                                                                                      ; Lost fanout                                                                                                                                                                                                 ;
+; binary_bcd:binary_bcd_ins|\bcd_process:nextstate.S5                                                                                                                                                                                                                                                                                                                      ; Lost fanout                                                                                                                                                                                                 ;
+; binary_bcd:binary_bcd_ins|\bcd_process:nextstate.s6                                                                                                                                                                                                                                                                                                                      ; Lost fanout                                                                                                                                                                                                 ;
 ; ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state.PUTRESP                                                                                                                                                                           ; Merged with ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|conv_dly1_s_flp     ;
 ; ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state.WAIT_PEND                                                                                                                                                                         ; Merged with ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state.PRE_CONV ;
 ; ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state.PRE_CONV                                                                                                                                                                          ; Stuck at GND due to stuck port data_in                                                                                                                                                                      ;
@@ -582,7 +517,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state.PUTRESP_PEND                                                                                                                                                                      ; Stuck at GND due to stuck port data_in                                                                                                                                                                      ;
 ; ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|chsel[4]                                                                                                                                                                                     ; Merged with ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|chsel[1]            ;
 ; ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|cmd_channel_dly[0]                                                                                                                                                                           ; Merged with ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|pend                ;
-; Total Number of Removed Registers = 74                                                                                                                                                                                                                                                                                                                                   ;                                                                                                                                                                                                             ;
+; Total Number of Removed Registers = 81                                                                                                                                                                                                                                                                                                                                   ;                                                                                                                                                                                                             ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -618,12 +553,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 328   ;
-; Number of registers using Synchronous Clear  ; 8     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 296   ;
+; Total registers                              ; 404   ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Asynchronous Clear ; 365   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 254   ;
+; Number of registers using Clock Enable       ; 333   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -647,13 +582,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Voltmeter|ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|int_timer[3] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Voltmeter|binary_bcd:binary_bcd_ins|Selector81                                                                                                                                                     ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Voltmeter|binary_bcd:binary_bcd_ins|Selector68                                                                                                                                                     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |Voltmeter|binary_bcd:binary_bcd_ins|Selector14                                                                                                                                                     ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |Voltmeter|binary_bcd:binary_bcd_ins|Selector66                                                                                                                                                     ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |Voltmeter|binary_bcd:binary_bcd_ins|Selector8                                                                                                                                                      ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 20 LEs               ; -4 LEs                 ; No         ; |Voltmeter|binary_bcd:binary_bcd_ins|Selector1                                                                                                                                                      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Voltmeter|ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|int_timer[0] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |Voltmeter|binary_bcd:binary_bcd_ins|bcd_signal[4]                                                                                                                                                  ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Voltmeter|binary_bcd:binary_bcd_ins|bcd_signal[16]                                                                                                                                                 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Voltmeter|binary_bcd:binary_bcd_ins|bcd_signal[1]                                                                                                                                                  ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |Voltmeter|binary_bcd:binary_bcd_ins|bcd_signal[19]                                                                                                                                                 ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Voltmeter|binary_bcd:binary_bcd_ins|bcd_signal[24]                                                                                                                                                 ;
+; 12:1               ; 4 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |Voltmeter|binary_bcd:binary_bcd_ins|bcd_signal[27]                                                                                                                                                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Voltmeter|SevenSegment:SevenSegment_ins|Hex3[7]                                                                                                                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1420,15 +1356,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "SevenSegment:SevenSegment_ins" ;
-+-------------+-------+----------+--------------------------+
-; Port        ; Type  ; Severity ; Details                  ;
-+-------------+-------+----------+--------------------------+
-; num_hex4    ; Input ; Info     ; Stuck at VCC             ;
-; num_hex5    ; Input ; Info     ; Stuck at VCC             ;
-; dp_in[3..0] ; Input ; Info     ; Stuck at GND             ;
-; dp_in[5]    ; Input ; Info     ; Stuck at GND             ;
-; dp_in[4]    ; Input ; Info     ; Stuck at VCC             ;
-+-------------+-------+----------+--------------------------+
++----------+-------+----------+-----------------------------+
+; Port     ; Type  ; Severity ; Details                     ;
++----------+-------+----------+-----------------------------+
+; num_hex4 ; Input ; Info     ; Stuck at VCC                ;
+; num_hex5 ; Input ; Info     ; Stuck at VCC                ;
++----------+-------+----------+-----------------------------+
 
 
 +---------------------------------------------+
@@ -1473,27 +1406,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 61                          ;
-; cycloneiii_ff         ; 328                         ;
-;     CLR               ; 71                          ;
-;     ENA               ; 29                          ;
-;     ENA CLR           ; 217                         ;
-;     ENA CLR SCLR      ; 8                           ;
+; cycloneiii_ff         ; 404                         ;
+;     CLR               ; 68                          ;
+;     ENA               ; 36                          ;
+;     ENA CLR           ; 265                         ;
+;     ENA CLR SCLR      ; 26                          ;
+;     ENA CLR SCLR SLD  ; 6                           ;
 ;     plain             ; 3                           ;
-; cycloneiii_lcell_comb ; 1504                        ;
+; cycloneiii_lcell_comb ; 1415                        ;
 ;     arith             ; 288                         ;
 ;         2 data inputs ; 77                          ;
 ;         3 data inputs ; 211                         ;
-;     normal            ; 1216                        ;
+;     normal            ; 1127                        ;
 ;         0 data inputs ; 21                          ;
 ;         1 data inputs ; 12                          ;
-;         2 data inputs ; 99                          ;
-;         3 data inputs ; 207                         ;
-;         4 data inputs ; 877                         ;
+;         2 data inputs ; 64                          ;
+;         3 data inputs ; 146                         ;
+;         4 data inputs ; 884                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; fiftyfivenm_adcblock  ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 16.90                       ;
-; Average LUT depth     ; 8.51                        ;
+; Max LUT depth         ; 14.90                       ;
+; Average LUT depth     ; 8.09                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1502,7 +1436,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:14     ;
+; Top            ; 00:00:17     ;
 +----------------+--------------+
 
 
@@ -1512,7 +1446,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 11 23:05:41 2021
+    Info: Processing started: Sat Nov 13 10:40:59 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LAB3_ABRINI_DAWOOD_MUJTABA -c Voltmeter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1551,7 +1485,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file simulat
     Info (12022): Found design unit 1: tb_prelab-behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/Simulation/tb_prelab.vhd Line: 7
     Info (12023): Found entity 1: tb_prelab File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/Simulation/tb_prelab.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux.vhd
-    Info (12022): Found design unit 1: Mux_for_Averager-Mux_Behaviour File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/mux.vhd Line: 14
+    Info (12022): Found design unit 1: Mux_for_Averager-Mux_Behaviour File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/mux.vhd Line: 15
     Info (12023): Found entity 1: Mux_for_Averager File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/mux.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file tb_mux.vhd
     Info (12022): Found design unit 1: tb_mux-behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/tb_mux.vhd Line: 8
@@ -1563,23 +1497,30 @@ Info (12021): Found 2 design units, including 1 entities, in source file tb_trou
     Info (12023): Found entity 1: tb_troubleshooting File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/tb_troubleshooting.vhd Line: 5
 Info (12127): Elaborating entity "Voltmeter" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at voltmeter.vhd(21): object "busy" assigned a value but never read File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 21
-Info (12128): Elaborating entity "averager" for hierarchy "averager:ave" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 103
+Info (12128): Elaborating entity "averager" for hierarchy "averager:ave" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 109
 Warning (12125): Using design file registers.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: registers-rtl File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/registers.vhd Line: 21
     Info (12023): Found entity 1: registers File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/registers.vhd Line: 8
-Info (12128): Elaborating entity "registers" for hierarchy "registers:sync1" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 112
-Info (12128): Elaborating entity "registers" for hierarchy "registers:sync3" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 132
+Info (12128): Elaborating entity "registers" for hierarchy "registers:sync1" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 118
+Info (12128): Elaborating entity "registers" for hierarchy "registers:sync3" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 138
 Warning (12125): Using design file sevensegment.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: SevenSegment-Behavioral File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/sevensegment.vhd Line: 14
+    Info (12022): Found design unit 1: SevenSegment-Behavioral File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/sevensegment.vhd Line: 17
     Info (12023): Found entity 1: SevenSegment File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/sevensegment.vhd Line: 6
-Info (12128): Elaborating entity "SevenSegment" for hierarchy "SevenSegment:SevenSegment_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 152
+Info (12128): Elaborating entity "SevenSegment" for hierarchy "SevenSegment:SevenSegment_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 158
+Warning (10492): VHDL Process Statement warning at sevensegment.vhd(58): signal "Mux_Switch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/sevensegment.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at sevensegment.vhd(59): signal "bcd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/sevensegment.vhd Line: 59
+Warning (10492): VHDL Process Statement warning at sevensegment.vhd(71): signal "Num_Hex3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/sevensegment.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at sevensegment.vhd(71): signal "DP_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/sevensegment.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at sevensegment.vhd(78): signal "bcd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/sevensegment.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at sevensegment.vhd(88): signal "Num_Hex3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/sevensegment.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at sevensegment.vhd(88): signal "DP_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/sevensegment.vhd Line: 88
 Warning (12125): Using design file sevensegment_decoder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: SevenSegment_decoder-Behavioral File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/sevensegment_decoder.vhd Line: 13
     Info (12023): Found entity 1: SevenSegment_decoder File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/sevensegment_decoder.vhd Line: 5
-Info (12128): Elaborating entity "SevenSegment_decoder" for hierarchy "SevenSegment:SevenSegment_ins|SevenSegment_decoder:\decoder_Instantiator:0:decoder" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/sevensegment.vhd Line: 32
+Info (12128): Elaborating entity "SevenSegment_decoder" for hierarchy "SevenSegment:SevenSegment_ins|SevenSegment_decoder:\decoder_Instantiator:0:decoder" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/sevensegment.vhd Line: 37
 Warning (12125): Using design file adc_conversion.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: ADC_Conversion File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/adc_conversion.v Line: 34
-Info (12128): Elaborating entity "ADC_Conversion" for hierarchy "ADC_Conversion:ADC_Conversion_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 168
+Info (12128): Elaborating entity "ADC_Conversion" for hierarchy "ADC_Conversion:ADC_Conversion_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 176
 Warning (10036): Verilog HDL or VHDL warning at adc_conversion.v(98): object "cur_adc_ch" assigned a value but never read File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/adc_conversion.v Line: 98
 Warning (10036): Verilog HDL or VHDL warning at adc_conversion.v(99): object "adc_sample_data" assigned a value but never read File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/adc_conversion.v Line: 99
 Info (12128): Elaborating entity "adc_qsys" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/adc_conversion.v Line: 75
@@ -1634,111 +1575,18 @@ Info (12128): Elaborating entity "fiftyfivenm_adcblock_primitive_wrapper" for hi
 Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/adc_qsys/synthesis/adc_qsys.v Line: 134
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/adc_qsys/synthesis/submodules/altera_reset_controller.v Line: 208
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/adc_qsys/synthesis/submodules/altera_reset_controller.v Line: 220
-Info (12128): Elaborating entity "Mux_for_Averager" for hierarchy "Mux_for_Averager:mux_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 175
+Info (12128): Elaborating entity "Mux_for_Averager" for hierarchy "Mux_for_Averager:mux_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 183
 Warning (12125): Using design file voltage2distance.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: voltage2distance-behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltage2distance.vhd Line: 32
     Info (12023): Found entity 1: voltage2distance File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltage2distance.vhd Line: 24
-Info (12128): Elaborating entity "voltage2distance" for hierarchy "voltage2distance:v2d" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 189
+Info (12128): Elaborating entity "voltage2distance" for hierarchy "voltage2distance:v2d" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 198
 Warning (12125): Using design file binary_bcd.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: binary_bcd-behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 19
     Info (12023): Found entity 1: binary_bcd File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 8
-Info (12128): Elaborating entity "binary_bcd" for hierarchy "binary_bcd:binary_bcd_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 197
-Warning (10036): Verilog HDL or VHDL warning at binary_bcd.vhd(23): object "counter" assigned a value but never read File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at binary_bcd.vhd(37): signal "binary" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 37
-Warning (10492): VHDL Process Statement warning at binary_bcd.vhd(41): signal "bcd_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 41
-Warning (10492): VHDL Process Statement warning at binary_bcd.vhd(42): signal "bcd_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 42
-Warning (10492): VHDL Process Statement warning at binary_bcd.vhd(47): signal "bcd_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 47
-Warning (10492): VHDL Process Statement warning at binary_bcd.vhd(48): signal "bcd_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 48
-Warning (10492): VHDL Process Statement warning at binary_bcd.vhd(53): signal "bcd_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 53
-Warning (10492): VHDL Process Statement warning at binary_bcd.vhd(54): signal "bcd_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 54
-Warning (10492): VHDL Process Statement warning at binary_bcd.vhd(59): signal "bcd_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 59
-Warning (10492): VHDL Process Statement warning at binary_bcd.vhd(60): signal "bcd_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 60
-Warning (10492): VHDL Process Statement warning at binary_bcd.vhd(65): signal "bcd_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 65
-Warning (10492): VHDL Process Statement warning at binary_bcd.vhd(68): signal "counter_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 68
-Warning (10492): VHDL Process Statement warning at binary_bcd.vhd(69): signal "bcd_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 69
-Warning (10492): VHDL Process Statement warning at binary_bcd.vhd(74): signal "counter_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 74
-Warning (10631): VHDL Process Statement warning at binary_bcd.vhd(33): inferring latch(es) for signal or variable "bcd_signal", which holds its previous value in one or more paths through the process File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Warning (10631): VHDL Process Statement warning at binary_bcd.vhd(33): inferring latch(es) for signal or variable "bcd", which holds its previous value in one or more paths through the process File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Warning (10631): VHDL Process Statement warning at binary_bcd.vhd(33): inferring latch(es) for signal or variable "counter_2", which holds its previous value in one or more paths through the process File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Warning (10631): VHDL Process Statement warning at binary_bcd.vhd(33): inferring latch(es) for signal or variable "busy", which holds its previous value in one or more paths through the process File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "busy" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[0]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[1]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[2]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[3]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[4]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[5]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[6]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[7]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[8]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[9]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[10]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[11]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[12]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[13]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[14]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[15]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[16]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[17]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[18]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[19]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[20]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[21]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[22]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[23]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[24]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[25]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[26]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[27]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[28]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[29]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[30]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "counter_2[31]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[0]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[1]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[2]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[3]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[4]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[5]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[6]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[7]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[8]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[9]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[10]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[11]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[12]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[13]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[14]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd[15]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[0]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[1]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[2]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[3]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[4]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[5]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[6]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[7]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[8]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[9]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[10]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[11]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[12]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[13]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[14]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[15]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[16]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[17]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[18]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[19]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[20]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[21]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[22]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[23]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[24]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[25]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[26]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[27]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Info (10041): Inferred latch for "bcd_signal[28]" at binary_bcd.vhd(33) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
+Info (12128): Elaborating entity "binary_bcd" for hierarchy "binary_bcd:binary_bcd_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 206
+Warning (10036): Verilog HDL or VHDL warning at binary_bcd.vhd(22): object "counter" assigned a value but never read File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 22
+Warning (10631): VHDL Process Statement warning at binary_bcd.vhd(31): inferring latch(es) for signal or variable "busy", which holds its previous value in one or more paths through the process File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 31
+Info (10041): Inferred latch for "busy" at binary_bcd.vhd(31) File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 31
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[0]" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/db/altsyncram_rqn1.tdf Line: 39
@@ -1777,165 +1625,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_arg File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/db/add_sub_arg.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[0] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[1] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[2] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[3] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[4] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[5] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[6] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[7] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[8] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[9] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[10] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[11] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[12] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[13] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[14] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd[15] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[13] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[1] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[0] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[3] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[4] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[5] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[6] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[7] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[8] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[9] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[10] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[11] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[12] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[13] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[14] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[15] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[16] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[17] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[18] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[19] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[20] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[21] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[22] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[23] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[24] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[25] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[26] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[27] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[28] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[29] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[30] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[31] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|counter_2[2] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.r File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[14] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[15] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[16] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[17] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[18] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[19] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[20] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[21] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[22] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[23] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[24] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[25] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|bcd_signal[24] File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[26] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|bcd_signal[25] File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[27] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|bcd_signal[26] File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[28] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|bcd_signal[27] File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[12] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[11] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[10] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[9] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[8] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[7] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[6] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[5] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[4] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[3] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[2] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
-Warning (13012): Latch binary_bcd:binary_bcd_ins|bcd_signal[1] has unsafe behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal binary_bcd:binary_bcd_ins|CurentState.s6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/binary_bcd.vhd Line: 21
 Info (13000): Registers with preset signals will power-up high File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 42
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
     Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
-    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
-    Warning (13410): Pin "HEX3[7]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
     Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
     Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
     Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
@@ -1943,7 +1637,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
     Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
     Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
-    Warning (13410): Pin "HEX4[7]" is stuck at GND File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
     Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
     Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
     Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
@@ -1953,7 +1647,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
     Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/voltmeter.vhd Line: 10
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 52 registers lost all their fanouts during netlist optimizations.
+Info (17049): 59 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "ADC_Conversion:ADC_Conversion_ins|response_valid" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/adc_conversion.v Line: 94
 Warning (20013): Ignored 149 assignments for entity "DE10_LITE" -- entity does not exist in design
@@ -2109,16 +1803,16 @@ Warning (20013): Ignored 149 assignments for entity "DE10_LITE" -- entity does n
 Info (144001): Generated suppressed messages file C:/Github/Digital_Systems_Design_B02G1/Lab_3/output_files/Voltmeter.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1846 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1771 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 58 output pins
-    Info (21061): Implemented 1783 logic cells
+    Info (21061): Implemented 1708 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 367 warnings
-    Info: Peak virtual memory: 4827 megabytes
-    Info: Processing ended: Thu Nov 11 23:06:20 2021
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 204 warnings
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Sat Nov 13 10:41:38 2021
     Info: Elapsed time: 00:00:39
-    Info: Total CPU time (on all processors): 00:01:03
+    Info: Total CPU time (on all processors): 00:01:02
 
 
 +------------------------------------------+
