@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Voltmeter
-Thu Nov 18 14:21:34 2021
+Thu Nov 18 14:48:47 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -100,7 +100,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 18 14:21:34 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 18 14:48:47 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Voltmeter                                   ;
 ; Top-level Entity Name              ; Voltmeter                                   ;
@@ -1437,7 +1437,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:17     ;
+; Top            ; 00:00:24     ;
 +----------------+--------------+
 
 
@@ -1447,7 +1447,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 18 14:20:55 2021
+    Info: Processing started: Thu Nov 18 14:48:00 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LAB3_ABRINI_DAWOOD_MUJTABA -c Voltmeter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1810,10 +1810,10 @@ Info (21057): Implemented 1771 device resources after synthesis - the final reso
     Info (21061): Implemented 1708 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 204 warnings
-    Info: Peak virtual memory: 4813 megabytes
-    Info: Processing ended: Thu Nov 18 14:21:34 2021
-    Info: Elapsed time: 00:00:39
-    Info: Total CPU time (on all processors): 00:00:57
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Thu Nov 18 14:48:47 2021
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:01:09
 
 
 +------------------------------------------+
