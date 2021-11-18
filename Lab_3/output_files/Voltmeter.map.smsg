@@ -1,1 +1,1 @@
-Warning (10273): Verilog HDL warning at altera_modular_adc_control_fsm.v(716): extended using "x" or "z" File: C:/Github/Digital_Systems_Design_B02G1/Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 716
+Warning (10273): Verilog HDL warning at altera_modular_adc_control_fsm.v(716): extended using "x" or "z" File: C:/Users/bilal/Desktop/Bilal/ENEL_Semesters/7_Fall_2021/ENEL_453-Digital_System_Designs/Digital_Systems_Design_B02G1/Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 716
