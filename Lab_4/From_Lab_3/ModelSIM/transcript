@@ -1,0 +1,181 @@
+# Compile of tb_prelab.vhd was successful with warnings.
+# Compile of averager.vhd was successful.
+# Compile of binary_bcd.vhd was successful with warnings.
+# Compile of mux.vhd was successful.
+# Compile of registers.vhd was successful.
+# Compile of SevenSegment.vhd was successful.
+# Compile of SevenSegment_decoder.vhd was successful.
+# Compile of tb_mux.vhd was successful.
+# Compile of typesforsevensegment.vhd was successful.
+# Compile of voltage2distance.vhd was successful.
+# Compile of voltmeter.vhd was successful.
+# 11 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of tb_prelab.vhd was successful with warnings.
+# Compile of averager.vhd was successful.
+# Compile of binary_bcd.vhd was successful with warnings.
+# Compile of mux.vhd was successful.
+# Compile of registers.vhd was successful.
+# Compile of SevenSegment.vhd was successful.
+# Compile of SevenSegment_decoder.vhd was successful.
+# Compile of tb_mux.vhd was successful.
+# Compile of typesforsevensegment.vhd was successful.
+# Compile of voltage2distance.vhd was successful.
+# Compile of voltmeter.vhd was successful.
+# Compile of tb_troubleshooting.vhd was successful with warnings.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.tb_troubleshooting
+# vsim -gui work.tb_troubleshooting 
+# Start time: 21:36:34 on Nov 11,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_troubleshooting(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.binary_bcd(behavior)
+add wave -position insertpoint  \
+sim:/tb_troubleshooting/bcd \
+sim:/tb_troubleshooting/busy \
+sim:/tb_troubleshooting/clk \
+sim:/tb_troubleshooting/clk_period \
+sim:/tb_troubleshooting/Mux_output \
+sim:/tb_troubleshooting/reset
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Ya  Hostname: DESKTOP-G7RS92G  ProcessID: 5604
+#           Attempting to use alternate WLF file "./wlft098gj4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft098gj4
+run
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 237500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 387500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 537500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 687500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 812500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 837500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 962500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 987500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1112500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1137500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1262500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1287500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1387500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1412500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1437500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1537500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1562500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1587500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1687500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1712500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1737500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1837500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1862500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 1887500 ps  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# Compile of tb_prelab.vhd was successful with warnings.
+# Compile of averager.vhd was successful.
+# Compile of binary_bcd.vhd was successful with warnings.
+# Compile of mux.vhd was successful.
+# Compile of registers.vhd was successful.
+# Compile of SevenSegment.vhd was successful.
+# Compile of SevenSegment_decoder.vhd was successful.
+# Compile of tb_mux.vhd was successful.
+# Compile of typesforsevensegment.vhd was successful.
+# Compile of voltage2distance.vhd was successful.
+# Compile of voltmeter.vhd was successful.
+# Compile of tb_troubleshooting.vhd was successful with warnings.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.tb_troubleshooting
+# End time: 21:42:25 on Nov 11,2021, Elapsed time: 0:05:51
+# Errors: 0, Warnings: 31
+# vsim -gui work.tb_troubleshooting 
+# Start time: 21:42:25 on Nov 11,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_troubleshooting(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.binary_bcd(behavior)
+add wave -position insertpoint  \
+sim:/tb_troubleshooting/bcd \
+sim:/tb_troubleshooting/busy \
+sim:/tb_troubleshooting/clk \
+sim:/tb_troubleshooting/clk_period \
+sim:/tb_troubleshooting/Mux_output \
+sim:/tb_troubleshooting/reset
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Ya  Hostname: DESKTOP-G7RS92G  ProcessID: 5604
+#           Attempting to use alternate WLF file "./wlft4a5thm".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4a5thm
+run
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 19 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 31 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 43 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 55 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 65 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 67 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 77 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 79 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 89 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 91 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 101 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 103 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 111 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 113 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 115 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 123 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 125 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 127 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 135 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 137 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 139 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 147 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 149 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 151 ns  Iteration: 2  Instance: /tb_troubleshooting/binary_bcd_ins

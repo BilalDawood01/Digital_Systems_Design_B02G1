@@ -1,0 +1,104 @@
+D:/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/tb_PWM_DAC.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/tb_PWM_DAC.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity tb_PWM_DAC
+-- Compiling architecture tb of tb_PWM_DAC
+
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_mux.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_mux.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_mux
+-- Compiling architecture behavior of tb_mux
+
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/registers.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/registers.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity registers
+-- Compiling architecture rtl of registers
+
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/SevenSegment_decoder.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/SevenSegment_decoder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity SevenSegment_decoder
+-- Compiling architecture Behavioral of SevenSegment_decoder
+
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltage2distance.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltage2distance.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity voltage2distance
+-- Compiling architecture behavior of voltage2distance
+
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/typesforsevensegment.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/typesforsevensegment.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package typesforsevensegment
+
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager_better.vhd {0 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager_better.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity averager
+** Error: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager_better.vhd(13): near "Times_to_Average": (vcom-1576) expecting END.
+
+} {8.0 9.0} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/mux.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/mux.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Mux_for_Averager
+-- Compiling architecture Mux_Behaviour of Mux_for_Averager
+
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/SevenSegment.vhd {0 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/SevenSegment.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+** Error: (vcom-11) Could not find work.typesforsevensegment.
+** Error (suppressible): D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/SevenSegment.vhd(4): (vcom-1195) Cannot find expanded name "work.typesforsevensegment".
+** Error: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/SevenSegment.vhd(4): Unknown expanded name.
+** Note: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/SevenSegment.vhd(6): VHDL Compiler exiting
+
+} {6.0 7.0 8.0 9.0} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity averager
+-- Compiling architecture rtl of averager
+
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/binary_bcd.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/binary_bcd.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity binary_bcd
+-- Compiling architecture behavior of binary_bcd
+
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_troubleshooting.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_troubleshooting.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_troubleshooting
+-- Compiling architecture behavior of tb_troubleshooting
+
+} {} {}}

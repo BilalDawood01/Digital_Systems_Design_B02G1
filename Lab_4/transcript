@@ -1,0 +1,41 @@
+# Compile of averager.vhd was successful.
+# Compile of averager_better.vhd failed with 1 errors.
+# Compile of binary_bcd.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of registers.vhd was successful.
+# Compile of SevenSegment.vhd failed with 3 errors.
+# Compile of SevenSegment_decoder.vhd was successful.
+# Compile of tb_mux.vhd was successful.
+# Compile of tb_troubleshooting.vhd was successful.
+# Compile of typesforsevensegment.vhd was successful.
+# Compile of voltage2distance.vhd was successful.
+# Compile of voltmeter.vhd was successful.
+# Compile of tb_PWM_DAC.vhd was successful.
+# 13 compiles, 2 failed with 4 errors.
+vsim -gui work.tb_pwm_dac
+# vsim -gui work.tb_pwm_dac 
+# Start time: 15:54:18 on Nov 24,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_pwm_dac(tb)
+# ** Warning: (vsim-3473) Component instance "uut : PWM_DAC" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_pwm_dac File: D:/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/tb_PWM_DAC.vhd
+add wave -position insertpoint  \
+sim:/tb_pwm_dac/clk \
+sim:/tb_pwm_dac/clk_period \
+sim:/tb_pwm_dac/duty_cycle \
+sim:/tb_pwm_dac/pwm_out \
+sim:/tb_pwm_dac/reset
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 19:51:00 on Nov 24,2021, Elapsed time: 3:56:42
+# Errors: 0, Warnings: 7
