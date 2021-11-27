@@ -13,6 +13,7 @@ ARCHITECTURE behavior OF tb_prelab IS
            clk                           	: in  STD_LOGIC;
            reset                         	: in  STD_LOGIC;
            Switch									: in  STD_LOGIC;
+			  test_input						   : in  STD_LOGIC_VECTOR(11 DOWNTO 7);
 			  LEDR                          	: out STD_LOGIC_VECTOR (9 downto 0);
 			  buzzer_out 						  	: out  STD_LOGIC;		
            HEX0,HEX1,HEX2,HEX3,HEX4,HEX5 	: out STD_LOGIC_VECTOR (7 downto 0)
@@ -30,6 +31,8 @@ ARCHITECTURE behavior OF tb_prelab IS
     --Reset
     signal reset : std_logic;
 	 
+	 Signal test_input: STD_LOGIC_VECTOR(11 DOWNTO 7);
+	 
 	 signal buzzer_out : STD_LOGIC;	
 	 
 	 --HEXes
@@ -43,6 +46,7 @@ ARCHITECTURE behavior OF tb_prelab IS
     uut: Voltmeter PORT MAP (
         clk => clk,
         reset => reset,
+		  test_input => test_input,
 		  Switch => switch,
 		  LEDR => LEDR,
 		  HEX0 => HEX0,
@@ -70,17 +74,64 @@ ARCHITECTURE behavior OF tb_prelab IS
 	 
 		reset<= '1';
 		switch<='1';
-		wait for 91ns;
+		wait for 2.5ms;
+		
 		reset<= '0';
 		switch<='1';
-		wait for 900000ns;
+		wait for 2.5ms;
+		
+		reset<= '0';
+		switch<='1';
+		wait for 2.5ms;
+		
+		reset<= '0';
+		switch<='1';
+		wait for 2.5ms;
+		
 		reset<= '1';
 		switch<='0';
-		wait for 91ns;
+		wait for 2.5ms;
+		
+		reset<= '0';
+		switch<='1';
+		wait for 2.5ms;
+		
 		reset<= '0';
 		switch<='0';
-		wait for 900000ns;
+		wait for 2.5ms;
+		
+		reset<= '0';
+		switch<='1';
+		wait for 2.5ms;
+		
     end process;
-
+	 
+	 -- Test Stimulus Process 
+    test_stim_proc: process 
+    begin
+		test_input<= "00000";
+		wait for 1ms;
+		
+		test_input<= "11111";
+		wait for 1ms;
+		
+		test_input<= "10101";
+		wait for 1ms;
+		
+		test_input<= "01110";
+		wait for 1ms;
+		
+		test_input<= "11000";
+		wait for 1ms;
+		
+		test_input<= "00011";
+		wait for 1ms;
+		
+		test_input<= "10001";
+		wait for 1ms;
+		
+		test_input<= "11011";
+		wait for 1ms;
+    end process;
 
 END;

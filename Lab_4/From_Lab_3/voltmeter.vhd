@@ -6,6 +6,7 @@ entity Voltmeter is
     Port ( clk                           : in  STD_LOGIC;
            reset                         : in  STD_LOGIC;
 			  Switch								  : in  STD_LOGIC;
+			  test_input						  : in  STD_LOGIC_VECTOR(11 DOWNTO 7);
            LEDR                          : out STD_LOGIC_VECTOR (9 downto 0);
 			  buzzer_out 						  : out  STD_LOGIC;		
            HEX0,HEX1,HEX2,HEX3,HEX4,HEX5 : out STD_LOGIC_VECTOR (7 downto 0)
@@ -36,7 +37,7 @@ Component SevenSegment is
 			 );
 End Component ;
 
-Component ADC_Conversion is
+Component test_ADC is
     Port( MAX10_CLK1_50      : in STD_LOGIC;
           response_valid_out : out STD_LOGIC;
           ADC_out            : out STD_LOGIC_VECTOR (11 downto 0)
@@ -203,7 +204,7 @@ SevenSegment_ins: SevenSegment
 									 Mux_Switch 		=> Switch
 									 );
                                      
-ADC_Conversion_ins:  ADC_Conversion
+ADC_Conversion_ins:  test_ADC
 	PORT MAP(      
                                      MAX10_CLK1_50       => clk,
                                      response_valid_out  => response_valid_out_i1(0),
@@ -248,8 +249,9 @@ Wave_Incrementer_ins: Wave_Incrementer
    PORT MAP(
       reset 			=> reset,
 		clk    			=> clk,
-		delta_x   		=> v2d_output(11 downto 7),  
-		x_fin  	=> wave_x
+--		delta_x   		=> v2d_output(11 downto 7),
+		delta_x   		=> test_input,
+		x_fin  			=> wave_x
 );
 		
 x2sin_ins: x2sin                             
