@@ -7,7 +7,7 @@ entity Voltmeter is
            reset                         : in  STD_LOGIC;
 			  Switch								  : in  STD_LOGIC;
            LEDR                          : out STD_LOGIC_VECTOR (9 downto 0);
-			  test_output 						  : out  STD_LOGIC;		
+			  buzzer_out 						  : out  STD_LOGIC;		
            HEX0,HEX1,HEX2,HEX3,HEX4,HEX5 : out STD_LOGIC_VECTOR (7 downto 0)
           );
            
@@ -25,7 +25,7 @@ Signal bcd: STD_LOGIC_VECTOR(15 DOWNTO 0);
 Signal Q_temp1 : std_logic_vector(11 downto 0);
 Signal Mux_Output : std_logic_vector(12 downto 0);
 Signal v2d_output : STD_LOGIC_VECTOR(12 DOWNTO 0); 
-Signal t_o : out  STD_LOGIC;	
+Signal wave_x, wave_sin_x : STD_LOGIC_VECTOR(8 DOWNTO 0);
 
 Component SevenSegment is
     Port( bcd : in  STD_LOGIC_VECTOR (15 downto 0);
@@ -102,6 +102,23 @@ port(
      duty_cycle : in STD_LOGIC_VECTOR (width-1 downto 0);
      pwm_out    : out STD_LOGIC
 	);
+end Component;
+
+Component Wave_Incrementer is
+Port    ( 	reset      		: in STD_LOGIC;
+             clk       		: in STD_LOGIC;
+             delta_x 			: in STD_LOGIC_VECTOR (4 downto 0);
+				 x_fin 	: out STD_LOGIC_VECTOR (8 downto 0)
+			  );
+end Component;
+
+Component x2sin is
+PORT(
+			clk            :  IN    STD_LOGIC;                                
+			reset          :  IN    STD_LOGIC;                                
+			x        		:  IN    STD_LOGIC_VECTOR(8 DOWNTO 0);                           
+			sinx       		:  OUT   STD_LOGIC_VECTOR(8 DOWNTO 0)
+			  );
 end Component;
 
 begin
@@ -201,6 +218,7 @@ mux_ins: Mux_for_Averager
 		Final_Out  		=> Mux_Output,
 		DP_in => DP_in      );
 		
+
 														 
 LEDR(9 downto 0) <= Mux_Output(12 downto 3); -- gives visual display of upper binary bits to the LEDs on board
 -- LEDR(9 downto 0) <= bcd(9 downto 0); -- gives visual display of upper binary bits to the LEDs on board
@@ -226,14 +244,29 @@ binary_bcd_ins: binary_bcd
       bcd      => bcd
       );
 		
+Wave_Incrementer_ins: Wave_Incrementer                            
+   PORT MAP(
+      reset 			=> reset,
+		clk    			=> clk,
+		delta_x   		=> v2d_output(11 downto 7),  
+		x_fin  	=> wave_x
+);
+		
+x2sin_ins: x2sin                             
+   PORT MAP(
+      clk 				=> clk,
+		reset   			=> reset,
+		x   				=> wave_x,  
+		sinx  			=> wave_sin_x
+);
+		
 PWM_DAC_ins: PWM_DAC                              
    PORT MAP(
       reset    		=> reset, 
 		clk      		=> clk,                                                         
-      duty_cycle     => "111101111"                        
-      pwm_out   		=> test_output
+      duty_cycle     => wave_sin_x,                        
+      pwm_out   		=> buzzer_out
       );
 		
--- test_output <= '1';
-
+		
 end Behavioral;

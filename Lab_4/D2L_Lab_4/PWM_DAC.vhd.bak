@@ -20,7 +20,7 @@ begin
        if( reset = '1') then
            counter <= (others => '0');
        elsif (rising_edge(clk)) then 
-           counter <= counter + 1; 
+           counter <= counter + 1;
        end if;
    end process;
  
