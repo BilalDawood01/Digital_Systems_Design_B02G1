@@ -1,19 +1,15 @@
-D:/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/tb_PWM_DAC.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/tb_PWM_DAC.vhd
+D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/Simulation/tb_prelab.vhd {2 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/Simulation/tb_prelab.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity tb_PWM_DAC
--- Compiling architecture tb of tb_PWM_DAC
-
-} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_mux.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_mux.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity tb_mux
--- Compiling architecture behavior of tb_mux
+-- Compiling entity tb_prelab
+-- Compiling architecture behavior of tb_prelab
+** Warning: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/Simulation/tb_prelab.vhd(39): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/Simulation/tb_prelab.vhd(73): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/Simulation/tb_prelab.vhd(76): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/Simulation/tb_prelab.vhd(79): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/Simulation/tb_prelab.vhd(82): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 
 } {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/registers.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/registers.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -31,6 +27,24 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity SevenSegment_decoder
 -- Compiling architecture Behavioral of SevenSegment_decoder
 
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/PWM_DAC.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/PWM_DAC.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PWM_DAC
+-- Compiling architecture Behavioral of PWM_DAC
+
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Voltmeter
+-- Compiling architecture Behavioral of Voltmeter
+
 } {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltage2distance.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltage2distance.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
@@ -47,16 +61,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package std_logic_1164
 -- Compiling package typesforsevensegment
 
-} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager_better.vhd {0 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager_better.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity averager
-** Error: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager_better.vhd(13): near "Times_to_Average": (vcom-1576) expecting END.
-
-} {8.0 9.0} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/mux.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/mux.vhd
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/mux.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/mux.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -65,17 +70,34 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity Mux_for_Averager
 -- Compiling architecture Mux_Behaviour of Mux_for_Averager
 
-} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/SevenSegment.vhd {0 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/SevenSegment.vhd
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/x2sin.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/x2sin.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
-** Error: (vcom-11) Could not find work.typesforsevensegment.
-** Error (suppressible): D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/SevenSegment.vhd(4): (vcom-1195) Cannot find expanded name "work.typesforsevensegment".
-** Error: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/SevenSegment.vhd(4): Unknown expanded name.
-** Note: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/SevenSegment.vhd(6): VHDL Compiler exiting
+-- Loading package NUMERIC_STD
+-- Compiling entity x2sin
+-- Compiling architecture behavior of x2sin
 
-} {6.0 7.0 8.0 9.0} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager.vhd
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/SevenSegment.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/SevenSegment.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package typesforsevensegment
+-- Compiling entity SevenSegment
+-- Compiling architecture Behavioral of SevenSegment
+
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/Wave_Incrementer.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/Wave_Incrementer.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Wave_Incrementer
+-- Compiling architecture Behavioral of Wave_Incrementer
+
+} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -92,13 +114,5 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package NUMERIC_STD
 -- Compiling entity binary_bcd
 -- Compiling architecture behavior of binary_bcd
-
-} {} {}} D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_troubleshooting.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_troubleshooting.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity tb_troubleshooting
--- Compiling architecture behavior of tb_troubleshooting
 
 } {} {}}

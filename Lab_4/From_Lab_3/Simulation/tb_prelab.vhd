@@ -10,11 +10,12 @@ ARCHITECTURE behavior OF tb_prelab IS
 	 
     COMPONENT Voltmeter
     PORT(
-           clk                           : in  STD_LOGIC;
-           reset                         : in  STD_LOGIC;
-           Switch								: in  STD_LOGIC;
-			  LEDR                          : out STD_LOGIC_VECTOR (9 downto 0);
-           HEX0,HEX1,HEX2,HEX3,HEX4,HEX5 : out STD_LOGIC_VECTOR (7 downto 0)
+           clk                           	: in  STD_LOGIC;
+           reset                         	: in  STD_LOGIC;
+           Switch									: in  STD_LOGIC;
+			  LEDR                          	: out STD_LOGIC_VECTOR (9 downto 0);
+			  buzzer_out 						  	: out  STD_LOGIC;		
+           HEX0,HEX1,HEX2,HEX3,HEX4,HEX5 	: out STD_LOGIC_VECTOR (7 downto 0)
     );
     END COMPONENT;
     
@@ -28,6 +29,8 @@ ARCHITECTURE behavior OF tb_prelab IS
     signal LEDR : STD_LOGIC_VECTOR (9 downto 0);
     --Reset
     signal reset : std_logic;
+	 
+	 signal buzzer_out : STD_LOGIC;	
 	 
 	 --HEXes
 	 signal HEX0,HEX1,HEX2,HEX3,HEX4,HEX5 : STD_LOGIC_VECTOR (7 downto 0);
@@ -47,7 +50,8 @@ ARCHITECTURE behavior OF tb_prelab IS
 		  HEX2 => HEX2,
 		  HEX3 => HEX3,
 		  HEX4 => HEX4,
-		  HEX5 => HEX5
+		  HEX5 => HEX5,
+		  buzzer_out => buzzer_out
     );
     
 	 
