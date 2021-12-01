@@ -6,7 +6,6 @@ entity Voltmeter is
     Port ( clk                           : in  STD_LOGIC;
            reset                         : in  STD_LOGIC;
 			  Switch								  : in  STD_LOGIC;
-			  test_input						  : in  STD_LOGIC_VECTOR(11 DOWNTO 7);
            LEDR                          : out STD_LOGIC_VECTOR (9 downto 0);
 			  buzzer_out 						  : out  STD_LOGIC;		
            HEX0,HEX1,HEX2,HEX3,HEX4,HEX5 : out STD_LOGIC_VECTOR (7 downto 0)
@@ -26,7 +25,8 @@ Signal bcd: STD_LOGIC_VECTOR(15 DOWNTO 0);
 Signal Q_temp1 : std_logic_vector(11 downto 0);
 Signal Mux_Output : std_logic_vector(12 downto 0);
 Signal v2d_output : STD_LOGIC_VECTOR(12 DOWNTO 0); 
-Signal wave_x, wave_sin_x : STD_LOGIC_VECTOR(8 DOWNTO 0);
+Signal wave_x : STD_LOGIC_VECTOR(11 DOWNTO 0);
+Signal wave_sin_x : STD_LOGIC_VECTOR(8 DOWNTO 0);
 
 Component SevenSegment is
     Port( bcd : in  STD_LOGIC_VECTOR (15 downto 0);
@@ -37,7 +37,7 @@ Component SevenSegment is
 			 );
 End Component ;
 
-Component test_ADC is
+Component ADC_Conversion is
     Port( MAX10_CLK1_50      : in STD_LOGIC;
           response_valid_out : out STD_LOGIC;
           ADC_out            : out STD_LOGIC_VECTOR (11 downto 0)
@@ -109,7 +109,7 @@ Component Wave_Incrementer is
 Port    ( 	reset      		: in STD_LOGIC;
              clk       		: in STD_LOGIC;
              delta_x 			: in STD_LOGIC_VECTOR (4 downto 0);
-				 x_fin 	: out STD_LOGIC_VECTOR (8 downto 0)
+				 x_fin 	: out STD_LOGIC_VECTOR (11 downto 0)
 			  );
 end Component;
 
@@ -117,7 +117,7 @@ Component x2sin is
 PORT(
 			clk            :  IN    STD_LOGIC;                                
 			reset          :  IN    STD_LOGIC;                                
-			x        		:  IN    STD_LOGIC_VECTOR(8 DOWNTO 0);                           
+			x        		:  IN    STD_LOGIC_VECTOR(11 DOWNTO 0);                           
 			sinx       		:  OUT   STD_LOGIC_VECTOR(8 DOWNTO 0)
 			  );
 end Component;
@@ -204,7 +204,7 @@ SevenSegment_ins: SevenSegment
 									 Mux_Switch 		=> Switch
 									 );
                                      
-ADC_Conversion_ins:  test_ADC
+ADC_Conversion_ins:  ADC_Conversion
 	PORT MAP(      
                                      MAX10_CLK1_50       => clk,
                                      response_valid_out  => response_valid_out_i1(0),
@@ -249,8 +249,7 @@ Wave_Incrementer_ins: Wave_Incrementer
    PORT MAP(
       reset 			=> reset,
 		clk    			=> clk,
---		delta_x   		=> v2d_output(11 downto 7),
-		delta_x   		=> test_input,
+		delta_x   		=> v2d_output(11 downto 7),
 		x_fin  			=> wave_x
 );
 		

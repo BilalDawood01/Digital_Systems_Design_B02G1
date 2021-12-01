@@ -6,14 +6,14 @@ entity Wave_Incrementer is
    Port    ( reset      : in STD_LOGIC;
              clk        : in STD_LOGIC;
              delta_x : in STD_LOGIC_VECTOR (4 downto 0);
-				 x_fin : out STD_LOGIC_VECTOR (8 downto 0)
+				 x_fin : out STD_LOGIC_VECTOR (11 downto 0)
 			  );
 end Wave_Incrementer;
 
 architecture Behavioral of Wave_Incrementer is
    signal counter : unsigned (8 downto 0);
 	signal rising : std_logic := '1'; 
-	signal x_val : unsigned (8 downto 0) := "000000000";
+	signal x_val : unsigned (11 downto 0) := "000000000000";
 begin
 
 -- Function of the triangulator is to vary the duty cycle
@@ -37,7 +37,7 @@ begin
 			  if (counter = 0) then
 			  	  -- counter = 0 when one duty cycle has just ended
 				  -- so this is the time to change the duty cycle amount if we want.
-				  x_val <= x_val + 1 + unsigned(delta_x);
+				  x_val <= x_val + NOT unsigned(delta_x);
 				  x_fin <= std_logic_vector(x_val);
 				end if;
 				
