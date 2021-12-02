@@ -113,7 +113,7 @@ Port    ( 	reset      		: in STD_LOGIC;
 			  );
 end Component;
 
-Component x2sin is
+Component x2square is
 PORT(
 			clk            :  IN    STD_LOGIC;                                
 			reset          :  IN    STD_LOGIC;                                
@@ -253,7 +253,7 @@ Wave_Incrementer_ins: Wave_Incrementer
 		x_fin  			=> wave_x
 );
 		
-x2sin_ins: x2sin                             
+x2square_ins: x2square                             
    PORT MAP(
       clk 				=> clk,
 		reset   			=> reset,
