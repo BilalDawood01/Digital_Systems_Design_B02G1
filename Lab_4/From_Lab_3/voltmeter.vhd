@@ -105,6 +105,16 @@ port(
 	);
 end Component;
 
+
+Component period_changer is
+port(
+	  reset      : in STD_LOGIC;
+     clk        : in STD_LOGIC;
+     period : in STD_LOGIC_VECTOR (11 downto 0);
+     buzzer    : out STD_LOGIC
+	);
+end Component;
+
 Component Wave_Incrementer is
 Port    ( 	reset      		: in STD_LOGIC;
              clk       		: in STD_LOGIC;
@@ -265,9 +275,17 @@ PWM_DAC_ins: PWM_DAC
    PORT MAP(
       reset    		=> reset, 
 		clk      		=> clk,                                                         
-      duty_cycle     => wave_sin_x,                        
-      pwm_out   		=> buzzer_out
+      duty_cycle     => wave_sin_x--,                        
+      --pwm_out   		=> buzzer_out
       );
 		
+		
+period_changer_ins: period_changer                              
+   PORT MAP(
+      reset    		=> reset, 
+		clk      		=> clk,                                                         
+      period     => v2d_output(12 downto 1),                        
+      buzzer   		=> buzzer_out
+      );
 		
 end Behavioral;

@@ -8,8 +8,9 @@ clk => ADC_Conversion:ADC_Conversion_ins.MAX10_CLK1_50
 clk => voltage2distance:v2d.clk
 clk => binary_bcd:binary_bcd_ins.clk
 clk => Wave_Incrementer:Wave_Incrementer_ins.clk
-clk => x2sin:x2sin_ins.clk
+clk => x2square:x2square_ins.clk
 clk => PWM_DAC:PWM_DAC_ins.clk
+clk => period_changer:period_changer_ins.clk
 reset => averager:ave.reset
 reset => registers:sync1.reset
 reset => registers:sync2.reset
@@ -18,8 +19,9 @@ reset => registers:sync4.reset
 reset => voltage2distance:v2d.reset
 reset => binary_bcd:binary_bcd_ins.reset
 reset => Wave_Incrementer:Wave_Incrementer_ins.reset
-reset => x2sin:x2sin_ins.reset
+reset => x2square:x2square_ins.reset
 reset => PWM_DAC:PWM_DAC_ins.reset
+reset => period_changer:period_changer_ins.reset
 Switch => SevenSegment:SevenSegment_ins.Mux_Switch
 Switch => Mux_for_Averager:mux_ins.Mux_Switch
 LEDR[0] << Mux_for_Averager:mux_ins.Final_Out[3]
@@ -32,7 +34,7 @@ LEDR[6] << Mux_for_Averager:mux_ins.Final_Out[9]
 LEDR[7] << Mux_for_Averager:mux_ins.Final_Out[10]
 LEDR[8] << Mux_for_Averager:mux_ins.Final_Out[11]
 LEDR[9] << Mux_for_Averager:mux_ins.Final_Out[12]
-buzzer_out << PWM_DAC:PWM_DAC_ins.pwm_out
+buzzer_out << period_changer:period_changer_ins.buzzer
 HEX0[0] << SevenSegment:SevenSegment_ins.Hex0[0]
 HEX0[1] << SevenSegment:SevenSegment_ins.Hex0[1]
 HEX0[2] << SevenSegment:SevenSegment_ins.Hex0[2]
@@ -2786,7 +2788,7 @@ x_fin[10] <= x_fin[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 x_fin[11] <= x_fin[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Voltmeter|x2sin:x2sin_ins
+|Voltmeter|x2square:x2square_ins
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 x[0] => ~NO_FANOUT~
@@ -2849,5 +2851,64 @@ duty_cycle[6] => LessThan0.IN3
 duty_cycle[7] => LessThan0.IN2
 duty_cycle[8] => LessThan0.IN1
 pwm_out <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Voltmeter|period_changer:period_changer_ins
+reset => counter[0].ACLR
+reset => counter[1].ACLR
+reset => counter[2].ACLR
+reset => counter[3].ACLR
+reset => counter[4].ACLR
+reset => counter[5].ACLR
+reset => counter[6].ACLR
+reset => counter[7].ACLR
+reset => counter[8].ACLR
+reset => counter[9].ACLR
+reset => counter[10].ACLR
+reset => counter[11].ACLR
+reset => counter[12].ACLR
+reset => counter[13].ACLR
+reset => counter[14].ACLR
+reset => counter[15].ACLR
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+period[0] => Equal0.IN367
+period[1] => Equal0.IN366
+period[1] => LessThan0.IN16
+period[2] => Equal0.IN365
+period[2] => LessThan0.IN15
+period[3] => Equal0.IN364
+period[3] => LessThan0.IN14
+period[4] => Equal0.IN363
+period[4] => LessThan0.IN13
+period[5] => Equal0.IN362
+period[5] => LessThan0.IN12
+period[6] => Equal0.IN361
+period[6] => LessThan0.IN11
+period[7] => Equal0.IN360
+period[7] => LessThan0.IN10
+period[8] => Equal0.IN359
+period[8] => LessThan0.IN9
+period[9] => Equal0.IN358
+period[9] => LessThan0.IN8
+period[10] => Equal0.IN357
+period[10] => LessThan0.IN7
+period[11] => Equal0.IN356
+period[11] => LessThan0.IN6
+buzzer <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 

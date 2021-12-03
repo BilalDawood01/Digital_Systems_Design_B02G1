@@ -8,9 +8,9 @@ ENTITY x2square IS
       reset          :  IN    STD_LOGIC;                                
       x        :  IN    STD_LOGIC_VECTOR(11 DOWNTO 0);                           
       sinx       :  OUT   STD_LOGIC_VECTOR(8 DOWNTO 0));  
-END x2sin;
+END x2square;
 
-ARCHITECTURE behavior OF x2sin IS
+ARCHITECTURE behavior OF x2square IS
 
 -- This array has been pasted in from the Excel spreadsheet.
 -- In this array, the values are duty cycles. They are determined via
