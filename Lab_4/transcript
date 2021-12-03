@@ -1,22 +1,6 @@
-# Compile of averager.vhd was successful.
-# Compile of averager_better.vhd failed with 1 errors.
-# Compile of binary_bcd.vhd was successful.
-# Compile of mux.vhd was successful.
-# Compile of registers.vhd was successful.
-# Compile of SevenSegment.vhd was successful.
-# Compile of SevenSegment_decoder.vhd was successful.
-# Compile of typesforsevensegment.vhd was successful.
-# Compile of voltage2distance.vhd was successful.
-# Compile of voltmeter.vhd was successful.
-# Compile of tb_prelab.vhd failed with 2 errors.
-# Compile of PWM_DAC.vhd was successful.
-# Compile of Wave_Incrementer.vhd was successful.
-# Compile of x2sin.vhd was successful.
-# 14 compiles, 2 failed with 3 errors.
-# Compile of tb_prelab.vhd was successful with warnings.
 vsim -gui work.tb_prelab
 # vsim -gui work.tb_prelab 
-# Start time: 22:30:09 on Nov 26,2021
+# Start time: 21:55:05 on Dec 02,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -33,94 +17,7 @@ vsim -gui work.tb_prelab
 # Loading work.mux_for_averager(mux_behaviour)
 # Loading work.voltage2distance(behavior)
 # Loading work.binary_bcd(behavior)
-# Loading work.wave_incrementer(behavioral)
-# Loading work.x2sin(behavior)
-# Loading work.pwm_dac(behavioral)
-add wave -position insertpoint  \
-sim:/tb_prelab/buzzer_out \
-sim:/tb_prelab/clk \
-sim:/tb_prelab/clk_period \
-sim:/tb_prelab/HEX0 \
-sim:/tb_prelab/HEX1 \
-sim:/tb_prelab/HEX2 \
-sim:/tb_prelab/HEX3 \
-sim:/tb_prelab/HEX4 \
-sim:/tb_prelab/HEX5 \
-sim:/tb_prelab/LEDR \
-sim:/tb_prelab/reset \
-sim:/tb_prelab/switch
-run
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/PWM_DAC_ins
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/x2sin_ins
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/v2d
-# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 1  Instance: /tb_prelab/uut/PWM_DAC_ins
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /tb_prelab/uut/v2d
-# Compile of voltmeter.vhd was successful.
-# Compile of tb_prelab.vhd was successful with warnings.
-# 2 compiles, 0 failed with no errors.
-vsim -gui work.tb_prelab
-# End time: 22:43:37 on Nov 26,2021, Elapsed time: 0:13:28
-# Errors: 1, Warnings: 30
-# vsim -gui work.tb_prelab 
-# Start time: 22:43:37 on Nov 26,2021
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_prelab(behavior)
-# Loading ieee.numeric_std(body)
-# Loading work.voltmeter(behavioral)
-# Loading work.averager(rtl)
-# Loading work.registers(rtl)
-# Loading work.typesforsevensegment
-# Loading work.sevensegment(behavioral)
-# Loading work.sevensegment_decoder(behavioral)
-# ** Warning: (vsim-3473) Component instance "ADC_Conversion_ins : test_ADC" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd
-# Loading work.mux_for_averager(mux_behaviour)
-# Loading work.voltage2distance(behavior)
-# Loading work.binary_bcd(behavior)
-# Loading work.wave_incrementer(behavioral)
-# Loading work.x2sin(behavior)
-# Loading work.pwm_dac(behavioral)
+# Loading work.period_changer(behavioral)
 add wave -position insertpoint  \
 sim:/tb_prelab/buzzer_out \
 sim:/tb_prelab/clk \
@@ -135,11 +32,14 @@ sim:/tb_prelab/LEDR \
 sim:/tb_prelab/reset \
 sim:/tb_prelab/switch \
 sim:/tb_prelab/test_input
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Ya  Hostname: DESKTOP-G7RS92G  ProcessID: 5756
+#           Attempting to use alternate WLF file "./wlftnehtgf".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnehtgf
 run
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/PWM_DAC_ins
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/x2sin_ins
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/period_changer_ins
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/v2d
 # ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
@@ -177,20 +77,15 @@ run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 1  Instance: /tb_prelab/uut/PWM_DAC_ins
+#    Time: 0 ps  Iteration: 1  Instance: /tb_prelab/uut/period_changer_ins
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 1  Instance: /tb_prelab/uut/v2d
-# Compile of voltmeter.vhd was successful.
-# Compile of tb_prelab.vhd failed with 8 errors.
-# 2 compiles, 1 failed with 8 errors.
-# Compile of tb_prelab.vhd failed with 8 errors.
-# Compile of tb_prelab.vhd failed with 8 errors.
 # Compile of tb_prelab.vhd was successful with warnings.
 vsim -gui work.tb_prelab
-# End time: 22:51:52 on Nov 26,2021, Elapsed time: 0:08:15
-# Errors: 1, Warnings: 27
+# End time: 21:58:40 on Dec 02,2021, Elapsed time: 0:03:35
+# Errors: 1, Warnings: 25
 # vsim -gui work.tb_prelab 
-# Start time: 22:51:52 on Nov 26,2021
+# Start time: 21:58:40 on Dec 02,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -202,53 +97,12 @@ vsim -gui work.tb_prelab
 # Loading work.typesforsevensegment
 # Loading work.sevensegment(behavioral)
 # Loading work.sevensegment_decoder(behavioral)
-# ** Warning: (vsim-3473) Component instance "ADC_Conversion_ins : test_ADC" is not bound.
+# ** Warning: (vsim-3473) Component instance "ADC_Conversion_ins : ADC_Conversion" is not bound.
 #    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd
 # Loading work.mux_for_averager(mux_behaviour)
 # Loading work.voltage2distance(behavior)
 # Loading work.binary_bcd(behavior)
-# Loading work.wave_incrementer(behavioral)
-# Loading work.x2sin(behavior)
-# Loading work.pwm_dac(behavioral)
-# **** Error: LoadCompleteQ cmd: namespace inscope ::vsimwidgets::Srcmgr {::.srcmgr UpdateLoadComplete} sim
-# ****        invalid command name ""
-# invalid command name ""
-#     while executing
-# "$srcedit SourceUpdateLoadComplete"
-#     (object "::.srcmgr" method "::vsimwidgets::Srcmgr::UpdateLoadComplete" body line 7)
-#     invoked from within
-# "::.srcmgr UpdateLoadComplete sim"
-#     (in namespace inscope "::vsimwidgets::Srcmgr" script line 1)
-#     invoked from within
-# "namespace inscope ::vsimwidgets::Srcmgr {::.srcmgr UpdateLoadComplete} sim"
-#     ("eval" body line 1)
-#     invoked from within
-# "eval $p $tankNamespace "
-# Compile of tb_prelab.vhd was successful with warnings.
-vsim -gui work.tb_prelab
-# End time: 22:52:11 on Nov 26,2021, Elapsed time: 0:00:19
-# Errors: 0, Warnings: 3
-# vsim -gui work.tb_prelab 
-# Start time: 22:52:11 on Nov 26,2021
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_prelab(behavior)
-# Loading ieee.numeric_std(body)
-# Loading work.voltmeter(behavioral)
-# Loading work.averager(rtl)
-# Loading work.registers(rtl)
-# Loading work.typesforsevensegment
-# Loading work.sevensegment(behavioral)
-# Loading work.sevensegment_decoder(behavioral)
-# ** Warning: (vsim-3473) Component instance "ADC_Conversion_ins : test_ADC" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd
-# Loading work.mux_for_averager(mux_behaviour)
-# Loading work.voltage2distance(behavior)
-# Loading work.binary_bcd(behavior)
-# Loading work.wave_incrementer(behavioral)
-# Loading work.x2sin(behavior)
-# Loading work.pwm_dac(behavioral)
+# Loading work.period_changer(behavioral)
 add wave -position insertpoint  \
 sim:/tb_prelab/buzzer_out \
 sim:/tb_prelab/clk \
@@ -263,11 +117,14 @@ sim:/tb_prelab/LEDR \
 sim:/tb_prelab/reset \
 sim:/tb_prelab/switch \
 sim:/tb_prelab/test_input
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Ya  Hostname: DESKTOP-G7RS92G  ProcessID: 5756
+#           Attempting to use alternate WLF file "./wlftcva1d8".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftcva1d8
 run
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/PWM_DAC_ins
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/x2sin_ins
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/period_changer_ins
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/v2d
 # ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
@@ -305,90 +162,97 @@ run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 1  Instance: /tb_prelab/uut/PWM_DAC_ins
+#    Time: 0 ps  Iteration: 1  Instance: /tb_prelab/uut/period_changer_ins
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 1  Instance: /tb_prelab/uut/v2d
-# Compile of tb_prelab.vhd was successful with warnings.
+run
+run
+run
+# Compile of period_changer.vhd was successful.
 vsim -gui work.tb_prelab
-# End time: 22:58:47 on Nov 26,2021, Elapsed time: 0:06:36
+# End time: 22:06:53 on Dec 02,2021, Elapsed time: 0:08:13
+# Errors: 1, Warnings: 25
+# vsim -gui work.tb_prelab 
+# Start time: 22:06:53 on Dec 02,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_prelab(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.voltmeter(behavioral)
+# Loading work.averager(rtl)
+# Loading work.registers(rtl)
+# Loading work.typesforsevensegment
+# Loading work.sevensegment(behavioral)
+# Loading work.sevensegment_decoder(behavioral)
+# ** Warning: (vsim-3473) Component instance "ADC_Conversion_ins : ADC_Conversion" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd
+# Loading work.mux_for_averager(mux_behaviour)
+# Loading work.voltage2distance(behavior)
+# Loading work.binary_bcd(behavior)
+# Loading work.period_changer(behavioral)
+add wave -position insertpoint  \
+sim:/tb_prelab/buzzer_out \
+sim:/tb_prelab/clk \
+sim:/tb_prelab/clk_period \
+sim:/tb_prelab/HEX0 \
+sim:/tb_prelab/HEX1 \
+sim:/tb_prelab/HEX2 \
+sim:/tb_prelab/HEX3 \
+sim:/tb_prelab/HEX4 \
+sim:/tb_prelab/HEX5 \
+sim:/tb_prelab/LEDR \
+sim:/tb_prelab/reset \
+sim:/tb_prelab/switch \
+sim:/tb_prelab/test_input
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Ya  Hostname: DESKTOP-G7RS92G  ProcessID: 5756
+#           Attempting to use alternate WLF file "./wlftdqmgc3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftdqmgc3
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/period_changer_ins
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/v2d
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_prelab/uut/period_changer_ins
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /tb_prelab/uut/v2d
+run
+# End time: 22:41:39 on Dec 02,2021, Elapsed time: 0:34:46
 # Errors: 1, Warnings: 24
-# vsim -gui work.tb_prelab 
-# Start time: 22:58:47 on Nov 26,2021
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_prelab(behavior)
-# Loading ieee.numeric_std(body)
-# Loading work.voltmeter(behavioral)
-# Loading work.averager(rtl)
-# Loading work.registers(rtl)
-# Loading work.typesforsevensegment
-# Loading work.sevensegment(behavioral)
-# Loading work.sevensegment_decoder(behavioral)
-# ** Warning: (vsim-3473) Component instance "ADC_Conversion_ins : test_ADC" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd
-# Loading work.mux_for_averager(mux_behaviour)
-# Loading work.voltage2distance(behavior)
-# Loading work.binary_bcd(behavior)
-# Loading work.wave_incrementer(behavioral)
-# Loading work.x2sin(behavior)
-# Loading work.pwm_dac(behavioral)
-add wave -position insertpoint  \
-sim:/tb_prelab/buzzer_out \
-sim:/tb_prelab/clk \
-sim:/tb_prelab/clk_period \
-sim:/tb_prelab/HEX0 \
-sim:/tb_prelab/HEX1 \
-sim:/tb_prelab/HEX2 \
-sim:/tb_prelab/HEX3 \
-sim:/tb_prelab/HEX4 \
-sim:/tb_prelab/HEX5 \
-sim:/tb_prelab/LEDR \
-sim:/tb_prelab/reset \
-sim:/tb_prelab/switch \
-sim:/tb_prelab/test_input
-run
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/PWM_DAC_ins
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/x2sin_ins
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/v2d
-# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_prelab/uut/ave
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 1  Instance: /tb_prelab/uut/PWM_DAC_ins
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /tb_prelab/uut/v2d

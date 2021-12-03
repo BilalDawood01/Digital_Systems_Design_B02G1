@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Voltmeter
-Thu Dec 02 16:32:45 2021
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Thu Dec 02 22:33:07 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -52,39 +52,37 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  44. Parameter Settings for User Entity Instance: ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller_001
  45. Parameter Settings for User Entity Instance: ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_sync_uq1
  46. Parameter Settings for User Entity Instance: ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_req_sync_uq1
- 47. Parameter Settings for User Entity Instance: PWM_DAC:PWM_DAC_ins
- 48. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 49. scfifo Parameter Settings by Entity Instance
- 50. lpm_mult Parameter Settings by Entity Instance
- 51. Port Connectivity Checks: "PWM_DAC:PWM_DAC_ins"
- 52. Port Connectivity Checks: "binary_bcd:binary_bcd_ins"
- 53. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller_001"
- 54. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1"
- 55. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller"
- 56. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo"
- 57. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal"
- 58. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_altpll_sys:altpll_sys|adc_qsys_altpll_sys_altpll_oc92:sd1"
- 59. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_altpll_sys:altpll_sys"
- 60. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0"
- 61. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins"
- 62. Port Connectivity Checks: "SevenSegment:SevenSegment_ins"
- 63. Port Connectivity Checks: "registers:sync4"
- 64. Port Connectivity Checks: "registers:sync3"
- 65. Port Connectivity Checks: "registers:sync2"
- 66. Port Connectivity Checks: "registers:sync1"
- 67. Post-Synthesis Netlist Statistics for Top Partition
- 68. Elapsed Time Per Partition
- 69. Analysis & Synthesis Messages
- 70. Analysis & Synthesis Suppressed Messages
+ 47. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 48. scfifo Parameter Settings by Entity Instance
+ 49. lpm_mult Parameter Settings by Entity Instance
+ 50. Port Connectivity Checks: "binary_bcd:binary_bcd_ins"
+ 51. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller_001"
+ 52. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1"
+ 53. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller"
+ 54. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo"
+ 55. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal"
+ 56. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_altpll_sys:altpll_sys|adc_qsys_altpll_sys_altpll_oc92:sd1"
+ 57. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_altpll_sys:altpll_sys"
+ 58. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0"
+ 59. Port Connectivity Checks: "ADC_Conversion:ADC_Conversion_ins"
+ 60. Port Connectivity Checks: "SevenSegment:SevenSegment_ins"
+ 61. Port Connectivity Checks: "registers:sync4"
+ 62. Port Connectivity Checks: "registers:sync3"
+ 63. Port Connectivity Checks: "registers:sync2"
+ 64. Port Connectivity Checks: "registers:sync1"
+ 65. Post-Synthesis Netlist Statistics for Top Partition
+ 66. Elapsed Time Per Partition
+ 67. Analysis & Synthesis Messages
+ 68. Analysis & Synthesis Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -94,15 +92,16 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 02 16:32:45 2021       ;
-; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 02 22:33:06 2021       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Voltmeter                                   ;
 ; Top-level Entity Name              ; Voltmeter                                   ;
 ; Family                             ; MAX 10                                      ;
@@ -211,87 +210,82 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                              ;
-+------------------------------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------+----------+
-; File Name with User-Entered Path                                       ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                   ; Library  ;
-+------------------------------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------+----------+
-; ../D2L_Lab_4/PWM_DAC.vhd                                               ; yes             ; User VHDL File               ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/PWM_DAC.vhd                                                             ;          ;
-; averager.vhd                                                           ; yes             ; User VHDL File               ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager.vhd                                                           ;          ;
-; adc_qsys/synthesis/adc_qsys.v                                          ; yes             ; User Verilog HDL File        ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/adc_qsys.v                                          ; adc_qsys ;
-; adc_qsys/synthesis/submodules/altera_reset_controller.v                ; yes             ; User Verilog HDL File        ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_reset_controller.v                ; adc_qsys ;
-; adc_qsys/synthesis/submodules/altera_reset_synchronizer.v              ; yes             ; User Verilog HDL File        ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_reset_synchronizer.v              ; adc_qsys ;
-; adc_qsys/synthesis/submodules/adc_qsys_modular_adc_0.v                 ; yes             ; User Verilog HDL File        ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_modular_adc_0.v                 ; adc_qsys ;
-; adc_qsys/synthesis/submodules/altera_modular_adc_control.v             ; yes             ; User Verilog HDL File        ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control.v             ; adc_qsys ;
-; adc_qsys/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v   ; yes             ; User Verilog HDL File        ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v   ; adc_qsys ;
-; adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v         ; yes             ; User Verilog HDL File        ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v         ; adc_qsys ;
-; adc_qsys/synthesis/submodules/chsel_code_converter_sw_to_hw.v          ; yes             ; User Verilog HDL File        ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/chsel_code_converter_sw_to_hw.v          ; adc_qsys ;
-; adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v ; yes             ; User Verilog HDL File        ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v ; adc_qsys ;
-; adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v       ; yes             ; User Verilog HDL File        ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v       ; adc_qsys ;
-; adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v                    ; yes             ; User Verilog HDL File        ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v                    ; adc_qsys ;
-; voltmeter.vhd                                                          ; yes             ; User VHDL File               ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd                                                          ;          ;
-; mux.vhd                                                                ; yes             ; User VHDL File               ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/mux.vhd                                                                ;          ;
-; typesforsevensegment.vhd                                               ; yes             ; User VHDL File               ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/typesforsevensegment.vhd                                               ;          ;
-; ../D2L_Lab_4/x2sin.vhd                                                 ; yes             ; User VHDL File               ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/x2sin.vhd                                                               ;          ;
-; ../D2L_Lab_4/Wave_Incrementer.vhd                                      ; yes             ; User VHDL File               ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/Wave_Incrementer.vhd                                                    ;          ;
-; ../D2L_Lab_4/period_changer.vhd                                        ; yes             ; User VHDL File               ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/period_changer.vhd                                                      ;          ;
-; registers.vhd                                                          ; yes             ; Auto-Found VHDL File         ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/registers.vhd                                                          ;          ;
-; sevensegment.vhd                                                       ; yes             ; Auto-Found VHDL File         ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd                                                       ;          ;
-; sevensegment_decoder.vhd                                               ; yes             ; Auto-Found VHDL File         ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment_decoder.vhd                                               ;          ;
-; adc_conversion.v                                                       ; yes             ; Auto-Found Verilog HDL File  ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_conversion.v                                                       ;          ;
-; altera_std_synchronizer.v                                              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_std_synchronizer.v                                               ;          ;
-; scfifo.tdf                                                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/scfifo.tdf                                                              ;          ;
-; a_regfifo.inc                                                          ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_regfifo.inc                                                           ;          ;
-; a_dpfifo.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_dpfifo.inc                                                            ;          ;
-; a_i2fifo.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_i2fifo.inc                                                            ;          ;
-; a_fffifo.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_fffifo.inc                                                            ;          ;
-; a_f2fifo.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_f2fifo.inc                                                            ;          ;
-; aglobal181.inc                                                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                          ;          ;
-; db/scfifo_ds61.tdf                                                     ; yes             ; Auto-Generated Megafunction  ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/scfifo_ds61.tdf                                                     ;          ;
-; db/a_dpfifo_3o41.tdf                                                   ; yes             ; Auto-Generated Megafunction  ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_dpfifo_3o41.tdf                                                   ;          ;
-; db/a_fefifo_c6e.tdf                                                    ; yes             ; Auto-Generated Megafunction  ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_fefifo_c6e.tdf                                                    ;          ;
-; db/cntr_337.tdf                                                        ; yes             ; Auto-Generated Megafunction  ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/cntr_337.tdf                                                        ;          ;
-; db/altsyncram_rqn1.tdf                                                 ; yes             ; Auto-Generated Megafunction  ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf                                                 ;          ;
-; db/cntr_n2b.tdf                                                        ; yes             ; Auto-Generated Megafunction  ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/cntr_n2b.tdf                                                        ;          ;
-; voltage2distance.vhd                                                   ; yes             ; Auto-Found VHDL File         ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltage2distance.vhd                                                   ;          ;
-; binary_bcd.vhd                                                         ; yes             ; Auto-Found VHDL File         ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/binary_bcd.vhd                                                         ;          ;
-; lpm_mult.tdf                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf                                                            ;          ;
-; lpm_add_sub.inc                                                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                         ;          ;
-; multcore.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc                                                            ;          ;
-; bypassff.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc                                                            ;          ;
-; altshift.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc                                                            ;          ;
-; multcore.tdf                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf                                                            ;          ;
-; csa_add.inc                                                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/csa_add.inc                                                             ;          ;
-; mpar_add.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.inc                                                            ;          ;
-; muleabz.inc                                                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/muleabz.inc                                                             ;          ;
-; mul_lfrg.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mul_lfrg.inc                                                            ;          ;
-; mul_boothc.inc                                                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mul_boothc.inc                                                          ;          ;
-; alt_ded_mult.inc                                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_ded_mult.inc                                                        ;          ;
-; alt_ded_mult_y.inc                                                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc                                                      ;          ;
-; dffpipe.inc                                                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/dffpipe.inc                                                             ;          ;
-; mpar_add.tdf                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf                                                            ;          ;
-; lpm_add_sub.tdf                                                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf                                                         ;          ;
-; addcore.inc                                                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/addcore.inc                                                             ;          ;
-; look_add.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/look_add.inc                                                            ;          ;
-; alt_stratix_add_sub.inc                                                ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                                 ;          ;
-; db/add_sub_frg.tdf                                                     ; yes             ; Auto-Generated Megafunction  ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/add_sub_frg.tdf                                                     ;          ;
-; db/add_sub_arg.tdf                                                     ; yes             ; Auto-Generated Megafunction  ; C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/add_sub_arg.tdf                                                     ;          ;
-; altshift.tdf                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.tdf                                                            ;          ;
-+------------------------------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------+----------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                       ;
++------------------------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------+----------+
+; File Name with User-Entered Path                                       ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                            ; Library  ;
++------------------------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------+----------+
+; averager.vhd                                                           ; yes             ; User VHDL File               ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager.vhd                                                           ;          ;
+; adc_qsys/synthesis/adc_qsys.v                                          ; yes             ; User Verilog HDL File        ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/adc_qsys.v                                          ; adc_qsys ;
+; adc_qsys/synthesis/submodules/altera_reset_controller.v                ; yes             ; User Verilog HDL File        ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_reset_controller.v                ; adc_qsys ;
+; adc_qsys/synthesis/submodules/altera_reset_synchronizer.v              ; yes             ; User Verilog HDL File        ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_reset_synchronizer.v              ; adc_qsys ;
+; adc_qsys/synthesis/submodules/adc_qsys_modular_adc_0.v                 ; yes             ; User Verilog HDL File        ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_modular_adc_0.v                 ; adc_qsys ;
+; adc_qsys/synthesis/submodules/altera_modular_adc_control.v             ; yes             ; User Verilog HDL File        ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control.v             ; adc_qsys ;
+; adc_qsys/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v   ; yes             ; User Verilog HDL File        ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v   ; adc_qsys ;
+; adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v         ; yes             ; User Verilog HDL File        ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v         ; adc_qsys ;
+; adc_qsys/synthesis/submodules/chsel_code_converter_sw_to_hw.v          ; yes             ; User Verilog HDL File        ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/chsel_code_converter_sw_to_hw.v          ; adc_qsys ;
+; adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v ; yes             ; User Verilog HDL File        ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v ; adc_qsys ;
+; adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v       ; yes             ; User Verilog HDL File        ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v       ; adc_qsys ;
+; adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v                    ; yes             ; User Verilog HDL File        ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v                    ; adc_qsys ;
+; voltmeter.vhd                                                          ; yes             ; User VHDL File               ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd                                                          ;          ;
+; mux.vhd                                                                ; yes             ; User VHDL File               ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/mux.vhd                                                                ;          ;
+; typesforsevensegment.vhd                                               ; yes             ; User VHDL File               ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/typesforsevensegment.vhd                                               ;          ;
+; ../D2L_Lab_4/period_changer.vhd                                        ; yes             ; User VHDL File               ; D:/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/period_changer.vhd                                                      ;          ;
+; registers.vhd                                                          ; yes             ; Auto-Found VHDL File         ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/registers.vhd                                                          ;          ;
+; sevensegment.vhd                                                       ; yes             ; Auto-Found VHDL File         ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd                                                       ;          ;
+; sevensegment_decoder.vhd                                               ; yes             ; Auto-Found VHDL File         ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment_decoder.vhd                                               ;          ;
+; adc_conversion.v                                                       ; yes             ; Auto-Found Verilog HDL File  ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_conversion.v                                                       ;          ;
+; altera_std_synchronizer.v                                              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_std_synchronizer.v                                        ;          ;
+; scfifo.tdf                                                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/scfifo.tdf                                                       ;          ;
+; a_regfifo.inc                                                          ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_regfifo.inc                                                    ;          ;
+; a_dpfifo.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_dpfifo.inc                                                     ;          ;
+; a_i2fifo.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_i2fifo.inc                                                     ;          ;
+; a_fffifo.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_fffifo.inc                                                     ;          ;
+; a_f2fifo.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_f2fifo.inc                                                     ;          ;
+; aglobal201.inc                                                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                   ;          ;
+; db/scfifo_ds61.tdf                                                     ; yes             ; Auto-Generated Megafunction  ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/scfifo_ds61.tdf                                                     ;          ;
+; db/a_dpfifo_3o41.tdf                                                   ; yes             ; Auto-Generated Megafunction  ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_dpfifo_3o41.tdf                                                   ;          ;
+; db/a_fefifo_c6e.tdf                                                    ; yes             ; Auto-Generated Megafunction  ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_fefifo_c6e.tdf                                                    ;          ;
+; db/cntr_337.tdf                                                        ; yes             ; Auto-Generated Megafunction  ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/cntr_337.tdf                                                        ;          ;
+; db/altsyncram_rqn1.tdf                                                 ; yes             ; Auto-Generated Megafunction  ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf                                                 ;          ;
+; db/cntr_n2b.tdf                                                        ; yes             ; Auto-Generated Megafunction  ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/cntr_n2b.tdf                                                        ;          ;
+; voltage2distance.vhd                                                   ; yes             ; Auto-Found VHDL File         ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltage2distance.vhd                                                   ;          ;
+; binary_bcd.vhd                                                         ; yes             ; Auto-Found VHDL File         ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/binary_bcd.vhd                                                         ;          ;
+; lpm_mult.tdf                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf                                                     ;          ;
+; lpm_add_sub.inc                                                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                  ;          ;
+; multcore.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.inc                                                     ;          ;
+; bypassff.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc                                                     ;          ;
+; altshift.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc                                                     ;          ;
+; multcore.tdf                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.tdf                                                     ;          ;
+; csa_add.inc                                                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/csa_add.inc                                                      ;          ;
+; mpar_add.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.inc                                                     ;          ;
+; muleabz.inc                                                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/muleabz.inc                                                      ;          ;
+; mul_lfrg.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mul_lfrg.inc                                                     ;          ;
+; mul_boothc.inc                                                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mul_boothc.inc                                                   ;          ;
+; alt_ded_mult.inc                                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_ded_mult.inc                                                 ;          ;
+; alt_ded_mult_y.inc                                                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc                                               ;          ;
+; dffpipe.inc                                                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dffpipe.inc                                                      ;          ;
+; mpar_add.tdf                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf                                                     ;          ;
+; lpm_add_sub.tdf                                                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.tdf                                                  ;          ;
+; addcore.inc                                                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/addcore.inc                                                      ;          ;
+; look_add.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/look_add.inc                                                     ;          ;
+; alt_stratix_add_sub.inc                                                ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                          ;          ;
+; db/add_sub_frg.tdf                                                     ; yes             ; Auto-Generated Megafunction  ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/add_sub_frg.tdf                                                     ;          ;
+; db/add_sub_arg.tdf                                                     ; yes             ; Auto-Generated Megafunction  ; D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/add_sub_arg.tdf                                                     ;          ;
+; altshift.tdf                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.tdf                                                     ;          ;
++------------------------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------+----------+
 
 
 +---------------------------------------------------------+
@@ -1110,16 +1104,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: PWM_DAC:PWM_DAC_ins ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; width          ; 9     ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +---------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                 ;
 +------------------------------------------------+----------+---------------------+
@@ -1188,15 +1172,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
 +---------------------------------------+----------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PWM_DAC:PWM_DAC_ins"                                                                   ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; pwm_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -1440,21 +1415,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR SCLR      ; 26                          ;
 ;     ENA CLR SCLR SLD  ; 6                           ;
 ;     plain             ; 3                           ;
-; cycloneiii_lcell_comb ; 1450                        ;
+; cycloneiii_lcell_comb ; 1451                        ;
 ;     arith             ; 312                         ;
 ;         2 data inputs ; 92                          ;
 ;         3 data inputs ; 220                         ;
-;     normal            ; 1138                        ;
+;     normal            ; 1139                        ;
 ;         0 data inputs ; 21                          ;
-;         1 data inputs ; 13                          ;
+;         1 data inputs ; 14                          ;
 ;         2 data inputs ; 76                          ;
 ;         3 data inputs ; 156                         ;
 ;         4 data inputs ; 872                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; fiftyfivenm_adcblock  ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 16.50                       ;
-; Average LUT depth     ; 8.68                        ;
+; Max LUT depth         ; 17.50                       ;
+; Average LUT depth     ; 8.95                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1463,7 +1438,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:14     ;
+; Top            ; 00:00:31     ;
 +----------------+--------------+
 
 
@@ -1472,113 +1447,104 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Dec 02 16:32:11 2021
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Dec 02 22:29:45 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LAB4_ABRINI_DAWOOD_MUJTABA -c Voltmeter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /github/digital_systems_design_b02g1/lab_4/d2l_lab_4/pwm_dac.vhd
-    Info (12022): Found design unit 1: PWM_DAC-Behavioral File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/PWM_DAC.vhd Line: 14
-    Info (12023): Found entity 1: PWM_DAC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/PWM_DAC.vhd Line: 5
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file averager.vhd
-    Info (12022): Found design unit 1: averager-rtl File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager.vhd Line: 15
-    Info (12023): Found entity 1: averager File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager.vhd Line: 6
+    Info (12022): Found design unit 1: averager-rtl File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager.vhd Line: 15
+    Info (12023): Found entity 1: averager File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/averager.vhd Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file adc_qsys/synthesis/adc_qsys.v
-    Info (12023): Found entity 1: adc_qsys File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/adc_qsys.v Line: 6
+    Info (12023): Found entity 1: adc_qsys File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/adc_qsys.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file adc_qsys/synthesis/submodules/altera_reset_controller.v
-    Info (12023): Found entity 1: altera_reset_controller File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_reset_controller.v Line: 42
+    Info (12023): Found entity 1: altera_reset_controller File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_reset_controller.v Line: 42
 Info (12021): Found 1 design units, including 1 entities, in source file adc_qsys/synthesis/submodules/altera_reset_synchronizer.v
-    Info (12023): Found entity 1: altera_reset_synchronizer File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_reset_synchronizer.v Line: 24
+    Info (12023): Found entity 1: altera_reset_synchronizer File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_reset_synchronizer.v Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file adc_qsys/synthesis/submodules/adc_qsys_modular_adc_0.v
-    Info (12023): Found entity 1: adc_qsys_modular_adc_0 File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_modular_adc_0.v Line: 9
+    Info (12023): Found entity 1: adc_qsys_modular_adc_0 File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_modular_adc_0.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file adc_qsys/synthesis/submodules/altera_modular_adc_control.v
-    Info (12023): Found entity 1: altera_modular_adc_control File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control.v Line: 18
+    Info (12023): Found entity 1: altera_modular_adc_control File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control.v Line: 18
 Info (12021): Found 1 design units, including 1 entities, in source file adc_qsys/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v
-    Info (12023): Found entity 1: altera_modular_adc_control_avrg_fifo File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v Line: 53
+    Info (12023): Found entity 1: altera_modular_adc_control_avrg_fifo File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v Line: 53
 Info (12021): Found 1 design units, including 1 entities, in source file adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v
-    Info (12023): Found entity 1: altera_modular_adc_control_fsm File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 18
+    Info (12023): Found entity 1: altera_modular_adc_control_fsm File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 18
 Info (12021): Found 1 design units, including 1 entities, in source file adc_qsys/synthesis/submodules/chsel_code_converter_sw_to_hw.v
-    Info (12023): Found entity 1: chsel_code_converter_sw_to_hw File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/chsel_code_converter_sw_to_hw.v Line: 32
+    Info (12023): Found entity 1: chsel_code_converter_sw_to_hw File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/chsel_code_converter_sw_to_hw.v Line: 32
 Info (12021): Found 1 design units, including 1 entities, in source file adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v
-    Info (12023): Found entity 1: fiftyfivenm_adcblock_primitive_wrapper File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v Line: 37
+    Info (12023): Found entity 1: fiftyfivenm_adcblock_primitive_wrapper File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v Line: 37
 Info (12021): Found 1 design units, including 1 entities, in source file adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v
-    Info (12023): Found entity 1: fiftyfivenm_adcblock_top_wrapper File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v Line: 31
+    Info (12023): Found entity 1: fiftyfivenm_adcblock_top_wrapper File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v Line: 31
 Info (12021): Found 4 design units, including 4 entities, in source file adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v
-    Info (12023): Found entity 1: adc_qsys_altpll_sys_dffpipe_l2c File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v Line: 37
-    Info (12023): Found entity 2: adc_qsys_altpll_sys_stdsync_sv6 File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v Line: 98
-    Info (12023): Found entity 3: adc_qsys_altpll_sys_altpll_oc92 File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v Line: 130
-    Info (12023): Found entity 4: adc_qsys_altpll_sys File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v Line: 217
+    Info (12023): Found entity 1: adc_qsys_altpll_sys_dffpipe_l2c File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v Line: 37
+    Info (12023): Found entity 2: adc_qsys_altpll_sys_stdsync_sv6 File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v Line: 98
+    Info (12023): Found entity 3: adc_qsys_altpll_sys_altpll_oc92 File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v Line: 130
+    Info (12023): Found entity 4: adc_qsys_altpll_sys File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v Line: 217
 Info (12021): Found 2 design units, including 1 entities, in source file voltmeter.vhd
-    Info (12022): Found design unit 1: Voltmeter-Behavioral File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 16
-    Info (12023): Found entity 1: Voltmeter File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 5
+    Info (12022): Found design unit 1: Voltmeter-Behavioral File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 17
+    Info (12023): Found entity 1: Voltmeter File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file simulation/tb_prelab.vhd
-    Info (12022): Found design unit 1: tb_prelab-behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/Simulation/tb_prelab.vhd Line: 7
-    Info (12023): Found entity 1: tb_prelab File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/Simulation/tb_prelab.vhd Line: 4
+    Info (12022): Found design unit 1: tb_prelab-behavior File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/Simulation/tb_prelab.vhd Line: 7
+    Info (12023): Found entity 1: tb_prelab File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/Simulation/tb_prelab.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux.vhd
-    Info (12022): Found design unit 1: Mux_for_Averager-Mux_Behaviour File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/mux.vhd Line: 15
-    Info (12023): Found entity 1: Mux_for_Averager File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/mux.vhd Line: 5
+    Info (12022): Found design unit 1: Mux_for_Averager-Mux_Behaviour File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/mux.vhd Line: 15
+    Info (12023): Found entity 1: Mux_for_Averager File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/mux.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file tb_mux.vhd
-    Info (12022): Found design unit 1: tb_mux-behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_mux.vhd Line: 8
-    Info (12023): Found entity 1: tb_mux File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_mux.vhd Line: 5
+    Info (12022): Found design unit 1: tb_mux-behavior File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_mux.vhd Line: 8
+    Info (12023): Found entity 1: tb_mux File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_mux.vhd Line: 5
 Info (12021): Found 1 design units, including 0 entities, in source file typesforsevensegment.vhd
-    Info (12022): Found design unit 1: typesforsevensegment File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/typesforsevensegment.vhd Line: 4
+    Info (12022): Found design unit 1: typesforsevensegment File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/typesforsevensegment.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file tb_troubleshooting.vhd
-    Info (12022): Found design unit 1: tb_troubleshooting-behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_troubleshooting.vhd Line: 8
-    Info (12023): Found entity 1: tb_troubleshooting File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_troubleshooting.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /github/digital_systems_design_b02g1/lab_4/d2l_lab_4/x2sin.vhd
-    Info (12022): Found design unit 1: x2square-behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/x2sin.vhd Line: 13
-    Info (12023): Found entity 1: x2square File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/x2sin.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /github/digital_systems_design_b02g1/lab_4/d2l_lab_4/wave_incrementer.vhd
-    Info (12022): Found design unit 1: Wave_Incrementer-Behavioral File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/Wave_Incrementer.vhd Line: 13
-    Info (12023): Found entity 1: Wave_Incrementer File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/Wave_Incrementer.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /github/digital_systems_design_b02g1/lab_4/d2l_lab_4/period_changer.vhd
-    Info (12022): Found design unit 1: period_changer-Behavioral File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/period_changer.vhd Line: 13
-    Info (12023): Found entity 1: period_changer File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/period_changer.vhd Line: 5
+    Info (12022): Found design unit 1: tb_troubleshooting-behavior File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_troubleshooting.vhd Line: 8
+    Info (12023): Found entity 1: tb_troubleshooting File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/tb_troubleshooting.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /digital_systems_design_b02g1/lab_4/d2l_lab_4/period_changer.vhd
+    Info (12022): Found design unit 1: period_changer-Behavioral File: D:/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/period_changer.vhd Line: 13
+    Info (12023): Found entity 1: period_changer File: D:/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/period_changer.vhd Line: 5
 Info (12127): Elaborating entity "Voltmeter" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at voltmeter.vhd(22): object "busy" assigned a value but never read File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 22
-Info (12128): Elaborating entity "averager" for hierarchy "averager:ave" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 150
+Warning (10036): Verilog HDL or VHDL warning at voltmeter.vhd(23): object "busy" assigned a value but never read File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 23
+Info (12128): Elaborating entity "averager" for hierarchy "averager:ave" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 122
 Warning (12125): Using design file registers.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: registers-rtl File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/registers.vhd Line: 21
-    Info (12023): Found entity 1: registers File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/registers.vhd Line: 8
-Info (12128): Elaborating entity "registers" for hierarchy "registers:sync1" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 159
-Info (12128): Elaborating entity "registers" for hierarchy "registers:sync3" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 179
+    Info (12022): Found design unit 1: registers-rtl File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/registers.vhd Line: 21
+    Info (12023): Found entity 1: registers File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/registers.vhd Line: 8
+Info (12128): Elaborating entity "registers" for hierarchy "registers:sync1" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 131
+Info (12128): Elaborating entity "registers" for hierarchy "registers:sync3" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 151
 Warning (12125): Using design file sevensegment.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: SevenSegment-Behavioral File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 17
-    Info (12023): Found entity 1: SevenSegment File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 6
-Info (12128): Elaborating entity "SevenSegment" for hierarchy "SevenSegment:SevenSegment_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 199
-Warning (10492): VHDL Process Statement warning at sevensegment.vhd(58): signal "Mux_Switch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 58
-Warning (10492): VHDL Process Statement warning at sevensegment.vhd(59): signal "bcd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 59
-Warning (10492): VHDL Process Statement warning at sevensegment.vhd(71): signal "Num_Hex3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 71
-Warning (10492): VHDL Process Statement warning at sevensegment.vhd(71): signal "DP_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 71
-Warning (10492): VHDL Process Statement warning at sevensegment.vhd(78): signal "bcd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 78
-Warning (10492): VHDL Process Statement warning at sevensegment.vhd(88): signal "Num_Hex3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 88
-Warning (10492): VHDL Process Statement warning at sevensegment.vhd(88): signal "DP_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 88
+    Info (12022): Found design unit 1: SevenSegment-Behavioral File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 17
+    Info (12023): Found entity 1: SevenSegment File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 6
+Info (12128): Elaborating entity "SevenSegment" for hierarchy "SevenSegment:SevenSegment_ins" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 171
+Warning (10492): VHDL Process Statement warning at sevensegment.vhd(58): signal "Mux_Switch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at sevensegment.vhd(59): signal "bcd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 59
+Warning (10492): VHDL Process Statement warning at sevensegment.vhd(71): signal "Num_Hex3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at sevensegment.vhd(71): signal "DP_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at sevensegment.vhd(78): signal "bcd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at sevensegment.vhd(88): signal "Num_Hex3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at sevensegment.vhd(88): signal "DP_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 88
 Warning (12125): Using design file sevensegment_decoder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: SevenSegment_decoder-Behavioral File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment_decoder.vhd Line: 13
-    Info (12023): Found entity 1: SevenSegment_decoder File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment_decoder.vhd Line: 5
-Info (12128): Elaborating entity "SevenSegment_decoder" for hierarchy "SevenSegment:SevenSegment_ins|SevenSegment_decoder:\decoder_Instantiator:0:decoder" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 37
+    Info (12022): Found design unit 1: SevenSegment_decoder-Behavioral File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment_decoder.vhd Line: 13
+    Info (12023): Found entity 1: SevenSegment_decoder File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment_decoder.vhd Line: 5
+Info (12128): Elaborating entity "SevenSegment_decoder" for hierarchy "SevenSegment:SevenSegment_ins|SevenSegment_decoder:\decoder_Instantiator:0:decoder" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/sevensegment.vhd Line: 37
 Warning (12125): Using design file adc_conversion.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: ADC_Conversion File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_conversion.v Line: 34
-Info (12128): Elaborating entity "ADC_Conversion" for hierarchy "ADC_Conversion:ADC_Conversion_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 217
-Warning (10036): Verilog HDL or VHDL warning at adc_conversion.v(98): object "cur_adc_ch" assigned a value but never read File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_conversion.v Line: 98
-Warning (10036): Verilog HDL or VHDL warning at adc_conversion.v(99): object "adc_sample_data" assigned a value but never read File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_conversion.v Line: 99
-Info (12128): Elaborating entity "adc_qsys" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_conversion.v Line: 75
-Info (12128): Elaborating entity "adc_qsys_altpll_sys" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_altpll_sys:altpll_sys" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/adc_qsys.v Line: 52
-Info (12128): Elaborating entity "adc_qsys_altpll_sys_stdsync_sv6" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_altpll_sys:altpll_sys|adc_qsys_altpll_sys_stdsync_sv6:stdsync2" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v Line: 288
-Info (12128): Elaborating entity "adc_qsys_altpll_sys_dffpipe_l2c" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_altpll_sys:altpll_sys|adc_qsys_altpll_sys_stdsync_sv6:stdsync2|adc_qsys_altpll_sys_dffpipe_l2c:dffpipe3" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v Line: 116
-Info (12128): Elaborating entity "adc_qsys_altpll_sys_altpll_oc92" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_altpll_sys:altpll_sys|adc_qsys_altpll_sys_altpll_oc92:sd1" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v Line: 294
-Info (12128): Elaborating entity "adc_qsys_modular_adc_0" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/adc_qsys.v Line: 71
-Info (12128): Elaborating entity "altera_modular_adc_control" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_modular_adc_0.v Line: 92
-Info (12128): Elaborating entity "altera_modular_adc_control_fsm" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control.v Line: 108
-Warning (10036): Verilog HDL or VHDL warning at altera_modular_adc_control_fsm.v(70): object "sync_ctrl_state_nxt" assigned a value but never read File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 70
-Info (12128): Elaborating entity "altera_std_synchronizer" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_clk_dft_synchronizer" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 156
-Info (12130): Elaborated megafunction instantiation "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_clk_dft_synchronizer" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 156
-Info (12133): Instantiated megafunction "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_clk_dft_synchronizer" with the following parameter: File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 156
+    Info (12023): Found entity 1: ADC_Conversion File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_conversion.v Line: 34
+Info (12128): Elaborating entity "ADC_Conversion" for hierarchy "ADC_Conversion:ADC_Conversion_ins" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 189
+Warning (10036): Verilog HDL or VHDL warning at adc_conversion.v(98): object "cur_adc_ch" assigned a value but never read File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_conversion.v Line: 98
+Warning (10036): Verilog HDL or VHDL warning at adc_conversion.v(99): object "adc_sample_data" assigned a value but never read File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_conversion.v Line: 99
+Info (12128): Elaborating entity "adc_qsys" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_conversion.v Line: 75
+Info (12128): Elaborating entity "adc_qsys_altpll_sys" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_altpll_sys:altpll_sys" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/adc_qsys.v Line: 52
+Info (12128): Elaborating entity "adc_qsys_altpll_sys_stdsync_sv6" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_altpll_sys:altpll_sys|adc_qsys_altpll_sys_stdsync_sv6:stdsync2" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v Line: 288
+Info (12128): Elaborating entity "adc_qsys_altpll_sys_dffpipe_l2c" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_altpll_sys:altpll_sys|adc_qsys_altpll_sys_stdsync_sv6:stdsync2|adc_qsys_altpll_sys_dffpipe_l2c:dffpipe3" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v Line: 116
+Info (12128): Elaborating entity "adc_qsys_altpll_sys_altpll_oc92" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_altpll_sys:altpll_sys|adc_qsys_altpll_sys_altpll_oc92:sd1" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_altpll_sys.v Line: 294
+Info (12128): Elaborating entity "adc_qsys_modular_adc_0" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/adc_qsys.v Line: 71
+Info (12128): Elaborating entity "altera_modular_adc_control" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/adc_qsys_modular_adc_0.v Line: 92
+Info (12128): Elaborating entity "altera_modular_adc_control_fsm" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control.v Line: 108
+Warning (10036): Verilog HDL or VHDL warning at altera_modular_adc_control_fsm.v(70): object "sync_ctrl_state_nxt" assigned a value but never read File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 70
+Info (12128): Elaborating entity "altera_std_synchronizer" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_clk_dft_synchronizer" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 156
+Info (12130): Elaborated megafunction instantiation "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_clk_dft_synchronizer" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 156
+Info (12133): Instantiated megafunction "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_clk_dft_synchronizer" with the following parameter: File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 156
     Info (12134): Parameter "depth" = "2"
-Info (12128): Elaborating entity "altera_modular_adc_control_avrg_fifo" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 955
-Info (12128): Elaborating entity "scfifo" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v Line: 91
-Info (12130): Elaborated megafunction instantiation "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v Line: 91
-Info (12133): Instantiated megafunction "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component" with the following parameter: File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v Line: 91
+Info (12128): Elaborating entity "altera_modular_adc_control_avrg_fifo" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 955
+Info (12128): Elaborating entity "scfifo" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v Line: 91
+Info (12130): Elaborated megafunction instantiation "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v Line: 91
+Info (12133): Instantiated megafunction "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component" with the following parameter: File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v Line: 91
     Info (12134): Parameter "add_ram_output_register" = "OFF"
     Info (12134): Parameter "intended_device_family" = "MAX 10"
     Info (12134): Parameter "lpm_hint" = "RAM_BLOCK_TYPE=M9K"
@@ -1591,64 +1557,60 @@ Info (12133): Instantiated megafunction "ADC_Conversion:ADC_Conversion_ins|adc_q
     Info (12134): Parameter "underflow_checking" = "ON"
     Info (12134): Parameter "use_eab" = "ON"
 Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_ds61.tdf
-    Info (12023): Found entity 1: scfifo_ds61 File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/scfifo_ds61.tdf Line: 24
-Info (12128): Elaborating entity "scfifo_ds61" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/scfifo.tdf Line: 299
+    Info (12023): Found entity 1: scfifo_ds61 File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/scfifo_ds61.tdf Line: 25
+Info (12128): Elaborating entity "scfifo_ds61" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/scfifo.tdf Line: 300
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_3o41.tdf
-    Info (12023): Found entity 1: a_dpfifo_3o41 File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_dpfifo_3o41.tdf Line: 28
-Info (12128): Elaborating entity "a_dpfifo_3o41" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/scfifo_ds61.tdf Line: 36
+    Info (12023): Found entity 1: a_dpfifo_3o41 File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_dpfifo_3o41.tdf Line: 29
+Info (12128): Elaborating entity "a_dpfifo_3o41" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/scfifo_ds61.tdf Line: 37
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_fefifo_c6e.tdf
-    Info (12023): Found entity 1: a_fefifo_c6e File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_fefifo_c6e.tdf Line: 24
-Info (12128): Elaborating entity "a_fefifo_c6e" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|a_fefifo_c6e:fifo_state" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_dpfifo_3o41.tdf Line: 40
+    Info (12023): Found entity 1: a_fefifo_c6e File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_fefifo_c6e.tdf Line: 25
+Info (12128): Elaborating entity "a_fefifo_c6e" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|a_fefifo_c6e:fifo_state" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_dpfifo_3o41.tdf Line: 41
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_337.tdf
-    Info (12023): Found entity 1: cntr_337 File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/cntr_337.tdf Line: 25
-Info (12128): Elaborating entity "cntr_337" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|a_fefifo_c6e:fifo_state|cntr_337:count_usedw" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_fefifo_c6e.tdf Line: 37
+    Info (12023): Found entity 1: cntr_337 File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/cntr_337.tdf Line: 26
+Info (12128): Elaborating entity "cntr_337" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|a_fefifo_c6e:fifo_state|cntr_337:count_usedw" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_fefifo_c6e.tdf Line: 38
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_rqn1.tdf
-    Info (12023): Found entity 1: altsyncram_rqn1 File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_rqn1" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_dpfifo_3o41.tdf Line: 41
+    Info (12023): Found entity 1: altsyncram_rqn1 File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_rqn1" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_dpfifo_3o41.tdf Line: 42
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_n2b.tdf
-    Info (12023): Found entity 1: cntr_n2b File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/cntr_n2b.tdf Line: 25
-Info (12128): Elaborating entity "cntr_n2b" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|cntr_n2b:rd_ptr_count" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_dpfifo_3o41.tdf Line: 42
-Info (12128): Elaborating entity "fiftyfivenm_adcblock_top_wrapper" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control.v Line: 152
-Info (12128): Elaborating entity "chsel_code_converter_sw_to_hw" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst|chsel_code_converter_sw_to_hw:decoder" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v Line: 173
-Info (12128): Elaborating entity "fiftyfivenm_adcblock_primitive_wrapper" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst|fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v Line: 191
-Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/adc_qsys.v Line: 134
-Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_reset_controller.v Line: 208
-Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_reset_controller.v Line: 220
-Info (12128): Elaborating entity "Mux_for_Averager" for hierarchy "Mux_for_Averager:mux_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 224
+    Info (12023): Found entity 1: cntr_n2b File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/cntr_n2b.tdf Line: 26
+Info (12128): Elaborating entity "cntr_n2b" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|cntr_n2b:rd_ptr_count" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/a_dpfifo_3o41.tdf Line: 43
+Info (12128): Elaborating entity "fiftyfivenm_adcblock_top_wrapper" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control.v Line: 152
+Info (12128): Elaborating entity "chsel_code_converter_sw_to_hw" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst|chsel_code_converter_sw_to_hw:decoder" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v Line: 173
+Info (12128): Elaborating entity "fiftyfivenm_adcblock_primitive_wrapper" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst|fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v Line: 191
+Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/adc_qsys.v Line: 134
+Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_reset_controller.v Line: 208
+Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_reset_controller.v Line: 220
+Info (12128): Elaborating entity "Mux_for_Averager" for hierarchy "Mux_for_Averager:mux_ins" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 196
 Warning (12125): Using design file voltage2distance.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: voltage2distance-behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltage2distance.vhd Line: 32
-    Info (12023): Found entity 1: voltage2distance File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltage2distance.vhd Line: 24
-Info (12128): Elaborating entity "voltage2distance" for hierarchy "voltage2distance:v2d" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 240
+    Info (12022): Found design unit 1: voltage2distance-behavior File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltage2distance.vhd Line: 32
+    Info (12023): Found entity 1: voltage2distance File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltage2distance.vhd Line: 24
+Info (12128): Elaborating entity "voltage2distance" for hierarchy "voltage2distance:v2d" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 212
 Warning (12125): Using design file binary_bcd.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: binary_bcd-behavior File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/binary_bcd.vhd Line: 19
-    Info (12023): Found entity 1: binary_bcd File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/binary_bcd.vhd Line: 8
-Info (12128): Elaborating entity "binary_bcd" for hierarchy "binary_bcd:binary_bcd_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 248
-Warning (10036): Verilog HDL or VHDL warning at binary_bcd.vhd(22): object "counter" assigned a value but never read File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/binary_bcd.vhd Line: 22
-Warning (10631): VHDL Process Statement warning at binary_bcd.vhd(31): inferring latch(es) for signal or variable "busy", which holds its previous value in one or more paths through the process File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/binary_bcd.vhd Line: 31
-Info (10041): Inferred latch for "busy" at binary_bcd.vhd(31) File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/binary_bcd.vhd Line: 31
-Info (12128): Elaborating entity "Wave_Incrementer" for hierarchy "Wave_Incrementer:Wave_Incrementer_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 258
-Warning (10492): VHDL Process Statement warning at Wave_Incrementer.vhd(29): signal "delta_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/D2L_Lab_4/Wave_Incrementer.vhd Line: 29
-Info (12128): Elaborating entity "x2square" for hierarchy "x2square:x2square_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 266
-Info (12128): Elaborating entity "PWM_DAC" for hierarchy "PWM_DAC:PWM_DAC_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 274
-Info (12128): Elaborating entity "period_changer" for hierarchy "period_changer:period_changer_ins" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 283
+    Info (12022): Found design unit 1: binary_bcd-behavior File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/binary_bcd.vhd Line: 19
+    Info (12023): Found entity 1: binary_bcd File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/binary_bcd.vhd Line: 8
+Info (12128): Elaborating entity "binary_bcd" for hierarchy "binary_bcd:binary_bcd_ins" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 220
+Warning (10036): Verilog HDL or VHDL warning at binary_bcd.vhd(22): object "counter" assigned a value but never read File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/binary_bcd.vhd Line: 22
+Warning (10631): VHDL Process Statement warning at binary_bcd.vhd(31): inferring latch(es) for signal or variable "busy", which holds its previous value in one or more paths through the process File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/binary_bcd.vhd Line: 31
+Info (10041): Inferred latch for "busy" at binary_bcd.vhd(31) File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/binary_bcd.vhd Line: 31
+Info (12128): Elaborating entity "period_changer" for hierarchy "period_changer:period_changer_ins" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 231
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[0]" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 39
-        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[1]" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 69
-        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[2]" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 99
-        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[3]" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 129
-        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[4]" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 159
-        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[5]" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 189
-        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[6]" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 219
-        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[7]" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 249
-        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[8]" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 279
-        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[9]" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 309
-        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[10]" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 339
-        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[11]" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 369
+        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[0]" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 40
+        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[1]" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 70
+        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[2]" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 100
+        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[3]" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 130
+        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[4]" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 160
+        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[5]" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 190
+        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[6]" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 220
+        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[7]" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 250
+        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[8]" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 280
+        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[9]" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 310
+        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[10]" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 340
+        Warning (14320): Synthesized away node "ADC_Conversion:ADC_Conversion_ins|adc_qsys:u0|adc_qsys_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram|q_b[11]" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/altsyncram_rqn1.tdf Line: 370
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/1993/numeric_std_vhdl1993.vhd Line: 1402
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/1993/numeric_std_vhdl1993.vhd Line: 1402
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/1993/numeric_std_vhdl1993.vhd Line: 1402
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/1993/numeric_std_vhdl1993.vhd Line: 1402
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/1993/numeric_std_vhdl1993.vhd Line: 1402
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/1993/numeric_std_vhdl1993.vhd Line: 1402
     Info (12134): Parameter "LPM_WIDTHA" = "12"
     Info (12134): Parameter "LPM_WIDTHB" = "12"
     Info (12134): Parameter "LPM_WIDTHP" = "24"
@@ -1658,42 +1620,42 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following para
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_frg.tdf
-    Info (12023): Found entity 1: add_sub_frg File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/add_sub_frg.tdf Line: 22
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+    Info (12023): Found entity 1: add_sub_frg File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/add_sub_frg.tdf Line: 23
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_arg.tdf
-    Info (12023): Found entity 1: add_sub_arg File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/add_sub_arg.tdf Line: 22
-Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+    Info (12023): Found entity 1: add_sub_arg File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/db/add_sub_arg.tdf Line: 23
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 42
+Info (13000): Registers with preset signals will power-up high File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_qsys/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 42
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
-    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 11
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
+    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/voltmeter.vhd Line: 12
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 59 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "ADC_Conversion:ADC_Conversion_ins|response_valid" File: C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_conversion.v Line: 94
+    Info (17048): Logic cell "ADC_Conversion:ADC_Conversion_ins|response_valid" File: D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/adc_conversion.v Line: 94
 Warning (20013): Ignored 149 assignments for entity "DE10_LITE" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10 -entity DE10_LITE was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[0] -entity DE10_LITE was ignored
@@ -1844,7 +1806,7 @@ Warning (20013): Ignored 149 assignments for entity "DE10_LITE" -- entity does n
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS -entity DE10_LITE was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk -entity DE10_LITE was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to reset -entity DE10_LITE was ignored
-Info (144001): Generated suppressed messages file C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/output_files/Voltmeter.map.smsg
+Info (144001): Generated suppressed messages file D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/output_files/Voltmeter.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 1807 device resources after synthesis - the final resource count might be different
@@ -1852,16 +1814,16 @@ Info (21057): Implemented 1807 device resources after synthesis - the final reso
     Info (21059): Implemented 59 output pins
     Info (21061): Implemented 1743 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 205 warnings
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Thu Dec 02 16:32:45 2021
-    Info: Elapsed time: 00:00:34
-    Info: Total CPU time (on all processors): 00:00:52
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 204 warnings
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Thu Dec 02 22:33:07 2021
+    Info: Elapsed time: 00:03:22
+    Info: Total CPU time (on all processors): 00:02:09
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Github/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/output_files/Voltmeter.map.smsg.
+The suppressed messages can be found in D:/Digital_Systems_Design_B02G1/Lab_4/From_Lab_3/output_files/Voltmeter.map.smsg.
 
 

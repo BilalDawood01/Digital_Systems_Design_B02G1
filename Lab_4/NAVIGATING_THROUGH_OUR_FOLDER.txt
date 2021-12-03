@@ -1,0 +1,16 @@
+To view our newly added file for lab 4 (repsonsible for PWM):
+
+New_Lab_4_File >> perio_changer.vhd
+_______________________________________________________________
+To get to the toplevel design: 
+
+From_Lab_3 >> LAB4_ABRINI_DAWOOD_MUJTABA
+
+_______________________________________________________________
+To view our tb code:
+
+1)Comment line that sends output to hardware. (line 235)
+2)Uncomment line directly below it.
+3)tb_prelab (our testbench) code can be found as follows:
+From_Lab_3 >> Simulation >> tb_prelab.vhd
+_______________________________________________________________

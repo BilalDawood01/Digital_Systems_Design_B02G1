@@ -30,9 +30,9 @@ begin
    compare : process(counter, period)
    begin
        if (counter < unsigned(period(11 downto 1))*2*2*2*2) then
-           buzzer <= '1';
-       else 
            buzzer <= '0';
+       else 
+			  buzzer <= '1';
        end if;
    end process;
   

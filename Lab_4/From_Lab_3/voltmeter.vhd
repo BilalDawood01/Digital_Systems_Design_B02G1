@@ -6,6 +6,7 @@ entity Voltmeter is
     Port ( clk                           : in  STD_LOGIC;
            reset                         : in  STD_LOGIC;
 			  Switch								  : in  STD_LOGIC;
+			  -- test_input		  : in  STD_LOGIC_VECTOR(11 downto 0); -- FOR MODELSIM SIMULATION
            LEDR                          : out STD_LOGIC_VECTOR (9 downto 0);
 			  buzzer_out 						  : out  STD_LOGIC;		
            HEX0,HEX1,HEX2,HEX3,HEX4,HEX5 : out STD_LOGIC_VECTOR (7 downto 0)
@@ -25,8 +26,6 @@ Signal bcd: STD_LOGIC_VECTOR(15 DOWNTO 0);
 Signal Q_temp1 : std_logic_vector(11 downto 0);
 Signal Mux_Output : std_logic_vector(12 downto 0);
 Signal v2d_output : STD_LOGIC_VECTOR(12 DOWNTO 0); 
-Signal wave_x : STD_LOGIC_VECTOR(11 DOWNTO 0);
-Signal wave_sin_x : STD_LOGIC_VECTOR(8 DOWNTO 0);
 
 Component SevenSegment is
     Port( bcd : in  STD_LOGIC_VECTOR (15 downto 0);
@@ -95,42 +94,15 @@ port(
 end Component;
 
 
-Component PWM_DAC is
-Generic ( width : integer := 9);
-port(
-	  reset      : in STD_LOGIC;
-     clk        : in STD_LOGIC;
-     duty_cycle : in STD_LOGIC_VECTOR (width-1 downto 0);
-     pwm_out    : out STD_LOGIC
-	);
-end Component;
-
-
 Component period_changer is
 port(
-	  reset      : in STD_LOGIC;
-     clk        : in STD_LOGIC;
-     period : in STD_LOGIC_VECTOR (11 downto 0);
+	  reset     : in STD_LOGIC;
+     clk       : in STD_LOGIC;
+     period 	: in STD_LOGIC_VECTOR (11 downto 0);
      buzzer    : out STD_LOGIC
 	);
 end Component;
 
-Component Wave_Incrementer is
-Port    ( 	reset      		: in STD_LOGIC;
-             clk       		: in STD_LOGIC;
-             delta_x 			: in STD_LOGIC_VECTOR (4 downto 0);
-				 x_fin 	: out STD_LOGIC_VECTOR (11 downto 0)
-			  );
-end Component;
-
-Component x2square is
-PORT(
-			clk            :  IN    STD_LOGIC;                                
-			reset          :  IN    STD_LOGIC;                                
-			x        		:  IN    STD_LOGIC_VECTOR(11 DOWNTO 0);                           
-			sinx       		:  OUT   STD_LOGIC_VECTOR(8 DOWNTO 0)
-			  );
-end Component;
 
 begin
    Num_Hex0 <= bcd(3  downto  0); 
@@ -255,36 +227,13 @@ binary_bcd_ins: binary_bcd
       bcd      => bcd
       );
 		
-Wave_Incrementer_ins: Wave_Incrementer                            
-   PORT MAP(
-      reset 			=> reset,
-		clk    			=> clk,
-		delta_x   		=> v2d_output(11 downto 7),
-		x_fin  			=> wave_x
-);
-		
-x2square_ins: x2square                             
-   PORT MAP(
-      clk 				=> clk,
-		reset   			=> reset,
-		x   				=> wave_x,  
-		sinx  			=> wave_sin_x
-);
-		
-PWM_DAC_ins: PWM_DAC                              
-   PORT MAP(
-      reset    		=> reset, 
-		clk      		=> clk,                                                         
-      duty_cycle     => wave_sin_x--,                        
-      --pwm_out   		=> buzzer_out
-      );
-		
 		
 period_changer_ins: period_changer                              
    PORT MAP(
       reset    		=> reset, 
 		clk      		=> clk,                                                         
-      period     => v2d_output(12 downto 1),                        
+      period         => v2d_output(12 downto 1), -- FOR ACTUAL HARDWARE
+		-- period         => test_input,  -- FOR MODELSIM SIMULATION		
       buzzer   		=> buzzer_out
       );
 		

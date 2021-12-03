@@ -13,7 +13,9 @@ ARCHITECTURE behavior OF tb_prelab IS
            clk                           	: in  STD_LOGIC;
            reset                         	: in  STD_LOGIC;
            Switch									: in  STD_LOGIC;
-			  test_input						   : in  STD_LOGIC_VECTOR(11 DOWNTO 7);
+			  test_input						   : in  STD_LOGIC_VECTOR(11 downto 0);
+			  -- This input is to simulate different distance values to verify the 
+			  -- correct PWM output.
 			  LEDR                          	: out STD_LOGIC_VECTOR (9 downto 0);
 			  buzzer_out 						  	: out  STD_LOGIC;		
            HEX0,HEX1,HEX2,HEX3,HEX4,HEX5 	: out STD_LOGIC_VECTOR (7 downto 0)
@@ -31,7 +33,7 @@ ARCHITECTURE behavior OF tb_prelab IS
     --Reset
     signal reset : std_logic;
 	 
-	 Signal test_input: STD_LOGIC_VECTOR(11 DOWNTO 7);
+	 Signal test_input: STD_LOGIC_VECTOR(11 downto 0);
 	 
 	 signal buzzer_out : STD_LOGIC;	
 	 
@@ -109,29 +111,29 @@ ARCHITECTURE behavior OF tb_prelab IS
 	 -- Test Stimulus Process 
     test_stim_proc: process 
     begin
-		test_input<= "00000";
-		wait for 1ms;
+		test_input<= "000000000000";
+		wait for 10ms;
 		
-		test_input<= "11111";
-		wait for 1ms;
+		test_input<= "111111111111";
+		wait for 10ms;
 		
-		test_input<= "10101";
-		wait for 1ms;
+		test_input<= "000111100000";
+		wait for 10ms;
 		
-		test_input<= "01110";
-		wait for 1ms;
+		test_input<= "111100000000";
+		wait for 10ms;
 		
-		test_input<= "11000";
-		wait for 1ms;
+		test_input<= "000000011111";
+		wait for 10ms;
 		
-		test_input<= "00011";
-		wait for 1ms;
+		test_input<= "111000001111";
+		wait for 10ms;
 		
-		test_input<= "10001";
-		wait for 1ms;
+		test_input<= "101010101010";
+		wait for 10ms;
 		
-		test_input<= "11011";
-		wait for 1ms;
+		test_input<= "110001100011";
+		wait for 10ms;
     end process;
 
 END;
